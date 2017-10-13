@@ -1,0 +1,98 @@
+
+			html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+		        padding: 0;
+		        border: 0;
+		        margin: 0;
+		        font: inherit;
+  				font-size: 100%;
+		    }
+		    
+			body{
+				margin: 0;
+				background: #6ed5ef; /* Old browsers */
+				background: -moz-linear-gradient(-45deg, #42D6F9 0%, #F67EDD 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(-45deg, #42D6F9 0%,#F67EDD 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(135deg, #42D6F9 0%,#F67EDD 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ed5ef', endColorstr='#ffbaf5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+				
+			};
+
+			h2 { 
+				   position: absolute; 
+				   top: 200px; 
+				   left: 0; 
+				   width: 100%; 
+		
+			}
+			h2 span { 
+			   color: white; 
+			   font: bold 240px/450px Helvetica, Sans-Serif; 
+			   letter-spacing: -1px;  
+			   background: rgb(0, 0, 0); /* fallback color */
+			   background: rgba(0, 0, 0, 0.);
+			   padding: 10px; 
+			}
+			canvas{width: 100%; height: 100%;};
+
+			#info {
+				position: absolute;
+				top: 0px;
+				width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				font-weight: bold;
+				text-align: center;
+				z-index: 1;
+			}
+			#menu {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+			#topmenu {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 100%;
+				text-align: right;
+				padding: 0;
+				margin: 0;
+				z-index: 1;
+			}
+			button {
+				background-color: rgb(255,255,255);
+				color: black;
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: rgba(0,0,0,1);
+				color: w;
+			}
+			button:active {
+				color: #000000;
+				background-color: rgba(0,0,0,1);
+			}
+			.bond {
+				width: 5px;
+				height: 10px;
+				background: #eee;
+				display: block;
+			}
+			.square {
+			   position:absolute;
+			   left:50%;
+			   top:0px;
+			   width: 1%;
+				height: 100%;
+			   background-color: white;
+			}
+
+			
+

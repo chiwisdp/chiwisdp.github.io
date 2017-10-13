@@ -1,58 +1,4 @@
-<html>
-	<head>
-		<title>Daniel Threes3</title>
-		
-		<link rel="stylesheet" type="text/css" href="main.css">
-		<script src="JS/three.js"></script>
-		<script src="JS/Tween.js"></script>
-		<script src="JS/Projector.js"></script>
-		<script src="JS/CanvasRenderer.js"></script>
-		<script src="JS/OBJLoader.js"></script>
-		<script src="JS/ExplodeModifier.js"></script>
-		<script src="JS/TessellateModifier.js"></script>
-		<script src="js/Detector.js"></script>
-	</head>
-
-	<body>
-		
-		
-		
-		
-		
-		<div id="topmenu">
-			<button id="b_l">Left</button>
-			<button id="b_m">Middle</button>
-			<button id="b_r">Right</button>
-		</div>
-
-		
-		<script type="x-shader/x-vertex" id="vertexshader">
-			uniform float amplitude;
-			attribute vec3 customColor;
-			attribute vec3 displacement;
-			varying vec3 vNormal;
-			varying vec3 vColor;
-			void main() {
-				vNormal = normal;
-				vColor = customColor;
-				vec3 newPosition = position + normal * amplitude * displacement;
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
-			}
-		</script>
-
-		<script type="x-shader/x-fragment" id="fragmentshader">
-			varying vec3 vNormal;
-			varying vec3 vColor ;
-			void main() {
-				const float ambient = .94;
-				vec3 light = vec3( 1.0 );
-				light = normalize( light );
-				float directional = max( dot( vNormal, light ), 0.0 );
-				gl_FragColor = vec4( ( directional + ambient ) * vColor, 1.0 );
-			}
-		</script>
-		
-		<script>
+'use strict'
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			//this is the scene for 3d objects
 			var scene = new THREE.Scene();
@@ -484,10 +430,9 @@
 				b_m.addEventListener( 'click', function() { visualizationType = 1; moveAllWayMiddle() } );
 				b_l.addEventListener( 'click', function() { visualizationType = 2; moveAllWayLeft() } );
 
-				//this is the middleBAr
 				div = document.createElement("div");
 				div.style.position = "absolute";
-				div.style.left = (rightCurrentCamPosition*window.innerWidth/2);
+				div.style.left = (rightCurrentCamPosition*window.innerWidth);
 				div.style.top = "0px";
 				div.style.width = divSize;
 				div.style.height = window.innerHeight;
@@ -664,6 +609,4 @@
 			
 			//call the gameloop
 			GameLoop();
-		</script>
-	</body>
-</html>
+		
