@@ -5,6 +5,7 @@
 		        margin: 0;
 		        font: inherit;
   				font-size: 100%;
+
 		    }
 		    
 			body{
@@ -62,7 +63,7 @@
 				text-align: right;
 				padding: 0;
 				margin: 0;
-				z-index: 1;
+				z-index: 3;
 			}
 			button {
 				background-color: rgb(255,255,255);
@@ -70,14 +71,17 @@
 				border: 0px;
 				padding: 5px 10px;
 				cursor: pointer;
+				font-family: 'Shrikhand', sans-seriff;
+				font-size: 2em;
+
 			}
 			button:hover {
 				background-color: rgba(0,0,0,1);
-				color: w;
+				color: white;
 			}
 			button:active {
-				color: #000000;
-				background-color: rgba(0,0,0,1);
+				color: white;
+				background-color: rgba(150,150,150,1);
 			}
 			.bond {
 				width: 5px;

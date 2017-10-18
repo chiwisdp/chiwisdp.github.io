@@ -1,7 +1,9 @@
 <html>
 	<head>
 		<title>Daniel Threes3</title>
-		
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Shrikhand');
+		</style>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<script src="JS/three.js"></script>
 		<script src="JS/Tween.js"></script>
@@ -20,9 +22,9 @@
 		
 		
 		<div id="topmenu">
-			<button id="b_l">Left</button>
-			<button id="b_m">Middle</button>
-			<button id="b_r">Right</button>
+			<button id="b_l">Design</button>
+			<button id="b_m">About</button>
+			<button id="b_r">Games</button>
 		</div>
 
 		
@@ -274,12 +276,14 @@
 					var h = 1;
 					var s = 1;
 					var l = 1;
+					var a = .1;
 					//color= Color.white;
 					var d = .025 * ( 0.75 - Math.random() );
 					for ( var i = 0; i < 3; i ++ ) {
 						colors[ index + ( 3 * i )     ] = 1.0;
 						colors[ index + ( 3 * i ) + 1 ] = 1;
 						colors[ index + ( 3 * i ) + 2 ] = 1;
+						colors[ index + ( 3 * i ) + 3] = .1;
 						displacement[ index + ( 3 * i )     ] = d;
 						displacement[ index + ( 3 * i ) + 1 ] = d;
 						displacement[ index + ( 3 * i ) + 2 ] = d;
@@ -480,9 +484,9 @@
 				var b_m = document.getElementById( "b_m" );
 				var b_l = document.getElementById( "b_l" );
 
-				b_r.addEventListener( 'click', function() { visualizationType = 0; moveAllWayRight() } );
+				b_r.addEventListener( 'click', function() { visualizationType = 0; moveAllWayLeft() } );
 				b_m.addEventListener( 'click', function() { visualizationType = 1; moveAllWayMiddle() } );
-				b_l.addEventListener( 'click', function() { visualizationType = 2; moveAllWayLeft() } );
+				b_l.addEventListener( 'click', function() { visualizationType = 2; moveAllWayRight() } );
 
 				//this is the middleBAr
 				div = document.createElement("div");
