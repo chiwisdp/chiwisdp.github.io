@@ -54,25 +54,30 @@
 				text-align: center;
 				padding: 0;
 				margin: 0;
+
 			}
 			#topmenu {
-				position: absolute;
-				top: 10px;
-				right: 10px;
-				width: 100%;
-				text-align: right;
+				position: fixed;
+				transform: translate(50%, 50%);
+				margin: auto;
+    			width: 50%;
+				text-align: center;
 				padding: 0;
-				margin: 0;
+				
 				z-index: 3;
+				/*transform: translate(-50%, -45%);*/
 			}
 			button {
 				background-color: rgb(255,255,255);
 				color: black;
+				margin: 0.3125em 0.3125em 0.3125em 0.3125em; /* 10 / 1980 */
 				border: 0px;
 				padding: 5px 10px;
 				cursor: pointer;
 				font-family: 'Shrikhand', sans-seriff;
-				font-size: 2em;
+				font-size: 1.5em;
+				box-shadow: -0.1875em 0.1875em 0px 0px rgba(100,100,100,1);
+
 
 			}
 			button:hover {
@@ -89,14 +94,39 @@
 				background: #eee;
 				display: block;
 			}
-			.square {
-			   position:absolute;
+			#square {
+			   position:fixed;
 			   left:50%;
 			   top:0px;
 			   width: 1%;
 				height: 100%;
 			   background-color: white;
+
+			   z-index: -1;
 			}
 
-			
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1035px) {
+  button {
+				
+				/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
+				font-size: 1em;
+				/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
+
+
+			}
+}	
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 750px) {
+  button {
+				
+				/*margin: 0.3125em 0.3125em 0.3125em 0.3125em;*/ /* 10 / 1980 */
+				font-size: .75em;
+				/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*
+
+
+			}
+}					
 

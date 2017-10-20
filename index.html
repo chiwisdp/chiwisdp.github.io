@@ -23,10 +23,13 @@
 		
 		<div id="topmenu">
 			<button id="b_l">Design</button>
-			<button id="b_m">About</button>
+			<button id="b_m">About me</button>
+			<button id="b_p">Press</button>
 			<button id="b_r">Games</button>
 		</div>
-
+		
+		
+		<div id="divider"></div>
 		
 		<script type="x-shader/x-vertex" id="vertexshader">
 			uniform float amplitude;
@@ -84,12 +87,30 @@
      			cube.scale.x = cube.scale.y * rightCamera.aspect;
      			
      			//
-				div.style.left = (rightCurrentCamPosition*window.innerWidth);
-				div.style.top = "0px";
-				div.style.width = divSize;
-				div.style.height = window.innerHeight;
+				div = document.getElementById("divider");
+				div.style.left = ((rightCurrentCamPosition)*window.innerWidth);
+				
 
 			});
+
+			window.addEventListener("orientationchange", function() {
+			    var width = window.innerWidth;
+				var height = window.innerHeight;
+				renderer.setSize(width, height);
+				rightCamera.aspect = width/height;
+				rightCamera.updateProjectionMatrix();
+				leftCamera.aspect = width/height;
+				leftCamera.updateProjectionMatrix();
+				//cube.scale.set(cubeScaleX*(window.innerWidth/window.innerHeight),cubeScale*(window.innerWidth/window.innerHeight), cubeScaleX*(window.innerWidth/window.innerHeight));
+				//cube scale
+
+				cube.scale.y = Math.tan(rightCamera.fov * Math.PI / 180 * 0.65) * camDistCubeScale * 2 ;
+     			cube.scale.x = cube.scale.y * rightCamera.aspect;
+     			
+     			//
+				div = document.getElementById("divider");
+				div.style.left = ((rightCurrentCamPosition)*window.innerWidth);
+			}, false);
 			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 			document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 			document.addEventListener( 'touchmove', onDocumentTouchMove, false );
@@ -135,7 +156,7 @@
 			var colors = [];
 			var camDistCubeScale = 1.5;
 			var meshNEW = new THREE.Mesh();
-
+			var dividerXcord = .5*window.innerWidth;
 			var uniforms;
 			init();
 
@@ -482,14 +503,16 @@
 			function menuControls(){
 				var b_r = document.getElementById( "b_r" );
 				var b_m = document.getElementById( "b_m" );
+				var b_p = document.getElementById( "b_p" );
 				var b_l = document.getElementById( "b_l" );
 
 				b_r.addEventListener( 'click', function() { visualizationType = 0; moveAllWayLeft() } );
 				b_m.addEventListener( 'click', function() { visualizationType = 1; moveAllWayMiddle() } );
+				b_p.addEventListener( 'click', function() { visualizationType = 1; moveAllWayMiddle() } );
 				b_l.addEventListener( 'click', function() { visualizationType = 2; moveAllWayRight() } );
 
 				//this is the middleBAr
-				div = document.createElement("div");
+				div = document.getElementById("divider");
 				div.style.position = "absolute";
 				div.style.left = (rightCurrentCamPosition*window.innerWidth/2);
 				div.style.top = "0px";
@@ -512,7 +535,8 @@
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
 						rightCurrentCamPosition =  this.x ;
-
+						if((((rightCurrentCamPosition)*window.innerWidth)-divSize*2)<window.innerWidth)
+						{dividerXcord=((rightCurrentCamPosition)*window.innerWidth)-divSize;}
 					} )
 					.start();
 				var tweenLeft = new TWEEN.Tween( { x: leftCurrentCamPosition, } )
@@ -535,6 +559,8 @@
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
 						rightCurrentCamPosition =  this.x ;
+						if((((rightCurrentCamPosition)*window.innerWidth)+(divSize*2))<window.innerWidth)
+						{dividerXcord=((rightCurrentCamPosition)*window.innerWidth);}
 
 					} )
 					.start();
@@ -559,6 +585,8 @@
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
 						rightCurrentCamPosition =  this.x ;
+						if((((rightCurrentCamPosition)*window.innerWidth)+(divSize*2))<window.innerWidth)
+						{dividerXcord=((rightCurrentCamPosition)*window.innerWidth);}
 
 					} )
 					.start();
@@ -647,14 +675,9 @@
 				 rightCamera.updateProjectionMatrix();
 				 renderer.render (scene,rightCamera);
 				 
-				 if(rightCurrentCamPosition == 1)
-				 {
-				 	div.style.left = ((rightCurrentCamPosition)*window.innerWidth)-divSize;
-				 }else if(rightCurrentCamPosition == 0){
-					div.style.left = ((rightCurrentCamPosition)*window.innerWidth);
-				 }else{
-				 	div.style.left = ((rightCurrentCamPosition)*window.innerWidth);
-				 }
+				
+				 	div.style.left = dividerXcord;
+				 
 				
 			};
 
