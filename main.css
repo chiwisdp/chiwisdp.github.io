@@ -33,6 +33,15 @@
 			   background: rgba(0, 0, 0, 0.);
 			   padding: 10px; 
 			}
+			h3 { 
+			   	color: grey; 
+			   	font-family: 'Shrikhand', sans-seriff;
+				font-size: .5em;
+			padding: 5px 10px;
+				margin: auto;
+
+			   
+			}
 			canvas{width: 100%; height: 100%;};
 
 			#info {
@@ -58,25 +67,29 @@
 			}
 			#topmenu {
 				position: fixed;
-				transform: translate(50%, 50%);
+				transform: translate(50%, 0.3125em);
 				margin: auto;
     			width: 50%;
 				text-align: center;
 				padding: 0;
-				
+				 animation-duration: 1.5s;
+  				animation-name: slidein;
+  				animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
 				z-index: 3;
 				/*transform: translate(-50%, -45%);*/
 			}
 			button {
 				background-color: rgb(255,255,255);
+				border-radius: 0 0.1875em 0.1875em 0;
 				color: black;
-				margin: 0.3125em 0.3125em 0.3125em 0.3125em; /* 10 / 1980 */
+				margin: 0.6125em 0.3125em 0.3125em 0.3125em; /* 10 / 1980 */
 				border: 0px;
 				padding: 5px 10px;
 				cursor: pointer;
 				font-family: 'Shrikhand', sans-seriff;
-				font-size: 1.5em;
-				box-shadow: -0.1875em 0.1875em 0px 0px rgba(100,100,100,1);
+				font-size: 1.25em;
+				box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+				z-index:2;
 
 
 			}
@@ -104,7 +117,29 @@
 
 			   z-index: -1;
 			}
-
+			#logo{
+				
+				margin: auto;
+    			border-radius: 0 0.1875em 0.1875em 0;
+    			width: 50%;
+    			padding: 5px 10px;
+				text-align: center;
+				font-family: 'Shrikhand', sans-seriff;
+				font-size:3em;
+				overflow:hidden;
+				background-color: rgb(255,255,255);
+				box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+				
+			}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1304px) {
+  #logo{
+			font-size:2em;
+	}
+	h3 { 
+			font-size: .5em;
+	}	
+}	
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1035px) {
@@ -118,15 +153,60 @@
 			}
 }	
 
+@media screen and (max-width: 874px) {
+  #logo{
+			font-size:1.5em;
+	}
+	h3 { 
+			font-size: .5em;
+	}	
+}	
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 750px) {
   button {
 				
 				/*margin: 0.3125em 0.3125em 0.3125em 0.3125em;*/ /* 10 / 1980 */
 				font-size: .75em;
-				/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*
+				
 
 
 			}
-}					
+}
+@media screen and (max-width: 652px) {
+  #logo{
+			font-size:1em;
+	}
+	h3 { 
+			font-size: .55em;
+	}	
+	button {
+				font-size: .5em;
+				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+			}
+}	
 
+@media screen and (max-width: 652px) {
+  #logo{
+			font-size:.75em;
+	}
+	h3 { 
+			font-size: .55em;
+	}	
+	button {
+				font-size: .5em;
+				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+			}
+}						
+/* animation  */
+
+
+@keyframes slidein {
+
+  from {
+    transform: translate(50%, -20.3125em);
+  }
+
+  to {
+   transform: translate(50%, 0.3125em);
+  }
+}
