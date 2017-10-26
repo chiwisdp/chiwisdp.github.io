@@ -128,6 +128,7 @@
 			    padding-left: 5%;
 			    max-height: 65%;
 			    overflow-y:auto;
+			    -webkit-overflow-scrolling: touch;
 				z-index: 2;
 				/*transform: translate(-50%, -45%);*/
 			}
@@ -393,7 +394,16 @@
 				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
 				box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 			}
-}									
+}	
+
+@media screen and (orientation: landscape) {
+ #aboutme {
+				
+			    max-height: 35%;
+			    
+				/*transform: translate(-50%, -45%);*/
+			}
+}								
 /* animation  */
 
 
