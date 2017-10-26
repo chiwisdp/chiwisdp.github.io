@@ -7,9 +7,7 @@
   				font-size: 100%;
 
 		    }
-		    div{
-		    	-webkit-overflow-scrolling: touch;
-		    }
+		   
 			body{
 				margin: 0;
 				background: #6ed5ef; /* Old browsers */
@@ -87,7 +85,7 @@
 				display: block;
 			}
 			#square {
-			   position:relative;
+			   position:fixed;
 			   left:50%;
 			   top:0px;
 			   width: .1%;
@@ -128,7 +126,7 @@
 			    padding-right: 5%;
 			    padding-bottom: 1%;
 			    padding-left: 5%;
-			    max-height: 2%;
+			    max-height: 70%;
 			    overflow-y:scroll;
 			    -webkit-overflow-scrolling: touch;
 				z-index: 2;
@@ -401,7 +399,7 @@
 @media screen and (orientation: landscape) {
  #aboutme {
 				
-			    max-height: 15%;
+			    max-height: 75%;
 			    
 				/*transform: translate(-50%, -45%);*/
 			}
