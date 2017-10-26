@@ -1,11 +1,13 @@
 <html>
 	<head>
-		
-		<title>Daniel Threes3</title>
+		<meta charset="utf-8" />
+ 		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Daniel's wacko world'</title>
 		<style>
 		@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Shrikhand');
 		</style>
 		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="JS/three.js"></script>
 		<script src="JS/Tween.js"></script>
 		<script src="JS/Projector.js"></script>
@@ -15,6 +17,10 @@
 		<script src="JS/TessellateModifier.js"></script>
 		<script src="JS/Detector.js"></script>
 		<script src="JS/ios-orientationchange-fix.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	    <link rel="stylesheet" href="css/lightbox.min.css">
 	</head>
 
 	<body>
@@ -24,17 +30,55 @@
 		
 		
 		<div id="topmenu">
-			<div id="logo">Daniel Ponce<h3>Designer</h3></div>
+			<div id="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
 			<button id="b_l">Design</button>
 			<button id="b_r">Games</button>
 			<button id="b_m">About me</button>
 			<button id="b_p">Press</button>
 			
 		</div>
-		
+		<div id="aboutme">
+			<div>
+				<h2>About me</h2>
+			</div>
+			<div>
+				<h3>Designing one pixel at a time...</h3>
+			</div>
+			
+			<div>
+				<div class="clearfix">
+					<div id="gallerywrapper">
+						<!----gallery row 1 start -->
+						<section class="profilepic">
+							<a class="example-image-link" id="lightbox-img" href="images/profile.jpg" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="images/profile.jpg" alt="My face" title="Stare into my soul"></a>
+						</section>
+					</div>
+					<p>From a young age, Daniel knew that he wanted to be part of the creative industry. He made that dream a reality after getting an MFA from <a href="https://cinema.usc.edu/interactive/" rel="noopener noreferrer" target="_blank">USC's Interactive Media Division.</a></p>
+					
+					<p>Daniel Co-Founded <a href="https://craterhouse.com" rel="noopener noreferrer" target="_blank">Crater House</a> with <a href="http://www.funwithbill.net/" rel="noopener noreferrer" target="_blank">Bill Graner</a> and other alumni of USC's Interactive Media Division. There they created exciting, uniquely creative apps and intellectual properties for international brands-including Shaq Sky Slam for Shaquille O'Neal, and original design and development for The Israel Antiquities Authority, Tyson Chicken, Kraken Rum, and the California Indian Museum and Cultural Center.</p>
+
+					<p>Daniel does Interactive Design, UI/UX, and front-end development. He makes sure products look and feel amazing. He likes making weird and wacky games with an offbeat sense of humor in his spare time.</p>
+				</div>
+			</div>
+			<div>
+				<a href="https://www.dropbox.com/s/4ytuo5qx1y7hlfa/DanielPonce_ResumeUXNEWWW.pdf?dl=0" style="font-size: .75em; text-decoration: none" rel="noopener noreferrer" target="_blank">Resume</a>
+			</div>
+			<div>
+				<a href="https://www.dropbox.com/s/f6mh9mfha9wqp8r/DanielPonceDesignPortfolio.pdf?dl=0" style="font-size: .75em; text-decoration: none" rel="noopener noreferrer" target="_blank">Portfolio PDF</a>
+			</div>
+			<div>
+				<a href="https://twitter.com/Chiwis" class="fa fa-twitter" rel="noopener noreferrer" target="_blank"></a>
+				<a href="https://www.linkedin.com/in/daniel-ponce-51038413/" class="fa fa-linkedin" rel="noopener noreferrer" target="_blank"></a>
+			</div>
+			<div>
+				<button>Back</button>
+				<button>Look at the cool background</button>
+			</div>
+		</div>
 		
 		<div id="divider"></div>
 		
+
 		<script type="x-shader/x-vertex" id="vertexshader">
 			uniform float amplitude;
 			attribute vec3 customColor;
@@ -149,7 +193,7 @@
 			var rightCamMoveDestination = .5;
 			var rightCurrentCamPosition = rightCamMoveDestination;
 			var tween = new TWEEN.Tween();
-			var divSize = window.innerWidth*.02;
+			var divSize = window.innerWidth*.01;
 			var dirLight, dirLightHeper, hemiLight, hemiLightHelper;
 			var cubeFrame = new THREE.Mesh();
 			var circlegeometry = new THREE.CircleBufferGeometry( .085, 5 );
@@ -303,7 +347,7 @@
 					var l = 1;
 					var a = .1;
 					//color= Color.white;
-					var d = .025 * ( 0.75 - Math.random() );
+					var d = .1 * ( 0.75 - Math.random() );
 					for ( var i = 0; i < 3; i ++ ) {
 						colors[ index + ( 3 * i )     ] = 1.0;
 						colors[ index + ( 3 * i ) + 1 ] = 1;
@@ -381,7 +425,7 @@
 				var loader = new THREE.OBJLoader( manager );
 				
 				
-				loader.load( 'Images/mountain.obj' , function ( object ) {
+				loader.load( 'images/mountain.obj' , function ( object ) {
 
                     object.traverse( function ( child ) {
 
@@ -643,14 +687,14 @@
 				
 				for (var i = 0 ; i < bgStars.length; i++) {
 					//bgStars[i].rotation.z = 2.0 + Math.sin( time * 0.15 );
-					bgStars[i].rotation.y = 1.0 + Math.sin( time * 0.15 );
+					bgStars[i].rotation.y = 1.0 + Math.sin( time * 0.35 );
 					
 					
 				}
 
 				TWEEN.update(  );
 				
-				uniforms.amplitude.value = 1.0 + Math.sin( time * 0.05 );
+				uniforms.amplitude.value = 1.0 + Math.sin( time * 0.3 );
 				//console.log('uniforms.amplitude.value: '+ uniforms.amplitude.value);
 				
 			};
@@ -696,5 +740,7 @@
 			//call the gameloop
 			GameLoop();
 		</script>
+
+	<script src="JS/lightbox-plus-jquery.min.js"></script>
 	</body>
 </html>

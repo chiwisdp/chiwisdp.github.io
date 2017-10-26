@@ -17,31 +17,6 @@
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ed5ef', endColorstr='#ffbaf5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 				
 			};
-
-			h2 { 
-				   position: absolute; 
-				   top: 200px; 
-				   left: 0; 
-				   width: 100%; 
-		
-			}
-			h2 span { 
-			   color: white; 
-			   font: bold 240px/450px Helvetica, Sans-Serif; 
-			   letter-spacing: -1px;  
-			   background: rgb(0, 0, 0); /* fallback color */
-			   background: rgba(0, 0, 0, 0.);
-			   padding: 10px; 
-			}
-			h3 { 
-			   	color: grey; 
-			   	font-family: 'Shrikhand', sans-seriff;
-				font-size: .5em;
-			padding: 5px 10px;
-				margin: auto;
-
-			   
-			}
 			canvas{width: 100%; height: 100%;};
 
 			#info {
@@ -73,14 +48,14 @@
 				text-align: center;
 				padding: 0;
 				 animation-duration: 1.5s;
-  				animation-name: slidein;
+  				animation-name: slideinmenu;
   				animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
 				z-index: 3;
 				/*transform: translate(-50%, -45%);*/
 			}
 			button {
 				background-color: rgb(255,255,255);
-				border-radius: 0 0.1875em 0.1875em 0;
+				border-radius: 0.1875em 0.1875em 0.1875em 0;
 				color: black;
 				margin: 0.6125em 0.3125em 0.3125em 0.3125em; /* 10 / 1980 */
 				border: 0px;
@@ -100,6 +75,8 @@
 			button:active {
 				color: white;
 				background-color: rgba(150,150,150,1);
+				box-shadow: box-shadow: -0.2em 0.05em 0px 0px rgba(50,50,50,1);
+  				transform: translateY(.25em);
 			}
 			.bond {
 				width: 5px;
@@ -108,10 +85,10 @@
 				display: block;
 			}
 			#square {
-			   position:fixed;
+			   position:relative;
 			   left:50%;
 			   top:0px;
-			   width: 1%;
+			   width: .1%;
 				height: 100%;
 			   background-color: white;
 
@@ -120,17 +97,181 @@
 			#logo{
 				
 				margin: auto;
-    			border-radius: 0 0.1875em 0.1875em 0;
+    			border-radius: 0.1875em 0.1875em 0.1875em 0;
     			width: 50%;
     			padding: 5px 10px;
 				text-align: center;
-				font-family: 'Shrikhand', sans-seriff;
 				font-size:3em;
 				overflow:hidden;
 				background-color: rgb(255,255,255);
 				box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
 				
 			}
+			#aboutme {
+				position: fixed;
+				transform: translate(12%, 5.25em);
+				margin: 0 auto;
+				border-radius: 0.1875em 0.1875em 0.1875em 0;
+    			width: 70%;
+    			padding: 5px 10px;
+				text-align: center;
+				font-size:2.5em;
+				overflow:hidden;
+				background-color: rgb(255,255,255);
+				animation-duration: 1.5s;
+  				animation-name: slideintextbg;
+  				animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
+  				box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+  				 padding-top: 1%;
+			    padding-right: 5%;
+			    padding-bottom: 1%;
+			    padding-left: 5%;
+			    max-height: 65%;
+			    overflow-y:auto;
+				z-index: 2;
+				/*transform: translate(-50%, -45%);*/
+			}
+			p{
+				font-family: 'Montserrat', sans-seriff;
+				font-size: .45em;
+				text-align: left;
+				margin: 0 auto;
+				width: 100%;
+				padding-bottom: .75em;
+				
+			}
+			h1{
+				font-family: 'Shrikhand', sans-seriff;
+				background: #6ed5ef; /* Old browsers */
+				background: -moz-linear-gradient(-45deg, #42D6F9 0%, #F67EDD 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(-45deg, #42D6F9 0%,#F67EDD 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(135deg, #42D6F9 0%,#F67EDD 100%);
+  				-webkit-background-clip: text;
+  				-webkit-text-fill-color: transparent;
+			}
+			h2 { 
+				font-family: 'Shrikhand', sans-seriff;
+		
+			}
+			h3 { 
+			   	color: grey; 
+			   	font-family: 'Shrikhand', sans-seriff;
+				font-size: .5em;
+				padding: .3em 0 .65em 0;
+				margin: auto;
+
+			   
+			}
+			a{
+				font-family: 'Shrikhand', sans-seriff;
+				color: #42D6F9;
+				text-decoration: none;
+			}
+			/* visited link */
+			a:visited {
+			    color: #F67EDD;
+			}
+
+			/* mouse over link */
+			a:hover {
+			    color: #aaaaaa;
+			}
+
+			/* selected link */
+			a:active {
+			    color: #42D6F9;
+			}
+
+			p a{
+				font-family: 'Montserrat', sans-seriff;
+				text-decoration: none;
+			}
+			.clearfix::after {
+			    content: "";
+			    clear: both;
+			    display: table;
+			}
+			.fa {
+			  padding: 20px;
+			  font-size: 20px;
+			  width: 30px;
+			  text-align: center;
+			  text-decoration: none;
+			  margin: .25em ;
+			  border-radius: 50%;
+			  color: #ffffff;
+			}
+			
+			.fa:hover {
+			    opacity: 0.7;
+			    color: #ffffff;
+			}
+			.fa:active {
+			    color: #ffffff;
+			}
+			.fa:visited {
+			    color: #ffffff;
+			}
+
+			.fa-twitter {
+			  background: #55ACEE;
+			  color: white;
+			}
+			.fa-linkedin {
+			  background: #007bb5;
+			  color: white;
+			}
+			
+			#aboutme button {
+				background-color: transparent;
+				border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
+				color: rgba(150,150,150,.5);
+				 /* 10 / 1980 */
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				font-family: 'Shrikhand', sans-seriff;
+				font-size: .5em;
+				box-shadow:  0em 0em .25em rgba(100,100,100,.5);
+				z-index:2;
+
+
+			}
+			#aboutme button:hover {
+				background-color: rgba(0,0,0,1);
+				color: white;
+			}
+			#aboutme button:active {
+				color: white;
+				background-color: rgba(150,150,150,1);
+			}
+#gallerywrapper{
+	max-width: 100%;
+	margin: 0 auto;
+
+}
+#gallerywrapper img{
+	display: block;
+	border-radius: 0.1875em 0.1875em 0.1875em 0;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	box-shadow: -0.075em 0.075em 0px 0px rgba(100,100,100,1);
+}
+.one-third{
+	width: 29%;
+	float: left;
+	margin: .5%;
+}
+.profilepic{
+	width: 9%;
+	float: left;
+	margin-right: 3%;
+}
+#gallerywrapper img:hover{
+	opacity: .8;
+}
+			
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1304px) {
   #logo{
@@ -138,19 +279,26 @@
 	}
 	h3 { 
 			font-size: .5em;
+	}
+	.profilepic{
+		width: 15%;
+		float: left;
+		margin-right: 3%;
 	}	
 }	
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1035px) {
-  button {
-				
-				/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-				font-size: 1em;
-				/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
-
-
-			}
+    button {
+		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
+		font-size: 1em;
+		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
+	}
+	.profilepic{
+		width: 20%;
+		float: left;
+		margin-right: 3%;
+	}	
 }	
 
 @media screen and (max-width: 874px) {
@@ -159,10 +307,15 @@
 	}
 	h3 { 
 			font-size: .5em;
-	}	
+	}
+	.profilepic{
+		width: 25%;
+		float: left;
+		margin-right: 3%;
+	}		
 }	
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   button {
 				
 				/*margin: 0.3125em 0.3125em 0.3125em 0.3125em;*/ /* 10 / 1980 */
@@ -171,6 +324,11 @@
 
 
 			}
+	.profilepic{
+		width: 30%;
+		float: left;
+		margin-right: 3%;
+	}	
 }
 @media screen and (max-width: 652px) {
   #logo{
@@ -180,8 +338,19 @@
 			font-size: .55em;
 	}	
 	button {
-				font-size: .5em;
-				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+				font-size: .85em;
+				margin: 0.6125em 0.025em 0.025em 0.05em; /* 10 / 1980 */
+			}
+		.profilepic{
+		width: 35%;
+		float: left;
+		margin-right: 3%;
+	}	
+	#aboutme {
+				
+			    max-height: 75%;
+			    
+				/*transform: translate(-50%, -45%);*/
 			}
 }	
 
@@ -193,21 +362,70 @@
 			font-size: .75em;
 	}	
 	button {
-				font-size: .75em;
+				font-size: .65em;
 				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
 				box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 			}
-}						
+			#aboutme {
+				
+			    max-height: 75%;
+			    
+				/*transform: translate(-50%, -45%);*/
+			}
+	.profilepic{
+		width: 100%;
+		float: left;
+		margin-right: 3%;
+		margin-bottom: 10%;
+	}
+		
+}			
+@media screen and (max-width: 264px) {
+  #logo{
+			font-size:.65em;
+	}
+	h3 { 
+			font-size: .5em;
+			padding: 0px 5px;
+	}	
+	button {
+				font-size: .55em;
+				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+				box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
+			}
+}									
 /* animation  */
 
 
-@keyframes slidein {
+@keyframes slideinmenu {
 
   from {
-    transform: translate(50%, -20.3125em);
+    transform: translate(50%, -20em);
   }
 
   to {
-   transform: translate(50%, 0.3125em);
+   transform: translate(50%, 0.3em);
+  }
+}
+
+@keyframes slideintextbg {
+
+  from {
+    transform: translate(12%, 30em);
+  }
+
+  to {
+   transform: translate(12%, 5.25em);
+  }
+}
+
+@keyframes slideouttextbg {
+
+  from {
+    transform: translate(12%, 5.25em);
+  }
+
+  to {
+   transform: translate(12%, 30em);
   }
 }
