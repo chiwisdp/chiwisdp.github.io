@@ -126,8 +126,8 @@
 			    padding-right: 5%;
 			    padding-bottom: 1%;
 			    padding-left: 5%;
-			    max-height: 65%;
-			    overflow-y:auto;
+			    max-height: 2%;
+			    overflow-y:scroll;
 			    -webkit-overflow-scrolling: touch;
 				z-index: 2;
 				/*transform: translate(-50%, -45%);*/
@@ -399,7 +399,7 @@
 @media screen and (orientation: landscape) {
  #aboutme {
 				
-			    max-height: 35%;
+			    max-height: 15%;
 			    
 				/*transform: translate(-50%, -45%);*/
 			}
