@@ -7,7 +7,9 @@
   				font-size: 100%;
 
 		    }
-		    
+		    div{
+		    	-webkit-overflow-scrolling: touch;
+		    }
 			body{
 				margin: 0;
 				background: #6ed5ef; /* Old browsers */
