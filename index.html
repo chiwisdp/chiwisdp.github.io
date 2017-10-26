@@ -149,7 +149,7 @@
 			window.addEventListener("orientationchange", function() {
 			    var width = window.innerWidth;
 				var height = window.innerHeight;
-				renderer.setSize(width, (height));
+				renderer.setSize(width, (height+44));
 				rightCamera.aspect = width/(height);
 				rightCamera.updateProjectionMatrix();
 				leftCamera.aspect = width/height;
@@ -686,7 +686,7 @@
 				cube.rotation.y +=.0002;
 				meshNEW.rotation.y += .0002;
 				
-				renderer.setSize(window.innerWidth, window.innerHeight);
+				renderer.setSize(window.innerWidth, window.innerHeight+44);
 				for (var i = 0 ; i < bgCubes.length; i++) {
 					bgCubes[i].rotation.x +=((.0003)*Math.random(1,5));
 					bgCubes[i].rotation.y +=((.0003)*Math.random(1,5));
