@@ -19,26 +19,58 @@
 		<script src="JS/Detector.js"></script>
 		<script src="JS/ios-orientationchange-fix.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	    
 	    <link rel="stylesheet" href="css/lightbox.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			    
+			    $.fn.designPageToggle = function(){ 
+			    	$("#aboutme").removeClass("showpanel");
+			    }
+			    $.fn.gamePageToggle = function(){ 
+			    	$("#aboutme").removeClass("showpanel");
+			    }
+			    $.fn.aboutPageToggle = function(){ 
+			    	$("#aboutme").toggleClass("showpanel");
+			    }
+			    $.fn.pressPageToggle = function(){ 
+			    	$("#aboutme").removeClass("showpanel");
+			    }
+
+			    $("#b_design").click(function(){
+					$.fn.designPageToggle();
+			    });
+			    $("#b_games").click(function(){
+					$.fn.gamePageToggle();
+			    });
+			    $("#b_about").click(function(){
+					$.fn.aboutPageToggle();
+			    });
+			    $("#b_press").click(function(){
+					$.fn.pressPageToggle();
+			    });
+			    $("#aboutmeclose").click(function(){
+					$.fn.aboutPageToggle();
+			    });
+
+			});
+		</script>
+	    
 	</head>
 
 	<body>
 		
-		
-		
-		
-		
 		<div id="topmenu">
 			<div id="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
-			<button id="b_l">Design</button>
-			<button id="b_r">Games</button>
-			<button id="b_m">About me</button>
-			<button id="b_p">Press</button>
+			<button id="b_design">Design</button>
+			<button id="b_games">Games</button>
+			<button id="b_about">About me</button>
+			<button id="b_press">Press</button>
 			
 		</div>
-		<div id="aboutme">
+		
+		<div id="aboutme" class="aboutme">
 			<div>
 				<h2>About me</h2>
 			</div>
@@ -49,7 +81,7 @@
 			<div>
 				<div class="clearfix">
 					<div id="gallerywrapper">
-						<!----gallery row 1 start -->
+						<!--gallery row 1 start -->
 						<section class="profilepic">
 							<a class="example-image-link" id="lightbox-img" href="images/profile.jpg" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="images/profile.jpg" alt="My face" title="Stare into my soul"></a>
 						</section>
@@ -72,14 +104,15 @@
 				<a href="https://www.linkedin.com/in/daniel-ponce-51038413/" class="fa fa-linkedin" rel="noopener noreferrer" target="_blank"></a>
 			</div>
 			<div>
-				<button>Back</button>
-				<button>Look at the cool background</button>
+				<button id ="aboutmeclose">Look at the cool background</button>
 			</div>
 		</div>
 		
-		<div id="divider"></div>
+		<div id="divider" class="square"></div>
 		
-
+		
+		
+		
 		<script type="x-shader/x-vertex" id="vertexshader">
 			uniform float amplitude;
 			attribute vec3 customColor;
@@ -124,7 +157,7 @@
 			window.addEventListener('resize', function(){
 				var width = window.innerWidth;
 				var height = window.innerHeight;
-				renderer.setSize(width, height*1.5);
+				renderer.setSize(width, height);
 				rightCamera.aspect = width/height;
 				rightCamera.updateProjectionMatrix();
 				leftCamera.aspect = width/height;
@@ -149,7 +182,7 @@
 			window.addEventListener("orientationchange", function() {
 			    var width = window.innerWidth;
 				var height = window.innerHeight;
-				renderer.setSize(width, (height+44));
+				renderer.setSize(width, (height));
 				rightCamera.aspect = width/(height);
 				rightCamera.updateProjectionMatrix();
 				leftCamera.aspect = width/height;
@@ -215,6 +248,7 @@
 			var meshNEW = new THREE.Mesh();
 			var dividerXcord = .5*window.innerWidth;
 			var uniforms;
+			var aboutmeOpen = false;
 			init();
 
 			function init() {
@@ -558,15 +592,15 @@
 			}
 
 			function menuControls(){
-				var b_r = document.getElementById( "b_r" );
-				var b_m = document.getElementById( "b_m" );
-				var b_p = document.getElementById( "b_p" );
-				var b_l = document.getElementById( "b_l" );
+				var b_games = document.getElementById( "b_games" );
+				var b_about = document.getElementById( "b_about" );
+				var b_press = document.getElementById( "b_press" );
+				var b_design = document.getElementById( "b_design" );
 
-				b_r.addEventListener( 'click', function() { visualizationType = 0; moveAllWayLeft() } );
-				b_m.addEventListener( 'click', function() { visualizationType = 1; moveAllWayMiddle() } );
-				b_p.addEventListener( 'click', function() { visualizationType = 1; moveAllWayMiddle() } );
-				b_l.addEventListener( 'click', function() { visualizationType = 2; moveAllWayRight() } );
+				b_games.addEventListener( 'click', function() { showGames() } );
+				b_about.addEventListener( 'click', function() { showAbout() } );
+				b_press.addEventListener( 'click', function() { showPress() } );
+				b_design.addEventListener( 'click', function() { showDesign() } );
 
 				//this is the middleBAr
 				div = document.getElementById("divider");
@@ -581,7 +615,7 @@
 				document.body.appendChild(div);
 			}
 
-			function moveAllWayRight()
+			function showDesign()
 			{
 				rightCamMoveDestination = 1;
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
@@ -603,9 +637,9 @@
 						leftCurrentCamPosition =  this.x ;
 					} )
 					.start();
-				console.log('right');
+				console.log('design');
 			}
-			function moveAllWayMiddle()
+			function showAbout()
 			{
 				rightCamMoveDestination = .5;
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
@@ -628,10 +662,48 @@
 						leftCurrentCamPosition =  this.x ;
 					} )
 					.start();
-				
-				console.log('middle');
+				/*var element = document.getElementById('aboutme');
+
+			console.log(element.style.getPropertyValue("transform"));
+				if(element.style.getPropertyValue("transform") == "translate(12%, 30em)" )
+				{
+					element.style.transform = "translate(12%, 5.3em)";
+				}
+				else
+				{
+					element.style.transform = "translate(12%, 30em)";
+				}*/
+			    
+			    
 			}
-			function moveAllWayLeft()
+			function showPress()
+			{
+				rightCamMoveDestination = .5;
+				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
+				//tween.start();
+				leftCamMoveDestination =-.5;
+				var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
+					.to( { x: rightCamMoveDestination }, 250 )
+					.easing( TWEEN.Easing.Quadratic.InOut )
+					.onUpdate( function () {
+						rightCurrentCamPosition =  this.x ;
+						if((((rightCurrentCamPosition)*window.innerWidth)+(divSize*2))<window.innerWidth)
+						{dividerXcord=((rightCurrentCamPosition)*window.innerWidth);}
+
+					} )
+					.start();
+				var tweenLeft = new TWEEN.Tween( { x: leftCurrentCamPosition, } )
+					.to( { x: leftCamMoveDestination }, 250 )
+					.easing( TWEEN.Easing.Quadratic.InOut )
+					.onUpdate( function () {
+						leftCurrentCamPosition =  this.x ;
+					} )
+					.start();
+					
+				
+				console.log('press');
+			}
+			function showGames()
 			{
 				rightCamMoveDestination = 0;
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
@@ -655,7 +727,7 @@
 					} )
 					.start();
 				
-				console.log('left ');
+				console.log('games ');
 			}
 
 			function onDocumentMouseMove(event) {
@@ -686,7 +758,7 @@
 				cube.rotation.y +=.0002;
 				meshNEW.rotation.y += .0002;
 				
-				renderer.setSize(window.innerWidth, window.innerHeight+44);
+				renderer.setSize(window.innerWidth, window.innerHeight);
 				for (var i = 0 ; i < bgCubes.length; i++) {
 					bgCubes[i].rotation.x +=((.0003)*Math.random(1,5));
 					bgCubes[i].rotation.y +=((.0003)*Math.random(1,5));
