@@ -412,7 +412,8 @@
 	}
 	#aboutme {
 			max-height: 50%;
-
+			overflow-y: scroll; /* has to be scroll, not auto */
+  			-webkit-overflow-scrolling: touch;
 	}
 	#topmenu{
 			transform: translate(0%, 2em);

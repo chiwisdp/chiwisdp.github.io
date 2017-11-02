@@ -12,7 +12,7 @@ body:after{
 	clear:both
 }
 body.lb-disable-scrolling{
-	overflow:scroll;
+	overflow:hidden
 }
 .lightboxOverlay{
 	position:absolute;
