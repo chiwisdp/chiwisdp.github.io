@@ -140,6 +140,29 @@
 				z-index: 2;
 				/*transform: translate(-50%, -45%);*/
 			}
+			.aboutme button {
+				background-color: transparent;
+				border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
+				color: rgba(150,150,150,.5);
+				 /* 10 / 1980 */
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				font-family: 'Shrikhand', sans-seriff;
+				font-size: .5em;
+				box-shadow:  0em 0em .25em rgba(100,100,100,.5);
+				z-index:2;
+
+
+			}
+			.aboutme button:hover {
+				background-color: rgba(0,0,0,1);
+				color: white;
+			}
+			.aboutme button:active {
+				color: white;
+				background-color: rgba(150,150,150,1);
+			}
 			.showpanel{
 				transform:translate(12%, 5em);
 			}
@@ -234,29 +257,7 @@
 			  color: white;
 			}
 			
-			.aboutme button {
-				background-color: transparent;
-				border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
-				color: rgba(150,150,150,.5);
-				 /* 10 / 1980 */
-				border: 0px;
-				padding: 5px 10px;
-				cursor: pointer;
-				font-family: 'Shrikhand', sans-seriff;
-				font-size: .5em;
-				box-shadow:  0em 0em .25em rgba(100,100,100,.5);
-				z-index:2;
-
-
-			}
-			.aboutme button:hover {
-				background-color: rgba(0,0,0,1);
-				color: white;
-			}
-			.aboutme button:active {
-				color: white;
-				background-color: rgba(150,150,150,1);
-			}
+			
 #gallerywrapper{
 	max-width: 100%;
 	margin: 0 auto;
@@ -398,26 +399,26 @@
 }	
 
 @media screen and (max-width: 414px) {
-  #logo{
-			font-size:.95em;
+    #logo{
+		font-size:1.25em;
 	}
 	h3 { 
-			font-size: .75em;
+		font-size: .75em;
 	}	
 	button {
-				font-size: .65em;
-				margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
-				box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
-			}
-			#aboutme {
-				
-			    max-height: 75%;
-			    
-				/*transform: translate(-50%, -45%);*/
-			}
-			#topmenu{
-			transform: translate(50%, 4em);
+			font-size: 1em;
+			margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+			box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
+	#aboutme {
+			max-height: 50%;
+
+	}
+	#topmenu{
+			transform: translate(0%, 3.3em);
+			width: 100%;
+	}
+	
 	.profilepic{
 		width: 100%;
 		float: left;
@@ -426,14 +427,14 @@
 	}
 	@keyframes slideinmenu {
 
-  from {
-    transform: translate(50%, -20em);
-  }
+	  from {
+	    transform: translate(0%, -20em);
+	  }
 
-  to {
-   transform: translate(50%, 3.3em);
-  }
-}	
+	  to {
+	   transform: translate(0%, 3.3em);
+	  }
+	}	
 }			
 @media screen and (max-width: 264px) {
   #logo{
