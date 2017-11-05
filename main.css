@@ -26,7 +26,16 @@
 				z-index: -9999;
 				pointer-events: none;
 			}
-			
+			#container {
+			  position: relative;
+			}
+			#webglContainer {
+			  position: absolute;
+			  pointer-events: none;
+			  /* this element will not catch any events */
+			  z-index: -8;
+			  /* position this canvas at bottom of the other one */
+			}
 			#info {
 				position: fixed;
 				top: 0px;
@@ -117,7 +126,7 @@
 				text-align: center;
 				font-size:2.5em;
 				
-				background-color: blue;
+				background-color: red;
 				
   				
   				animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);

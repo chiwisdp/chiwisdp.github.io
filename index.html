@@ -59,7 +59,10 @@
 	</head>
 
 	<body>
-		<div id="container"></div>
+		<div id="container">
+		  <div id="webglContainer"></div>
+		  
+		</div>
 		<div id="topmenu" class="topmenu">
 			<div id="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
 			<button id="b_design">Design</button>
@@ -210,7 +213,7 @@
 			var renderer = new THREE.WebGLRenderer({ alpha: true,antialiasing: true});
 			
 			//add the renderer to the webpage
-			document.body.appendChild(renderer.domElement);
+			webglContainer.appendChild(renderer.domElement);
 			
 			//implement orbit controls
 			//controls = new THREE.OrbitControls(camera1, renderer.domElement);
