@@ -117,7 +117,7 @@
 				text-align: center;
 				font-size:2.5em;
 				
-				background-color: white;
+				background-color: blue;
 				
   				
   				animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
@@ -411,7 +411,7 @@
 			box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	#aboutme {
-			max-height: 50%;
+			max-height: 65%;
 			overflow-y: scroll; /* has to be scroll, not auto */
   			-webkit-overflow-scrolling: touch;
 	}

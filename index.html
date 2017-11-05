@@ -59,7 +59,7 @@
 	</head>
 
 	<body>
-		
+		<div id="container"></div>
 		<div id="topmenu" class="topmenu">
 			<div id="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
 			<button id="b_design">Design</button>
@@ -741,8 +741,7 @@
 					mouseX = event.touches[ 0 ].pageX - windowHalfX;
 					mouseY = event.touches[ 0 ].pageY - windowHalfY;
 				}
-				var theholder = document.getElementById("aboutme");
-			  theholder.addEventListener( 'touchstart', onDocumentTouchStart, false );
+			
 			
 			}
 			function onDocumentTouchMove( event ) {
@@ -752,9 +751,7 @@
 					mouseY = event.touches[ 0 ].pageY - windowHalfY;
 				}
 
-			  var theholder = document.getElementById("aboutme");
-			  theholder.addEventListener( 'touchmove', onDocumentTouchMove, false );
-			
+			 
 			}
 			var moveScreenRight = function(){
 
