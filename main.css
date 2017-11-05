@@ -118,7 +118,7 @@
 			}
 			.aboutme {
 				position: fixed;
-				transform:translate(12%, 30em);
+				transform:translate(12%, 3em);
 				margin: 0 auto;
 				border-radius: 0.1875em 0.1875em 0.1875em 0;
     			width: 70%;
