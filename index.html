@@ -32,6 +32,9 @@
 			    }
 			    $.fn.aboutPageToggle = function(){ 
 			    	$("#aboutme").toggleClass("showpanel");
+			    	$("#aboutme").animate({
+					    scrollTop: 0
+					  }, 1000);
 			    }
 			    $.fn.pressPageToggle = function(){ 
 			    	$("#aboutme").removeClass("showpanel");
