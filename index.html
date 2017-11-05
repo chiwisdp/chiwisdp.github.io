@@ -65,10 +65,10 @@
 		</div>
 		<div id="topmenu" class="topmenu">
 			<div id="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
-			<button id="b_design">Design</button>
-			<button id="b_games">Games</button>
-			<button id="b_about">About me</button>
-			<button id="b_press">Press</button>
+			<button id="b_design" onclick="showDesign()">Design</button>
+			<button id="b_games" onclick="showGames()">Games</button>
+			<button id="b_about" onclick="showAbout()">About me</button>
+			<button id="b_press" onclick="showPress()">Press</button>
 			
 		</div>
 		
@@ -203,9 +203,9 @@
 				div.style.height = window.innerHeight;
 				div.style.background = "white";
 			}, false);
-			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-			document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-			document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+			//document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+			//document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+			//document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 			//camera like unity 
 			//var camera1= new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, .1, 1000);
 			
@@ -601,10 +601,10 @@
 				var b_press = document.getElementById( "b_press" );
 				var b_design = document.getElementById( "b_design" );
 
-				b_games.addEventListener( 'click', function() { showGames() } );
-				b_about.addEventListener( 'click', function() { showAbout() } );
-				b_press.addEventListener( 'click', function() { showPress() } );
-				b_design.addEventListener( 'click', function() { showDesign() } );
+				//b_games.addEventListener( 'click', function() { showGames() } );
+				//b_about.addEventListener( 'click', function() { showAbout() } );
+				//b_press.addEventListener( 'click', function() { showPress() } );
+				//b_design.addEventListener( 'click', function() { showDesign() } );
 
 				//this is the middleBAr
 				div = document.getElementById("divider");
@@ -616,7 +616,7 @@
 				div.style.background = "white";
 				
 
-				
+				//webglContainer.appendChild(div);
 			}
 
 			function showDesign()
