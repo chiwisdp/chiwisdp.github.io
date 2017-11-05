@@ -40,6 +40,7 @@
 				top: 0;
 				left: 0;
 				
+				pointer-events: none;
 			  /* position this canvas at bottom of the other one */
 			}
 			#info {
@@ -132,7 +133,7 @@
 				text-align: center;
 				font-size:2.5em;
 				
-				background-color: yellow;
+				background-color: white;
 				
   				
   				animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
@@ -147,7 +148,7 @@
 			    padding-right: 5%;
 			    padding-bottom: 1%;
 			    padding-left: 5%;
-			    max-height: 30%;
+			    max-height: 70%;
 			    
 				overflow-y: scroll; /* has to be scroll, not auto */
   				-webkit-overflow-scrolling: touch;
