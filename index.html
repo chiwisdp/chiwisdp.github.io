@@ -10,13 +10,12 @@
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="JS/three.js"></script>
+		<script src="JS/Tween.js"></script>
 		
-		
-		
-		
+		<script src="JS/OBJLoader.js"></script>
 		<script src="JS/ExplodeModifier.js"></script>
 		<script src="JS/TessellateModifier.js"></script>
-		
+		<script src="JS/Detector.js"></script>
 		
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	    <link rel="stylesheet" href="css/lightbox.min.css">
@@ -140,7 +139,7 @@
 		</script>
 		
 		<script>
-			//if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			//this is the scene for 3d objects
 			var scene = new THREE.Scene();
 
@@ -234,7 +233,7 @@
 			var leftCurrentCamPosition = leftCamMoveDestination;
 			var rightCamMoveDestination = .5;
 			var rightCurrentCamPosition = rightCamMoveDestination;
-			//var tween = new TWEEN.Tween();
+			var tween = new TWEEN.Tween();
 			var divSize = window.innerWidth*.01;
 			var dirLight, dirLightHeper, hemiLight, hemiLightHelper;
 			var cubeFrame = new THREE.Mesh();
@@ -465,7 +464,7 @@
 				};
 
 				// model
-				/*var loader = new THREE.OBJLoader( manager );
+				var loader = new THREE.OBJLoader( manager );
 				
 				
 				loader.load( 'images/mountain.obj' , function ( object ) {
@@ -591,6 +590,8 @@
 				
 			}
 
+			
+
 			function menuControls(){
 				var b_games = document.getElementById( "b_games" );
 				var b_about = document.getElementById( "b_about" );
@@ -621,7 +622,7 @@
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
 				//tween.start();
 				leftCamMoveDestination =0;
-				/*var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
+				var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
 					.to( { x: rightCamMoveDestination }, 250 )
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
@@ -637,7 +638,7 @@
 						leftCurrentCamPosition =  this.x ;
 					} )
 					.start();
-				console.log('design');*/
+				console.log('design');
 			}
 			function showAbout()
 			{
@@ -645,7 +646,7 @@
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
 				//tween.start();
 				leftCamMoveDestination =-.5;
-				/*var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
+				var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
 					.to( { x: rightCamMoveDestination }, 250 )
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
@@ -682,7 +683,7 @@
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
 				//tween.start();
 				leftCamMoveDestination =-.5;
-				/*var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
+				var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
 					.to( { x: rightCamMoveDestination }, 250 )
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
@@ -700,7 +701,7 @@
 					} )
 					.start();
 					
-				*/
+				
 				console.log('press');
 			}
 			function showGames()
@@ -709,7 +710,7 @@
 				//tween = new TWEEN.Tween(currentPosition).to(backgroundMoveDestination, 2000);
 				//tween.start();
 				leftCamMoveDestination =-1;
-				/*var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
+				var tweenRight = new TWEEN.Tween( { x: rightCurrentCamPosition, } )
 					.to( { x: rightCamMoveDestination }, 250 )
 					.easing( TWEEN.Easing.Quadratic.InOut )
 					.onUpdate( function () {
@@ -726,7 +727,7 @@
 						leftCurrentCamPosition =  this.x ;
 					} )
 					.start();
-				*/
+				
 				console.log('games ');
 			}
 
@@ -740,6 +741,9 @@
 					mouseX = event.touches[ 0 ].pageX - windowHalfX;
 					mouseY = event.touches[ 0 ].pageY - windowHalfY;
 				}
+				var theholder = document.getElementById("aboutme");
+			  theholder.addEventListener( 'touchstart', onDocumentTouchStart, false );
+			
 			}
 			function onDocumentTouchMove( event ) {
 				if ( event.touches.length == 1 ) {
@@ -747,6 +751,10 @@
 					mouseX = event.touches[ 0 ].pageX - windowHalfX;
 					mouseY = event.touches[ 0 ].pageY - windowHalfY;
 				}
+
+			  var theholder = document.getElementById("aboutme");
+			  theholder.addEventListener( 'touchmove', onDocumentTouchMove, false );
+			
 			}
 			var moveScreenRight = function(){
 
@@ -773,7 +781,7 @@
 					
 				}
 
-				//TWEEN.update(  );
+				TWEEN.update(  );
 				
 				uniforms.amplitude.value = 1.0 + Math.sin( time * 0.3 );
 				//console.log('uniforms.amplitude.value: '+ uniforms.amplitude.value);
