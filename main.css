@@ -224,6 +224,239 @@ button {
 		color: white;
 		background-color: rgba(150,150,150,1);
 	}
+.games {
+	position: fixed;
+	transform:translate(12%, 30em);
+	margin: 0 auto;
+	border-radius: 0.1875em 0.1875em 0.1875em 0;
+    width: 70%;
+    padding: 5px 10px;
+	text-align: center;
+	font-size:2.5em;
+	background-color: white;
+	box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+  	padding-top: 1%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	max-height: 70%;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
+	z-index: 2;
+
+  	animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
+  	-webkit-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	-moz-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	-o-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	-ms-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+}
+
+	.games button {
+		background-color: transparent;
+		border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
+		color: rgba(150,150,150,.5);
+		border: 0px;
+		padding: 5px 10px;
+		cursor: pointer;
+		font-family: 'Shrikhand', sans-seriff;
+		font-size: .5em;
+		box-shadow:  0em 0em .25em rgba(100,100,100,.5);
+		z-index:2;
+	}
+
+	.games button:hover {
+		background-color: rgba(0,0,0,1);
+		color: white;
+		}
+
+	.games button:active {
+		color: white;
+		background-color: rgba(150,150,150,1);
+	}
+.design {
+	position: fixed;
+	transform:translate(12%, 30em);
+	margin: 0 auto;
+	border-radius: 0.1875em 0.1875em 0.1875em 0;
+    width: 70%;
+    padding: 5px 10px;
+	text-align: center;
+	font-size:2.5em;
+	background-color: white;
+	box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+  	padding-top: 1%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	max-height: 70%;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
+	z-index: 2;
+
+  	animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
+  	-webkit-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	-moz-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	-o-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	-ms-transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+	transition: all .75s cubic-bezier(.59,1.22,.84,1.13);
+}
+
+	.design button {
+		background-color: transparent;
+		border-radius: 0.1875em 0.1875em 0.1875em 0.1875em;
+		color: rgba(150,150,150,.5);
+		border: 0px;
+		padding: 5px 10px;
+		cursor: pointer;
+		font-family: 'Shrikhand', sans-seriff;
+		font-size: .5em;
+		box-shadow:  0em 0em .25em rgba(100,100,100,.5);
+		z-index:2;
+	}
+
+	.design button:hover {
+		background-color: rgba(0,0,0,1);
+		color: white;
+		}
+
+	.design button:active {
+		color: white;
+		background-color: rgba(150,150,150,1);
+	}
+/*image  links*/
+.imgcontent {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 0.25em;
+  overflow: hidden;
+  border-radius: 0.1875em 0.1875em 0.1875em 0;
+  box-shadow: -0.15em 0.15em 0px 0px rgba(100,100,100,1);
+}
+
+.imgcontent .imgcontent-overlay {
+  background: rgba(0,0,0,0.37);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 0.1875em 0.1875em 0.1875em 0;
+  box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.imgcontent:hover .imgcontent-overlay{
+  opacity: 1;
+}
+
+.imgcontent-image{
+  width: 100%;
+}
+
+.imgcontent-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.imgcontent:hover .imgcontent-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.imgcontent-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.imgcontent-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+
+
+/* Create four equal columns that floats next to each other */
+.imgcolumn {
+    float: left;
+     width: 30%;
+    padding: 10px;
+}
+
+.imgcolumn container{
+ 	margin-top: 12px;
+    border-radius: 0.1875em 0.1875em 0.1875em 0;
+    box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+}
+.imgcolumn img {
+    margin-top: .25em;
+    border-radius: 0.1875em 0.1875em 0.1875em 0;
+    box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+}
+
+/* Clear floats after the columns */
+.imgrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 881px) {
+    .imgcolumn {
+        width: 100%;
+    }
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .imgcolumn {
+        width: 100%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .imgcolumn {
+        width: 100%;
+    }
+}
+
 /* Create two equal columns that floats next to each other for press */
 .column {
     float: left;
@@ -231,13 +464,13 @@ button {
     padding: 1em;
     margin: 0 auto;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .showpanel{
 	transform:translate(12%, 5.25em);
 }
@@ -249,7 +482,6 @@ p{
 	margin: 0 auto;
 	width: 100%;
 	padding-bottom: .75em;
-
 }
 
 h1{
@@ -491,6 +723,15 @@ p a{
 	.aboutme {
 		max-height: 70%;
 	}
+	.press {
+		max-height: 70%;
+	}
+	.games {
+		max-height: 70%;
+	}
+	.design {
+		max-height: 70%;
+	}
 	.showpanel{
 		transform:translate(12%, 4.5em);
 	}
@@ -529,6 +770,21 @@ p a{
 			max-height: 70%;
 			overflow-y: scroll; /* has to be scroll, not auto */
   			-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 70%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 70%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		max-height: 70%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
 	}
 	.topmenu{
 			transform: translate(0%, 1.5em);
@@ -571,6 +827,21 @@ p a{
 		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	.aboutme {
+		max-height: 70%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 70%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 70%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
 		max-height: 70%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
@@ -630,6 +901,21 @@ p a{
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
+	.press {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
 
 }
 @media screen and (max-width: 265px) {
@@ -643,6 +929,21 @@ p a{
 		transform:translate(12%, 6em);
 	}
 	.aboutme {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
 		max-height: 60%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
@@ -671,6 +972,21 @@ p a{
 		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	.aboutme {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
 		max-height: 65%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;

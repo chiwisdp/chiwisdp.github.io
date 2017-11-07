@@ -26,25 +26,39 @@
 
 			    $.fn.designPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
+			    	$("#games").removeClass("showpanel");
 			    	$("#press").removeClass("showpanel");
+			    	$("#design").toggleClass("showpanel");
+			    	$("#design").animate({
+					    scrollTop: 0
+					  }, 200);
 			    }
 			    $.fn.gamePageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
+			    	$("#design").removeClass("showpanel");
 			    	$("#press").removeClass("showpanel");
+			    	$("#games").toggleClass("showpanel");
+			    	$("#games").animate({
+					    scrollTop: 0
+					  }, 200);
 			    }
 			    $.fn.aboutPageToggle = function(){
 			    	$("#aboutme").toggleClass("showpanel");
+			    	$("#games").removeClass("showpanel");
+			    	$("#design").removeClass("showpanel");
 			    	$("#press").removeClass("showpanel");
 			    	$("#aboutme").animate({
 					    scrollTop: 0
-					  }, 1000);
+					  }, 200);
 			    }
 			    $.fn.pressPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
+			    	$("#games").removeClass("showpanel");
+			    	$("#design").removeClass("showpanel");
 			    	$("#press").toggleClass("showpanel");
 			    	$("#press").animate({
 					    scrollTop: 0
-					  }, 1000);
+					  }, 200);
 			    }
 
 			    $("#b_design").click(function(){
@@ -64,6 +78,12 @@
 			    });
 			    $("#pressclose").click(function(){
 					$.fn.pressPageToggle();
+			    });
+			     $("#gamesclose").click(function(){
+					$.fn.gamePageToggle();
+			    });
+			      $("#designclose").click(function(){
+					$.fn.designPageToggle();
 			    });
 
 			});
@@ -159,6 +179,171 @@
 
 			<div>
 				<button id ="pressclose">Look at the cool background</button>
+			</div>
+		</div>
+		<div id="games" class="Games">
+			<div>
+				<h2>Games</h2>
+			</div>
+			
+			<div>
+				<h3>Games I've made!</h3>
+			</div>
+
+			<div>
+				<div class="imgrow">
+					<div class="imgcolumn">
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Cold Email</h3>
+								</div>
+							</a>
+						</div>
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Dynamice</h3>
+								</div>
+							</a>
+						</div>
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Monoverse</h3>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="imgcolumn">
+						
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Dig Quest: Israel</h3>
+								</div>
+							</a>
+						</div>
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Type Set</h3>
+								</div>
+							</a>
+						</div>
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Spectre</h3>
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+					<div class="imgcolumn">
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Shaq Sky Slam</h3>
+								</div>
+							</a>
+						</div>
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Touch Lightning</h3>
+								</div>
+							</a>
+						</div>
+						<div class="imgcontent">
+							<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+								<div class="imgcontent-overlay"></div>
+								<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+								<div class="imgcontent-details fadeIn-bottom">
+									<h3 class="imgcontent-title">Kid The World Saver</h3>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div>
+				<button id ="gamesclose">Look at the cool background</button>
+			</div>
+		</div>
+		<!-- Photo Grid -->
+		<div id="design" class = "design">
+			<div>
+				<h2>Design</h2>
+			</div>
+
+			<div>
+				<h3>Some graphic design</h3>
+			</div>
+
+			<div class="imgrow">
+				<div class="imgcolumn">
+					<div class="imgcontent">
+						<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+							<div class="imgcontent-overlay"></div>
+							<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+							<div class="imgcontent-details fadeIn-bottom">
+								<h3 class="imgcontent-title">This is a title</h3>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="imgcolumn">
+					
+					<div class="imgcontent">
+						<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+							<div class="imgcontent-overlay"></div>
+							<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+							<div class="imgcontent-details fadeIn-bottom">
+								<h3 class="imgcontent-title">This is a title</h3>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="imgcolumn">
+					<div class="imgcontent">
+						<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+							<div class="imgcontent-overlay"></div>
+							<img class="imgcontent-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+							<div class="imgcontent-details fadeIn-bottom">
+								<h3 class="imgcontent-title">This is a title</h3>
+							</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div>
+				<button id ="designclose">Look at the cool background</button>
 			</div>
 		</div>
 
