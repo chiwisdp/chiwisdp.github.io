@@ -7,37 +7,44 @@
 		<style>
 		@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Shrikhand');
 		</style>
-		
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="JS/three.js"></script>
 		<script src="JS/Tween.js"></script>
-		
+
 		<script src="JS/OBJLoader.js"></script>
 		<script src="JS/ExplodeModifier.js"></script>
 		<script src="JS/TessellateModifier.js"></script>
 		<script src="JS/Detector.js"></script>
-		
+
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	    <link rel="stylesheet" href="css/lightbox.min.css">
 	    <link rel="stylesheet" type="text/css" href="main.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
-			    
-			    $.fn.designPageToggle = function(){ 
+
+			    $.fn.designPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
+			    	$("#press").removeClass("showpanel");
 			    }
-			    $.fn.gamePageToggle = function(){ 
+			    $.fn.gamePageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
+			    	$("#press").removeClass("showpanel");
 			    }
-			    $.fn.aboutPageToggle = function(){ 
+			    $.fn.aboutPageToggle = function(){
 			    	$("#aboutme").toggleClass("showpanel");
+			    	$("#press").removeClass("showpanel");
 			    	$("#aboutme").animate({
 					    scrollTop: 0
 					  }, 1000);
 			    }
-			    $.fn.pressPageToggle = function(){ 
+			    $.fn.pressPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
+			    	$("#press").toggleClass("showpanel");
+			    	$("#press").animate({
+					    scrollTop: 0
+					  }, 1000);
 			    }
 
 			    $("#b_design").click(function(){
@@ -55,26 +62,29 @@
 			    $("#aboutmeclose").click(function(){
 					$.fn.aboutPageToggle();
 			    });
+			    $("#pressclose").click(function(){
+					$.fn.pressPageToggle();
+			    });
 
 			});
 		</script>
-	    
+
 	</head>
 
 	<body>
 		<div id="container">
 		  <div id="webglContainer"></div>
-		  
+
 		</div>
 		<div id="topmenu" class="topmenu">
-			<div id="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
+			<div id="logo" class="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
 			<button id="b_design" onclick="showDesign()">Design</button>
 			<button id="b_games" onclick="showGames()">Games</button>
 			<button id="b_about" onclick="showAbout()">About me</button>
 			<button id="b_press" onclick="showPress()">Press</button>
-			
+
 		</div>
-		
+
 		<div id="aboutme" class="aboutme">
 			<div>
 				<h2>About me</h2>
@@ -82,7 +92,7 @@
 			<div>
 				<h3>Designing one pixel at a time...</h3>
 			</div>
-			
+
 			<div>
 				<div class="clearfix">
 					<div id="gallerywrapper">
@@ -92,7 +102,7 @@
 						</section>
 					</div>
 					<p>From a young age, Daniel knew that he wanted to be part of the creative industry. He made that dream a reality after getting an MFA from <a href="https://cinema.usc.edu/interactive/" rel="noopener noreferrer" target="_blank">USC's Interactive Media Division.</a></p>
-					
+
 					<p>Daniel Co-Founded <a href="https://craterhouse.com" rel="noopener noreferrer" target="_blank">Crater House</a> with <a href="http://www.funwithbill.net/" rel="noopener noreferrer" target="_blank">Bill Graner</a> and other alumni of USC's Interactive Media Division. There they created exciting, uniquely creative apps and intellectual properties for international brands-including Shaq Sky Slam for Shaquille O'Neal, and original design and development for The Israel Antiquities Authority, Tyson Chicken, Kraken Rum, and the California Indian Museum and Cultural Center.</p>
 
 					<p>Daniel does Interactive Design, UI/UX, and front-end development. He makes sure products look and feel amazing. He likes making weird and wacky games with an offbeat sense of humor in his spare time.</p>
@@ -112,12 +122,48 @@
 				<button id ="aboutmeclose">Look at the cool background</button>
 			</div>
 		</div>
-		
+
+		<div id="press" class="press">
+			<div>
+				<h2>Awards & Press</h2>
+			</div>
+			
+			<div>
+				<h3>Some accolades!</h3>
+			</div>
+
+			<div>
+				<div class="clearfix">
+					<div class="row">
+					  <div class="column" >
+					    <h2>Awards</h2>
+					    <p>2017 My Famicase Exhibition : Rusty Blade</p>
+					    <p>2012 San Francisco Global Game Jam : Most Polish For Dynamice</p>
+						<p>2010 Independent Games Festival Student Showcase Winner For Spectre</p>
+						<p>2009 Indiecade Finalist For Spectre</p>
+						<p>2009 Independent Games Festival Student Showcase Winner For Kid the World Saver</p>
+						<p>2007 California Governor’s Safety Award For Disaster Zone</p>
+					  </div>
+					  <div class="column" >
+					    <h2>Press</h2>
+					    <p>PC Gamer Magazine Issue #280 July 2016 Top 10 Downloads : Cold Email</p>
+						<p>PCGamer.com March 2016 : Cold Email</p>
+						<p><a href="https://www.rockpapershotgun.com/2016/03/12/best-free-games-of-the-week-15/" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Rock Paper Shotgun</a>: Cold Email</p>
+						<p><a href="http://indiegames.com/2016/03/cold_email_-_a_game_about_cont.html" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Indiegames.com</a>: Cold Email</p>
+						<p><a href="https://www.youtube.com/watch?v=X1Bi6Q-fp2E&feature=youtu.be&t=4m47s" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Pewdiepie</a>: Cold Email</p>
+						<p><a href="http://indiegames.com/2011/12/daniel_ponce_creates_a_type_se.html" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Indiegames.com</a>: Type Set</p>
+					  </div>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<button id ="pressclose">Look at the cool background</button>
+			</div>
+		</div>
+
 		<div id="divider" class="square"></div>
-		
-		
-		
-		
+
 		<script type="x-shader/x-vertex" id="vertexshader">
 			uniform float amplitude;
 			attribute vec3 customColor;
@@ -143,13 +189,13 @@
 				gl_FragColor = vec4( ( directional + ambient ) * vColor, 1.0 );
 			}
 		</script>
-		
+
 		<script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			//this is the scene for 3d objects
 			var scene = new THREE.Scene();
 
-			
+
 			var mouseX = 0;
 			var mouseY = 0;
 
