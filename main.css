@@ -125,10 +125,10 @@ button {
 
 .aboutme {
 	position: fixed;
-	transform:translate(12%, 30em);
+	transform:translate(25%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 70%;
+    width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -176,10 +176,10 @@ button {
 
 .press {
 	position: fixed;
-	transform:translate(12%, 30em);
+	transform:translate(25%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 70%;
+    width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -226,10 +226,10 @@ button {
 	}
 .games {
 	position: fixed;
-	transform:translate(12%, 30em);
+	transform:translate(25%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 70%;
+    width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -276,10 +276,10 @@ button {
 	}
 .design {
 	position: fixed;
-	transform:translate(12%, 30em);
+	transform:translate(25%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 70%;
+    width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -324,6 +324,53 @@ button {
 		color: white;
 		background-color: rgba(150,150,150,1);
 	}
+.gamescontainer{
+	position: fixed;
+	transform:translate(25%, 5.25em);
+	margin: 0 auto;
+	border-radius: 0.1875em 0.1875em 0.1875em 0;
+    width: 55%;
+    padding: 5px 10px;
+	text-align: center;
+	font-size:2.5em;
+	background-color: white;
+	box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
+  	padding-top: 1%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	height: 70%;
+	max-height: 70%;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
+	z-index: 10;
+	
+	opacity: 0;
+    pointer-events: none;
+
+	-webkit-transition: opacity .75s cubic-bezier(.59,1.22,.84,1.13);
+	-moz-transition: opacity .75s cubic-bezier(.59,1.22,.84,1.13);
+	-o-transition: opacity .75s cubic-bezier(.59,1.22,.84,1.13);
+	-ms-transition: opacity .75s cubic-bezier(.59,1.22,.84,1.13);
+	transition: opacity .75s cubic-bezier(.59,1.22,.84,1.13);
+}
+.showgamescontainer {
+ 	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}
+.elementToFadeInAndOut {
+    opacity: 1;
+    animation: fade 2s linear;
+    animation: fade  .75s cubic-bezier(.59,1.22,.84,1.13);
+}
+
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
 /*image  links*/
 .imgcontent {
   position: relative;
@@ -438,7 +485,7 @@ button {
     display: table;
     clear: both;
 }
-@media (max-width: 881px) {
+@media (max-width: 950px) {
     .imgcolumn {
         width: 100%;
     }
@@ -460,7 +507,7 @@ button {
 /* Create two equal columns that floats next to each other for press */
 .column {
     float: left;
-    width: 40%;
+    width: 35%;
     padding: 1em;
     margin: 0 auto;
 }
@@ -472,7 +519,7 @@ button {
 }
 
 .showpanel{
-	transform:translate(12%, 5.25em);
+	transform:translate(25%, 5.25em);
 }
 
 p{
@@ -632,6 +679,7 @@ p a{
    transform: translate(12%, 30em);
   }
 }
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1304px) {
   .logo{
@@ -640,19 +688,43 @@ p a{
 	h3 {
 			font-size: .5em;
 	}
-
+	.design {
+		transform:translate(15%, 30em);
+	    width: 65%;
+	}
+	.aboutme {
+		transform:translate(15%, 30em);
+	    width: 65%;
+	}
+	.press {
+		transform:translate(15%, 30em);
+	    width: 65%;
+	}
+	.games {
+		transform:translate(15%, 30em);
+	    width: 65%;
+	}
 	.profilepic{
 		width: 15%;
 		float: left;
 		margin-right: 3%;
 	}
+	.gamescontainer{
+		width: 65%;
+		transform:translate(15%, 4.65em);
+	}
 	.showpanel{
-		transform:translate(12%, 4.65em);
+		transform:translate(15%, 4.65em);
+	}
+	.column {
+	    float: left;
+	    width: 35%;
+	    padding: 1em;
+	    margin: 0 auto;
 	}
 }
 @media screen and (max-width: 1167px) {
 	.column {
-	    
 	    width: 80%;
 	    padding: 1em;
 	    margin: 0 auto;
@@ -676,8 +748,33 @@ p a{
 		float: left;
 		margin-right: 3%;
 	}
+	.design {
+		transform:translate(15%, 30em);
+	    width: 70%;
+	}
+	.aboutme {
+		transform:translate(15%, 30em);
+	    width: 70%;
+	}
+	.press {
+		transform:translate(15%, 30em);
+	    width: 70%;
+	}
+	.games {
+		transform:translate(15%, 30em);
+	    width: 70%;
+	}
+	.profilepic{
+		width: 15%;
+		float: left;
+		margin-right: 3%;
+	}
+	.gamescontainer{
+		width: 70%;
+		transform:translate(15%, 4.5em);
+	}
 	.showpanel{
-		transform:translate(12%, 4.5em);
+		transform:translate(15%, 4.5em);
 	}
 }
 
@@ -698,6 +795,10 @@ p a{
 		width: 25%;
 		float: left;
 		margin-right: 3%;
+	}
+	.gamescontainer{
+		
+		transform:translate(12%, 4em);
 	}
 	.showpanel{
 		transform:translate(12%, 4em);
@@ -736,6 +837,10 @@ p a{
 	}
 	.design {
 		max-height: 70%;
+	}
+	.gamescontainer{
+		
+		transform:translate(12%, 4.5em);
 	}
 	.showpanel{
 		transform:translate(12%, 4.5em);
@@ -792,11 +897,15 @@ p a{
   		-webkit-overflow-scrolling: touch;
 	}
 	.topmenu{
-			transform: translate(0%, 1.5em);
-			width: 100%;
+		transform: translate(0%, 1.5em);
+		width: 100%;
+	}
+	.gamescontainer{
+		
+		transform:translate(12%, 4.25em);
 	}
 	.showpanel{
-			transform:translate(12%, 4.25em);
+		transform:translate(12%, 4.25em);
 	}
 
 	.profilepic{
@@ -855,6 +964,10 @@ p a{
 		transform: translate(0%, 1.5em);
 		width: 100%;
 	}
+	.gamescontainer{
+		
+		transform:translate(12%, 3.75em);
+	}
 	.showpanel{
 		transform:translate(12%, 3.75em);
 	}
@@ -901,6 +1014,10 @@ p a{
 	.showpanel{
 		transform:translate(12%, 6.5em);
 	}
+	.gamescontainer{
+		
+		transform:translate(12%, 6.5em);
+	}
 	.aboutme {
 		max-height: 60%;
 		overflow-y: scroll; /* has to be scroll, not auto */
@@ -931,6 +1048,10 @@ p a{
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
+		transform:translate(12%, 6em);
+	}
+	.gamescontainer{
+		
 		transform:translate(12%, 6em);
 	}
 	.aboutme {
@@ -999,6 +1120,10 @@ p a{
 	.topmenu{
 		transform: translate(0%, 1.5em);
 		width: 100%;
+	}
+	.gamescontainer{
+		
+		transform:translate(12%, 5.5em);
 	}
 	.showpanel{
 		transform:translate(12%, 5.5em);

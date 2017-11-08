@@ -28,6 +28,10 @@
 			    	$("#aboutme").removeClass("showpanel");
 			    	$("#games").removeClass("showpanel");
 			    	$("#press").removeClass("showpanel");
+			    	
+			    	//games pages
+			    	$("#coldpage").removeClass("showgamescontainer");
+			    	//functionality
 			    	$("#design").toggleClass("showpanel");
 			    	$("#design").animate({
 					    scrollTop: 0
@@ -37,6 +41,10 @@
 			    	$("#aboutme").removeClass("showpanel");
 			    	$("#design").removeClass("showpanel");
 			    	$("#press").removeClass("showpanel");
+			    	
+			    	//games pages
+			    	$("#coldpage").removeClass("showgamescontainer");
+			    	//functionality
 			    	$("#games").toggleClass("showpanel");
 			    	$("#games").animate({
 					    scrollTop: 0
@@ -47,6 +55,9 @@
 			    	$("#games").removeClass("showpanel");
 			    	$("#design").removeClass("showpanel");
 			    	$("#press").removeClass("showpanel");
+			    	//games pages
+			    	$("#coldpage").removeClass("showgamescontainer");
+			    	//functionality
 			    	$("#aboutme").animate({
 					    scrollTop: 0
 					  }, 200);
@@ -55,10 +66,28 @@
 			    	$("#aboutme").removeClass("showpanel");
 			    	$("#games").removeClass("showpanel");
 			    	$("#design").removeClass("showpanel");
+
+			    	//games pages
+			    	$("#coldpage").removeClass("showgamescontainer");
+			    	//functionality
 			    	$("#press").toggleClass("showpanel");
 			    	$("#press").animate({
 					    scrollTop: 0
 					  }, 200);
+			    }
+			   	//individual games pages
+			    $.fn.coldPageToggle = function(){
+			    	$("#aboutme").removeClass("showpanel");
+			    	$("#design").removeClass("showpanel");
+			    	$("#press").removeClass("showpanel");
+			    	//games pages
+			    	
+			    	//functionality
+			    	$("#coldpage").toggleClass("showgamescontainer");
+			    	console.log('dafsdafds');
+			    	$("#coldpage").animate({
+					    scrollTop: 0
+					  }, 100);
 			    }
 
 			    $("#b_design").click(function(){
@@ -79,11 +108,19 @@
 			    $("#pressclose").click(function(){
 					$.fn.pressPageToggle();
 			    });
-			     $("#gamesclose").click(function(){
+			    $("#gamesclose").click(function(){
 					$.fn.gamePageToggle();
 			    });
-			      $("#designclose").click(function(){
+			    $("#designclose").click(function(){
 					$.fn.designPageToggle();
+			    });
+
+
+			    $("#coldpagetoggle").click(function(){
+					$.fn.coldPageToggle();
+			    });
+			    $("#coldpageclose").click(function(){
+					$.fn.coldPageToggle();
 			    });
 
 			});
@@ -197,42 +234,19 @@
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/0.gif" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/coldemail/0.gif" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="coldpagetoggle"><img class="example-image" src="Images/games/coldemail/0.gif" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/dynamice/Dynamice.png" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/dynamice/Dynamice.png" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="dynapage"><img class="example-image" src="Images/games/dynamice/Dynamice.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/mono/mono.png" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/mono/mono.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqlogo.png" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/touch/TLShot1.png" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/touch/TLShot1.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/spectre/Spectre_Wallpaper_Text.jpg" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/spectre/Spectre_Wallpaper_Text.jpg" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="monopage"><img class="example-image" src="Images/games/mono/mono.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
@@ -243,21 +257,44 @@
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/sss/sssScreen1.png" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/sss/sssScreen1.png" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="dqpage"><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="touchpage"><img class="example-image" src="Images/games/touch/stormynight-logo.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="spectrepage"><img class="example-image" src="Images/games/spectre/Spectre_Wallpaper_Text.jpg" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+
+					</div>
+
+					<div class="imgcolumn">
+
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="shaqpage"><img class="example-image" src="Images/games/sss/sssScreen1.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/typeset/8.png" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/typeset/8.png" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="typepage"><img class="example-image" src="Images/games/typeset/8.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/kid/hqdefault.jpg" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/kid/hqdefault.jpg" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="kidpage"><img class="example-image" src="Images/games/kid/hqdefault.jpg" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
@@ -285,7 +322,7 @@
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
 						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/rusty/Famicom case just sticker.png" data-lightbox="design" data-title="You zoomed in on my face" ><img class="example-image" src="Images/design/rusty/Famicom case just sticker.png" alt="My face" title="Stare into my soul"></a>
+							<a class="example-image-link" id="famipage"  ><img class="example-image" src="Images/design/rusty/Famicom case just sticker.png" alt="My face" title="Stare into my soul"></a>
 						</section>
 					</div>
 				</div>
@@ -295,7 +332,7 @@
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
 						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqlogo.png" data-lightbox="design" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
+							<a class="example-image-link" id="journeypage"  ><img class="example-image" src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
 						</section>
 					</div>
 
@@ -305,7 +342,7 @@
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
 						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqlogo.png" data-lightbox="design" data-title="You zoomed in on my face" ><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
+							<a class="example-image-link" id="craterpage" ><img class="example-image" src="Images/design/craterhouse/CH Logo Square.png" alt="My face" title="Stare into my soul"></a>
 						</section>
 					</div>
 				</div>
@@ -317,6 +354,53 @@
 			</div>
 		</div>
 
+		<!--individual games end -->
+		<div id="coldpage" class = "gamescontainer">
+			<div>
+				<h2>Cold Email</h2>
+			</div>
+
+			<div>
+				<h3>Design | Art | Programming</h3>
+			</div>
+
+			<div class="imgrow">
+				<div class="imgcolumn">
+					<div id="gallerywrapper">
+						<!--gallery row 1 start -->
+						<section class="workselect">
+							<a class="example-image-link" id="famipage"  ><img class="example-image" src="Images/design/rusty/Famicom case just sticker.png" alt="My face" title="Stare into my soul"></a>
+						</section>
+					</div>
+				</div>
+
+				<div class="imgcolumn">
+
+					<div id="gallerywrapper">
+						<!--gallery row 1 start -->
+						<section class="workselect">
+							<a class="example-image-link" id="journeypage"  ><img class="example-image" src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
+						</section>
+					</div>
+
+				</div>
+
+				<div class="imgcolumn">
+					<div id="gallerywrapper">
+						<!--gallery row 1 start -->
+						<section class="workselect">
+							<a class="example-image-link" id="craterpage" ><img class="example-image" src="Images/design/craterhouse/CH Logo Square.png" alt="My face" title="Stare into my soul"></a>
+						</section>
+					</div>
+				</div>
+
+			</div>
+
+			<div>
+				<button id ="coldpageclose">Look at the cool background</button>
+			</div>
+		</div>
+		<!-- individual games end-->
 		<div id="divider" class="square"></div>
 
 		<script type="x-shader/x-vertex" id="vertexshader">
