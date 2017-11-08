@@ -592,6 +592,11 @@ p a{
 	float: left;
 	margin-right: 3%;
 }
+.workselect{
+	width: 100%;
+	float: left;
+	margin-right: 3%;
+}
 #gallerywrapper img:hover{
 	opacity: .8;
 }
