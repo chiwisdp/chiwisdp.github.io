@@ -23,7 +23,7 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
-
+				var isagamepageshowing = 0;
 			    $.fn.designPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
 			    	$("#games").removeClass("showpanel");
@@ -31,6 +31,7 @@
 			    	
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
+			    	isagamepageshowing = 0;
 			    	//functionality
 			    	$("#design").toggleClass("showpanel");
 			    	$("#design").animate({
@@ -45,10 +46,13 @@
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	//functionality
-			    	$("#games").toggleClass("showpanel");
-			    	$("#games").animate({
-					    scrollTop: 0
-					  }, 200);
+			    	if(isagamepageshowing<1)
+			    	{
+				    	$("#games").toggleClass("showpanel");
+				    	$("#games").animate({
+						    scrollTop: 0
+						  }, 200);
+				    }
 			    }
 			    $.fn.aboutPageToggle = function(){
 			    	$("#aboutme").toggleClass("showpanel");
@@ -57,6 +61,7 @@
 			    	$("#press").removeClass("showpanel");
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
+			    	isagamepageshowing = 0;
 			    	//functionality
 			    	$("#aboutme").animate({
 					    scrollTop: 0
@@ -69,6 +74,7 @@
 
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
+			    	isagamepageshowing = 0;
 			    	//functionality
 			    	$("#press").toggleClass("showpanel");
 			    	$("#press").animate({
@@ -84,10 +90,21 @@
 			    	
 			    	//functionality
 			    	$("#coldpage").toggleClass("showgamescontainer");
-			    	console.log('dafsdafds');
+			    	
 			    	$("#coldpage").animate({
 					    scrollTop: 0
 					  }, 100);
+
+			    	if($("#coldpage").attr('class') =='gamescontainer showgamescontainer')
+			    	{
+			    		isagamepageshowing = 1;
+			    		console.log('show');
+			    	}
+			    	else{
+			    		isagamepageshowing = 0;
+			    		console.log('close');
+			    	}
+					
 			    }
 
 			    $("#b_design").click(function(){
@@ -115,7 +132,7 @@
 					$.fn.designPageToggle();
 			    });
 
-
+			    //games pages
 			    $("#coldpagetoggle").click(function(){
 					$.fn.coldPageToggle();
 			    });
