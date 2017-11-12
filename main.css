@@ -1472,5 +1472,183 @@ p a{
 	}
 }
 
+@media screen and (max-height: 630px) {
+    .logo{
+		font-size:1.5em;
+	}
+	.logo h3{
+		font-size:.65em;
+	}
+	button {
+		font-size: .95em;
+		padding: 3px 5px;
+		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
+	}
+	.aboutme {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		max-height: 65%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	
+	.gamescontainer{
+		max-height: 65%;
+		transform:translate(12%, 4em);
+	}
+	.showpanel{
+		transform:translate(12%, 4em);
+	}
+
+	
+}
+@media screen and (max-height: 519px) {
+    .logo{
+		font-size:1.25em;
+	}
+	.logo h3{
+		font-size:.65em;
+	}
+	button {
+		font-size: .95em;
+		padding: 3px 5px;
+		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
+	}
+	.aboutme {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 60%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		3.7
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	
+	.gamescontainer{
+		max-height: 60%;
+		transform:translate(12%, 3.7em);
+	}
+	.showpanel{
+		transform:translate(12%, 3.7em);
+	}
+
+	
+}
+@media screen and (max-height: 519px) {
+    .logo{
+		font-size:1em;
+	}
+	.logo h3{
+		font-size:.65em;
+	}
+	button {
+		font-size: .95em;
+		padding: 3px 5px;
+		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
+	}
+	.aboutme {
+		max-height: 50%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 50%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 50%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		max-height: 50%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	
+	.gamescontainer{
+		max-height: 50%;
+		transform:translate(12%, 3.7em);
+	}
+	.showpanel{
+		transform:translate(12%, 3.7em);
+	}
+
+	
+}
+@media screen and (max-height: 320px) {
+    .logo{
+		font-size:1em;
+	}
+	.logo h3{
+		font-size:.65em;
+	}
+	button {
+		font-size: .95em;
+		padding: 3px 5px;
+		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
+	}
+	.aboutme {
+		max-height: 40%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 40%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 40%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		max-height: 40%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	
+	.gamescontainer{
+		max-height: 40%;
+		transform:translate(12%, 3.7em);
+	}
+	.showpanel{
+		transform:translate(12%, 3.7em);
+	}
+
+	
+}
+
+
 
 
