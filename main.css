@@ -1584,10 +1584,10 @@ p a{
 	
 	.gamescontainer{
 		max-height: 45%;
-		transform:translate(12%, 3.7em);
+		transform:translate(12%, 3em);
 	}
 	.showpanel{
-		transform:translate(12%, 3.7em);
+		transform:translate(12%, 3em);
 	}
 
 	
@@ -1628,10 +1628,10 @@ p a{
 	
 	.gamescontainer{
 		max-height: 40%;
-		transform:translate(12%, 3.7em);
+		transform:translate(12%, 3em);
 	}
 	.showpanel{
-		transform:translate(12%, 3.7em);
+		transform:translate(12%, 3em);
 	}
 
 	
