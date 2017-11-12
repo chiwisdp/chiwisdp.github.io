@@ -1123,10 +1123,7 @@ p a{
     .logo{
 		font-size:1.75em;
 	}
-	.topmenu{
-		transform: translate(0%, 1em);
-		width: 100%;
-	}
+	
 	h3 {
 		font-size: .55em;
 	}
@@ -1158,16 +1155,7 @@ p a{
 	.showpanel{
 		transform:translate(12%, 4.5em);
 	}
-	@keyframes slideinmenu {
-
-	  from {
-	    transform: translate(0%, -20em);
-	  }
-
-	  to {
-	   transform: translate(0%, 1em);
-	  }
-	}
+	
 }
 @media screen and (max-width: 1167px) {
 	.column {
@@ -1574,28 +1562,28 @@ p a{
 		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	.aboutme {
-		max-height: 50%;
+		max-height: 45%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	.press {
-		max-height: 50%;
+		max-height: 45%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	.games {
-		max-height: 50%;
+		max-height: 45%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	.design {
-		max-height: 50%;
+		max-height: 45%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	
 	.gamescontainer{
-		max-height: 50%;
+		max-height: 45%;
 		transform:translate(12%, 3.7em);
 	}
 	.showpanel{
