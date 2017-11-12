@@ -93,7 +93,7 @@ canvas{
   	animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
 	z-index: 3;
 	-webkit-animation-delay: 4.75s; /* Safari 4.0 - 8.0 */
-    animation-delay:4.75s;
+    animation-delay:5.25s;
 }
 
 button {
