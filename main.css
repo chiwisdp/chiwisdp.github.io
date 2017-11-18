@@ -93,7 +93,7 @@ canvas{
   	animation-timing-function: cubic-bezier(.59,1.22,.84,1.13);
 	z-index: 3;
 	-webkit-animation-delay: 4.75s; /* Safari 4.0 - 8.0 */
-    animation-delay:5.75s;
+    animation-delay:7.5s;
 }
 
 button {
@@ -151,13 +151,14 @@ button {
 
 .aboutme {
 	position: fixed;
-	transform:translate(25%, 30em);
+	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
     width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
+	left: 50%;
 	background-color: white;
 	box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
   	padding-top: 1%;
@@ -202,13 +203,15 @@ button {
 
 .press {
 	position: fixed;
-	transform:translate(25%, 30em);
+	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
     width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
+	margin:0 auto;
+	left: 50%;
 	background-color: white;
 	box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
   	padding-top: 1%;
@@ -252,13 +255,14 @@ button {
 	}
 .games {
 	position: fixed;
-	transform:translate(25%, 30em);
-	margin: 0 auto;
+	transform:translate(-50%, 30em);
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
     width: 55%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
+	margin:0 auto;
+	left: 50%;
 	background-color: white;
 	box-shadow: -0.1em 0.1em 0px 0px rgba(100,100,100,1);
   	padding-top: 1%;
@@ -302,10 +306,12 @@ button {
 	}
 .design {
 	position: fixed;
-	transform:translate(25%, 30em);
+	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 55%;
+    width: 25%;
+    margin:0 auto;
+	left: 50%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -352,10 +358,11 @@ button {
 	}
 .gamescontainer{
 	position: fixed;
-	transform:translate(25%, 5.25em);
+	transform:translate(-50%, 5.25em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
     width: 55%;
+	left: 50%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -420,6 +427,7 @@ button {
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
     width: 100%;
+	left: 50%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -693,7 +701,15 @@ button {
 .imgcolumn {
     float: left;
      width: 30%;
-    padding: 10px;
+    padding: .25em;
+}
+.imgrowdesign{
+	 margin: 0 auto;
+}
+.imgcolumndesignpage {
+    margin: 0 auto;
+     width: 100%;
+    
 }
 
 .imgcolumn container{
@@ -747,7 +763,10 @@ button {
 }
 
 .showpanel{
-	transform:translate(25%, 5.25em);
+	transform:translate(-50%, 5.25em);
+}
+.showpaneldesign{
+	transform:translate(-50%, 5.25em);
 }
 
 p{
@@ -866,7 +885,7 @@ p a{
 .workselect{
 	width: 100%;
 	float: left;
-	margin-right: 3%;
+	margin-right: 0%;
 	margin-bottom: .5em;
 }
 #headerpicwrapper{
@@ -994,27 +1013,27 @@ p a{
 }
 }
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 1316px) {
   .logo{
-			font-size:2.5em;
+			font-size:2em;
 	}
 	h3 {
 			font-size: .5em;
 	}
 	.design {
-		transform:translate(15%, 30em);
-	    width: 65%;
+		transform:translate(-50%, 30em);
+	    width: 30%;
 	}
 	.aboutme {
-		transform:translate(15%, 30em);
+		transform:translate(-50%, 30em);
 	    width: 65%;
 	}
 	.press {
-		transform:translate(15%, 30em);
+		transform:translate(-50%, 30em);
 	    width: 65%;
 	}
 	.games {
-		transform:translate(15%, 30em);
+		transform:translate(-50%, 30em);
 	    width: 65%;
 	}
 	.profilepic{
@@ -1024,10 +1043,13 @@ p a{
 	}
 	.gamescontainer{
 		width: 65%;
-		transform:translate(15%, 4.65em);
+		transform:translate(-50%, 4.65em);
 	}
 	.showpanel{
-		transform:translate(15%, 4.65em);
+		transform:translate(-50%, 4.65em);
+	}
+	.showpaneldesign{
+		transform:translate(-50%, 5.25em);
 	}
 	.column {
 	    float: left;
@@ -1062,19 +1084,19 @@ p a{
 		margin-right: 3%;
 	}
 	.design {
-		transform:translate(15%, 30em);
-	    width: 70%;
+		transform:translate(-50%, 30em);
+	    width: 30%;
 	}
 	.aboutme {
-		transform:translate(15%, 30em);
+		transform:translate(-50%, 30em);
 	    width: 70%;
 	}
 	.press {
-		transform:translate(15%, 30em);
+		transform:translate(-50%, 30em);
 	    width: 70%;
 	}
 	.games {
-		transform:translate(15%, 30em);
+		transform:translate(-50%, 30em);
 	    width: 70%;
 	}
 	.profilepic{
@@ -1084,14 +1106,17 @@ p a{
 	}
 	.gamescontainer{
 		width: 70%;
-		transform:translate(15%, 4.5em);
+		transform:translate(-50%, 4.5em);
 	}
 	.showpanel{
-		transform:translate(15%, 4.5em);
+		transform:translate(-50%, 4.5em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 4.5em);
 	}
 }
 
-@media screen and (max-width: 894px) {
+@media screen and (max-width: 905px) {
 
 	button {
 		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
@@ -1111,10 +1136,17 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 4em);
+		transform:translate(-50%, 4em);
 	}
 	.showpanel{
-		transform:translate(12%, 4em);
+		transform:translate(-50%, 4em);
+	}
+	.design {
+		transform:translate(-50%, 30em);
+	    width: 60%;
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 4em);
 	}
 }
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -1128,7 +1160,7 @@ p a{
 		font-size: .55em;
 	}
 	button {
-		font-size: 1.15em;
+		font-size: 1em;
 		margin: 0.6125em 0.025em 0.025em 0.05em; /* 10 / 1980 */
 	}
 	.profilepic{
@@ -1150,10 +1182,53 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 4.5em);
+		transform:translate(-50%, 4.5em);
 	}
 	.showpanel{
-		transform:translate(12%, 4.5em);
+		transform:translate(-50%, 4.5em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 4.5em);
+	}
+}
+@media screen and (max-width: 691px) {
+    .logo{
+		font-size:1.5em;
+	}
+	
+	h3 {
+		font-size: .55em;
+	}
+	button {
+		font-size: .8em;
+		margin: 0.6125em 0.015em 0.015em 0.05em; /* 10 / 1980 */
+	}
+	.profilepic{
+		width: 35%;
+		float: left;
+		margin-right: 3%;
+	}
+	.aboutme {
+		max-height: 70%;
+	}
+	.press {
+		max-height: 70%;
+	}
+	.games {
+		max-height: 70%;
+	}
+	.design {
+		max-height: 70%;
+	}
+	.gamescontainer{
+		
+		transform:translate(-50%, 4.5em);
+	}
+	.showpanel{
+		transform:translate(-50%, 4.5em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 4.5em);
 	}
 	
 }
@@ -1165,7 +1240,7 @@ p a{
 	    margin: 0 auto;
 	}
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 684px) {
     .logo{
 		font-size:1.4em;
 	}
@@ -1193,6 +1268,7 @@ p a{
   		-webkit-overflow-scrolling: touch;
 	}
 	.design {
+		width: 70%;
 		max-height: 70%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
@@ -1203,10 +1279,13 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 4.25em);
+		transform:translate(-50%, 4.25em);
 	}
 	.showpanel{
-		transform:translate(12%, 4.25em);
+		transform:translate(-50%, 4.25em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 4.25em);
 	}
 
 	.profilepic{
@@ -1257,6 +1336,7 @@ p a{
   		-webkit-overflow-scrolling: touch;
 	}
 	.design {
+
 		max-height: 70%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
@@ -1267,10 +1347,13 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 3.75em);
+		transform:translate(-50%, 3.75em);
 	}
 	.showpanel{
-		transform:translate(12%, 3.75em);
+		transform:translate(-50%, 3.75em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 3.75em);
 	}
 
 	.profilepic{
@@ -1313,11 +1396,14 @@ p a{
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
-		transform:translate(12%, 6.5em);
+		transform:translate(-50%, 6.5em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 6.5em);
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 6.5em);
+		transform:translate(-50%, 6.5em);
 	}
 	.aboutme {
 		max-height: 60%;
@@ -1349,11 +1435,14 @@ p a{
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
-		transform:translate(12%, 6em);
+		transform:translate(-50%, 6em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 6em);
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 6em);
+		transform:translate(-50%, 6em);
 	}
 	.aboutme {
 		max-height: 60%;
@@ -1424,10 +1513,13 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(12%, 5.5em);
+		transform:translate(-50%, 5.5em);
 	}
 	.showpanel{
-		transform:translate(12%, 5.5em);
+		transform:translate(-50%, 5.5em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 5.5em);
 	}
 
 	.profilepic{
@@ -1490,64 +1582,24 @@ p a{
 	}
 	.design {
 		max-height: 65%;
+		margin:0 auto;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	
 	.gamescontainer{
 		max-height: 65%;
-		transform:translate(12%, 4em);
+		transform:translate(-50%, 4em);
 	}
 	.showpanel{
-		transform:translate(12%, 4em);
+		transform:translate(-50%, 4em);
 	}
-
+	.showpaneldesign{
+	transform:translateY(-50%, 4em);
+	}
 	
 }
-@media screen and (max-height: 519px) {
-    .logo{
-		font-size:1.25em;
-	}
-	.logo h3{
-		font-size:.65em;
-	}
-	button {
-		font-size: .95em;
-		padding: 3px 5px;
-		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
-		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
-	}
-	.aboutme {
-		max-height: 60%;
-		overflow-y: scroll; /* has to be scroll, not auto */
-  		-webkit-overflow-scrolling: touch;
-	}
-	.press {
-		max-height: 60%;
-		overflow-y: scroll; /* has to be scroll, not auto */
-  		-webkit-overflow-scrolling: touch;
-	}
-	.games {
-		max-height: 60%;
-		overflow-y: scroll; /* has to be scroll, not auto */
-  		-webkit-overflow-scrolling: touch;
-	}
-	.design {
-		3.7
-		overflow-y: scroll; /* has to be scroll, not auto */
-  		-webkit-overflow-scrolling: touch;
-	}
-	
-	.gamescontainer{
-		max-height: 60%;
-		transform:translate(12%, 3.7em);
-	}
-	.showpanel{
-		transform:translate(12%, 3.7em);
-	}
 
-	
-}
 @media screen and (max-height: 519px) {
     .logo{
 		font-size:1em;
@@ -1578,18 +1630,21 @@ p a{
 	}
 	.design {
 		max-height: 45%;
+
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	
 	.gamescontainer{
 		max-height: 45%;
-		transform:translate(12%, 3em);
+		transform:translate(-50%, 3em);
 	}
 	.showpanel{
-		transform:translate(12%, 3em);
+		transform:translate(-50%, 3em);
 	}
-
+	.showpaneldesign{
+	transform:translate(-50%, 3em);
+	}
 	
 }
 @media screen and (max-height: 320px) {
@@ -1628,12 +1683,14 @@ p a{
 	
 	.gamescontainer{
 		max-height: 40%;
-		transform:translate(12%, 3em);
+		transform:translate(-50%, 3em);
 	}
 	.showpanel{
-		transform:translate(12%, 3em);
+		transform:translate(-50%, 3em);
 	}
-
+	.showpaneldesign{
+	transform:translate(-50%, 3em);
+	}
 	
 }
 
