@@ -126,7 +126,14 @@ button {
 	background: #eee;
 	display: block;
 }
-
+.copyright{
+	position:absolute;
+	left:0%;
+	top:95%;
+	font-family: 'Shrikhand', sans-seriff;
+	font-size: .75em;
+	color:rgba(1,1,1,.4);
+}
 .square {
 	position:absolute;
 	left:50%;
