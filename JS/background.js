@@ -21,10 +21,10 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
      			cube.scale.x = cube.scale.y * rightCamera.aspect;
      			//
 				div.style.left = (rightCurrentCamPosition*window.innerWidth/2);
-				div.style.top = "0px";
-				div.style.width = divSize;
+				
+				
 				div.style.height = window.innerHeight;
-				div.style.background = "white";
+				
 			});
 
 			window.addEventListener("orientationchange", function() {
@@ -40,10 +40,10 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
      			cube.scale.x = cube.scale.y * rightCamera.aspect;
 
 				div.style.left = (rightCurrentCamPosition*window.innerWidth/2);
-				div.style.top = "0px";
-				div.style.width = divSize;
+				
+				
 				div.style.height = window.innerHeight;
-				div.style.background = "white";
+				
 			}, false);
 			//renderer to render the objects on the screen must set the size like the size of a camera on screen
 			var renderer = new THREE.WebGLRenderer({ alpha: true,antialiasing: true});
@@ -53,6 +53,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 			var geometry0 = new THREE.BoxGeometry(1,1,1);
 			var geometry1 = new THREE.BoxGeometry(1,1,1);
+			var geometryDevider = new THREE.BoxGeometry(.1,10,1);
 			var geometry2 = new THREE.SphereGeometry( .07, 6	, 6 );
 			//material for geometry
 			var mat = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 1} );
@@ -81,6 +82,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			var dividerXcord = .5*window.innerWidth;
 			var uniforms;
 			var aboutmeOpen = false;
+			
 			init();
 
 			function init() {
@@ -261,12 +263,12 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			function menuControls(){
 				//this is the middleBAr
 				div = document.getElementById("divider");
-				div.style.position = "absolute"
+				
 				div.style.left = (rightCurrentCamPosition*window.innerWidth/2);
-				div.style.top = "0px";
-				div.style.width = divSize;
+				
+				
 				div.style.height = window.innerHeight;
-				div.style.background = "white";
+				
 			}
 
 			function showDesign()
@@ -279,7 +281,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 					.onUpdate( function () {
 						rightCurrentCamPosition =  this.x ;
 						if((((rightCurrentCamPosition)*window.innerWidth)-divSize*2)<window.innerWidth)
-						{dividerXcord=((rightCurrentCamPosition)*window.innerWidth)-divSize;}
+						{dividerXcord=((rightCurrentCamPosition)*window.innerWidth);}
 					} )
 					.start();
 				var tweenLeft = new TWEEN.Tween( { x: leftCurrentCamPosition, } )
@@ -395,9 +397,10 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				for (var i = 0 ; i < bgStars.length; i++) {
 					bgStars[i].rotation.y = 1.0 + Math.sin( time * 0.35 );
 				}
-				div.style.left = dividerXcord;
+				div.style.left = dividerXcord+'px';
 				TWEEN.update(  );
 				uniforms.amplitude.value = 1.0 + Math.sin( time * 0.3 );
+				
 			};
 			//this is where you put the objects to be rendered in scene
 			var render = function(){

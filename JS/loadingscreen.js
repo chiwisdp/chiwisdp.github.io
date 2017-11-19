@@ -3,6 +3,6 @@ $(document).ready(function() {
 	setTimeout(function(){
 		$('body').addClass('loaded');
 		$('h1').css('color','#222222');
-	}, 5250);
+	}, 7000);
 	
 });
