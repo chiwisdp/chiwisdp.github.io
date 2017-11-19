@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html>
 	<head>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<meta charset="utf-8" />
  		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 		 <meta charset="UTF-8">
+		  <meta name="description" content="Daniel Ponce's Website">
+		  <meta name="keywords" content="Chiwis,Daniel Ponce,portfolio, designer">
+		  <meta name="author" content="Daniel Ponce">
 		<title>Daniel's web container</title>
 		<style>
 		@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Shrikhand');
@@ -90,7 +95,7 @@
 			    	if(isagamepageshowing<1)
 			    	{
 			    		console.log($("#games").attr('class'));
-				    	if($("#games").attr('class') =='Games')
+				    	if($("#games").attr('class') =='games')
 			    		{
 			    		 setTimeout(function(){
 					            $("#games").toggleClass("showpanel");
@@ -780,7 +785,7 @@
 				<button id ="pressclose">Look at the cool background</button>
 			</div>
 		</div>
-		<div id="games" class="Games">
+		<div id="games" class="games">
 			<div>
 				<h2>Games</h2>
 			</div>
@@ -788,7 +793,7 @@
 				<h3>Games I've made!</h3>
 			</div>
 
-			<div>
+			<div class="clearfix">
 				<div class="imgrow">
 					<div class="imgcolumn">
 
@@ -863,6 +868,7 @@
 
 				</div>
 			</div>
+
 
 			<div>
 				<button id ="gamesclose">Look at the cool background</button>
