@@ -161,7 +161,7 @@ button {
 	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 55%;
+    width: 70%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -213,7 +213,7 @@ button {
 	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 55%;
+    width: 70%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -265,7 +265,7 @@ button {
 	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 55%;
+    width: 70%;
     padding: 5px 10px;
 	text-align: center;
 	font-size:2.5em;
@@ -316,7 +316,7 @@ button {
 	transform:translate(-50%, 30em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 25%;
+    width: 70%;
     margin:0 auto;
 	left: 50%;
     padding: 5px 10px;
@@ -368,7 +368,7 @@ button {
 	transform:translate(-50%, 5.25em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
-    width: 55%;
+    width: 70%;
 	left: 50%;
     padding: 5px 10px;
 	text-align: center;
@@ -770,10 +770,10 @@ button {
 }
 
 .showpanel{
-	transform:translate(-50%, 5.25em);
+	transform:translate(-50%, 4em);
 }
 .showpaneldesign{
-	transform:translate(-50%, 5.25em);
+	transform:translate(-50%, 4em);
 }
 
 p{
@@ -885,7 +885,7 @@ p a{
 }
 
 .profilepic{
-	width: 9%;
+	width: 13%;
 	float: left;
 	margin-right: 3%;
 }
@@ -909,10 +909,10 @@ p a{
 	box-shadow: -0.075em 0.075em 0px 0px rgba(100,100,100,1);
 }
 .headerpicture{
-	width: 50%;
+	width: 30%;
 	
 	margin: 0 auto;
-	margin-left: 25%;
+	
 	margin-bottom: .75em;
 
 }
@@ -987,7 +987,7 @@ p a{
   }
 
   to {
-   transform: translate(12%, 5.25em);
+   transform: translate(12%, 4.25em);
   }
 }
 
@@ -1050,13 +1050,13 @@ p a{
 	}
 	.gamescontainer{
 		width: 65%;
-		transform:translate(-50%, 4.65em);
+		transform:translate(-50%, 3.5em);
 	}
 	.showpanel{
-		transform:translate(-50%, 4.65em);
+		transform:translate(-50%, 3.5em);
 	}
 	.showpaneldesign{
-		transform:translate(-50%, 4.65em);
+		transform:translate(-50%, 3.5em);
 	}
 	.column {
 	    float: left;
@@ -1074,13 +1074,16 @@ p a{
 }
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1089px) {
-    button {
-		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-		font-size: 1.25em;
-		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
+   .logo{
+		font-size:2em;
 	}
-	.logo{
-			font-size:2em;
+	h3 {
+		font-size: .75em;
+	}
+	button {
+			font-size: 1em;
+			margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+			box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	h3 {
 			font-size: .5em;
@@ -1113,25 +1116,28 @@ p a{
 	}
 	.gamescontainer{
 		width: 70%;
-		transform:translate(-50%, 4.5em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpanel{
-		transform:translate(-50%, 4.5em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 4.5em);
+	transform:translate(-50%, 3.25em);
 	}
 }
 
 @media screen and (max-width: 905px) {
 
-	button {
-		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-		font-size: .9em;
-		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
+.logo{
+		font-size:1.5em;
 	}
-    .logo{
-		font-size:1.65em;
+	h3 {
+		font-size: .75em;
+	}
+	button {
+			font-size: .85em;
+			margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+			box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	h3 {
 		font-size: .5em;
@@ -1143,32 +1149,32 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(-50%, 4em);
+		transform:translate(-50%, 3em);
 	}
 	.showpanel{
-		transform:translate(-50%, 4em);
+		transform:translate(-50%, 3em);
 	}
 	.design {
 		transform:translate(-50%, 30em);
 	    width: 60%;
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 4em);
+	transform:translate(-50%, 3em);
 	}
 }
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
 @media screen and (max-width: 736px) {
-    .logo{
-		font-size:1.75em;
+   .logo{
+		font-size:2em;
 	}
-	
 	h3 {
-		font-size: .55em;
+		font-size: .75em;
 	}
 	button {
-		font-size: 1em;
-		margin: 0.6125em 0.025em 0.025em 0.05em; /* 10 / 1980 */
+			font-size: .85em;
+			margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
+			box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
 	}
 	.profilepic{
 		width: 35%;
@@ -1187,27 +1193,41 @@ p a{
 	.design {
 		max-height: 70%;
 	}
+	.topmenu{
+		transform: translate(0%, 1.5em);
+		width: 100%;
+	}
 	.gamescontainer{
 		
-		transform:translate(-50%, 4.5em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpanel{
-		transform:translate(-50%, 4.5em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 4.5em);
+	transform:translate(-50%, 3.25em);
+	}
+	@keyframes slideinmenu {
+
+	  from {
+	    transform: translate(0%, -20em);
+	  }
+
+	  to {
+	   transform: translate(0%, 1.5em);
+	  }
 	}
 }
 @media screen and (max-width: 691px) {
     .logo{
-		font-size:1.5em;
+		font-size:2em;
 	}
 	
 	h3 {
 		font-size: .55em;
 	}
 	button {
-		font-size: .8em;
+		font-size: .75em;
 		margin: 0.6125em 0.015em 0.015em 0.05em; /* 10 / 1980 */
 	}
 	.profilepic{
@@ -1215,6 +1235,7 @@ p a{
 		float: left;
 		margin-right: 3%;
 	}
+
 	.aboutme {
 		max-height: 70%;
 	}
@@ -1229,13 +1250,24 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(-50%, 4.5em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpanel{
-		transform:translate(-50%, 4.5em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 4.5em);
+	transform:translate(-50%, 3.25em);
+	}
+
+@keyframes slideinmenu {
+
+	  from {
+	    transform: translate(0%, -20em);
+	  }
+
+	  to {
+	   transform: translate(0%, 1.5em);
+	  }
 	}
 	
 }
@@ -1286,13 +1318,13 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(-50%, 4.25em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpanel{
-		transform:translate(-50%, 4.25em);
+		transform:translate(-50%, 3.25em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 4.25em);
+	transform:translate(-50%, 3.25em);
 	}
 
 	.profilepic{
@@ -1314,7 +1346,7 @@ p a{
 
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 420px) {
     .logo{
 		font-size:1.25em;
 	}
@@ -1354,13 +1386,13 @@ p a{
 	}
 	.gamescontainer{
 		
-		transform:translate(-50%, 3.75em);
+		transform:translate(-50%, 3em);
 	}
 	.showpanel{
-		transform:translate(-50%, 3.75em);
+		transform:translate(-50%, 3em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 3.75em);
+	transform:translate(-50%, 3em);
 	}
 
 	.profilepic{
@@ -1393,24 +1425,24 @@ p a{
 	  }
 	}
 }
-@media screen and (max-width: 290px) {
+@media screen and (max-width: 326px) {
 	.logo{
-		font-size:1.45em;
+		font-size:1.25em;
 	}
 	button {
 		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-		font-size: 1.35em;
+		font-size: .85em;
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
-		transform:translate(-50%, 6.5em);
+		transform:translate(-50%, 4.75em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 6.5em);
+	transform:translate(-50%, 4.75em);
 	}
 	.gamescontainer{
 		
-		transform:translate(-50%, 6.5em);
+		transform:translate(-50%, 4.75em);
 	}
 	.aboutme {
 		max-height: 60%;
@@ -1438,7 +1470,7 @@ p a{
 
 	button {
 		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-		font-size: 1.25em;
+		font-size: 1em;
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
@@ -1559,43 +1591,33 @@ p a{
 	}
 }
 
-@media screen and (max-height: 700px) {
-    .logo{
-		font-size:1.5em;
-	}
-	.logo h3{
-		font-size:.65em;
-	}
-	button {
-		font-size: .95em;
-		padding: 3px 5px;
-		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
-		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
-	}
+@media screen and (max-height: 780px) {
+    
+	
 	.aboutme {
-		max-height: 65%;
+		max-height: 70%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	.press {
-		max-height: 65%;
+		max-height: 70%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	.games {
-		max-height: 65%;
+		max-height: 70%;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	.design {
-		max-height: 65%;
+		max-height: 70%;
 		margin:0 auto;
 		overflow-y: scroll; /* has to be scroll, not auto */
   		-webkit-overflow-scrolling: touch;
 	}
 	
 	.gamescontainer{
-		max-height: 65%;
+		max-height: 70%;
 		transform:translate(-50%, 4em);
 	}
 	.showpanel{
@@ -1607,19 +1629,9 @@ p a{
 	
 }
 
+
 @media screen and (max-height: 519px) {
-    .logo{
-		font-size:1em;
-	}
-	.logo h3{
-		font-size:.65em;
-	}
-	button {
-		font-size: .95em;
-		padding: 3px 5px;
-		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
-		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
-	}
+    
 	.aboutme {
 		max-height: 45%;
 		overflow-y: scroll; /* has to be scroll, not auto */
@@ -1644,29 +1656,18 @@ p a{
 	
 	.gamescontainer{
 		max-height: 45%;
-		transform:translate(-50%, 3em);
+		transform:translate(-50%, 3.5em);
 	}
 	.showpanel{
-		transform:translate(-50%, 3em);
+		transform:translate(-50%, 3.5em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 3em);
+	transform:translate(-50%, 3.5em);
 	}
 	
 }
 @media screen and (max-height: 320px) {
-    .logo{
-		font-size:1em;
-	}
-	.logo h3{
-		font-size:.65em;
-	}
-	button {
-		font-size: .95em;
-		padding: 3px 5px;
-		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
-		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
-	}
+   
 	.aboutme {
 		max-height: 40%;
 		overflow-y: scroll; /* has to be scroll, not auto */
@@ -1690,13 +1691,13 @@ p a{
 	
 	.gamescontainer{
 		max-height: 40%;
-		transform:translate(-50%, 3em);
+		transform:translate(-50%, 3.5em);
 	}
 	.showpanel{
-		transform:translate(-50%, 3em);
+		transform:translate(-50%, 3.5em);
 	}
 	.showpaneldesign{
-	transform:translate(-50%, 3em);
+	transform:translate(-50%, 3.5em);
 	}
 	
 }

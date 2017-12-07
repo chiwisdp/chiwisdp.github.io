@@ -488,7 +488,7 @@
 
 			    $.fn.rustyPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
-			    	$("#games").removeClass("showpanel");
+			    	$("#design").removeClass("showpaneldesign");
 			    	$("#press").removeClass("showpanel");
 			    	//design pages
 			    	$("#journeypage").removeClass("showgamescontainer");
@@ -505,7 +505,7 @@
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isagamepageshowing = 0;
+			    	isadesignpageshowing = 0;
 			    	//functionality
 			    	$("#rustypage").toggleClass("showgamescontainer");
 			    	$("#rustypage").animate({
@@ -514,17 +514,17 @@
 
 			    	if($("#rustypage").attr('class') =='gamescontainer showgamescontainer')
 			    	{
-			    		isadesignpageshowing = 1;
+			    		isagamepageshowing = 1;
 			    	}
 			    	else{
-			    		isadesignpageshowing = 0;
+			    		isagamepageshowing = 0;
 			    	}
 
 			    }
 
 			    $.fn.journeyPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
-			    	$("#games").removeClass("showpanel");
+			    	$("#design").removeClass("showpaneldesign");
 			    	$("#press").removeClass("showpanel");
 			    	//design pages
 			    	$("#rustypage").removeClass("showgamescontainer");
@@ -539,7 +539,7 @@
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isagamepageshowing = 0;
+			    	isadesignpageshowing = 0;
 			    	//functionality
 			    	$("#journeypage").toggleClass("showgamescontainer");
 			    	$("#journeypage").animate({
@@ -548,10 +548,10 @@
 
 			    	if($("#journeypage").attr('class') =='gamescontainer showgamescontainer')
 			    	{
-			    		isadesignpageshowing = 1;
+			    		isagamepageshowing = 1;
 			    	}
 			    	else{
-			    		isadesignpageshowing = 0;
+			    		isagamepageshowing = 0;
 			    	}
 
 			    }
@@ -703,9 +703,9 @@
 		  <div id="webglContainer"></div>
 		</div>
 		<div id="topmenu" class="topmenu">
-			<div id="logo" class="logo"><h1>Daniel Ponce</h1><h3>Designer</h3></div>
-			<button id="b_design" onclick="showDesign()">Design</button>
-			<button id="b_games" onclick="showGames()">Games</button>
+			<div id="logo" class="logo"><h1>Daniel Ponce</h1></div>
+			<button id="b_design" onclick="showDesign()">Design Process</button>
+			<button id="b_games" onclick="showGames()">Works</button>
 			<button id="b_about" onclick="showAbout()">About me</button>
 			<button id="b_press" onclick="showPress()">Press</button>
 
@@ -787,22 +787,74 @@
 		</div>
 		<div id="games" class="games">
 			<div>
-				<h2>Games</h2>
+				<h2>Projects I've Worked on</h2>
 			</div>
 			<div>
-				<h3>Games I've made!</h3>
+				<h3>Selected Works</h3>
 			</div>
 
 			<div class="clearfix">
 				<div class="imgrow">
 					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="coldpagetoggle"><img class="example-image" src="Images/games/coldemail/ColdEmailLogo.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
 
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="coldpagetoggle"><img class="example-image" src="Images/games/coldemail/0.gif" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="rustypagetoggle"  ><img class="example-image" src="Images/design/rusty/logo.jpg" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
+						
+						
+
+					</div>
+
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="dqpagetoggle"><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+						
+						
+					
+
+					</div>
+
+					<div class="imgcolumn">
+
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="ssspagetoggle"><img class="example-image" src="Images/games/sss/sssScreen1.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="journeypagetoggle"  ><img class="example-image" src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+				
+
+					</div>
+
+				</div>
+			</div>
+			<div>
+				<h3>Older Projects</h3>
+			</div>
+			<div class="clearfix">
+				<div class="imgrow">
+					<div class="imgcolumn">
+
+						
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
@@ -820,12 +872,7 @@
 
 					<div class="imgcolumn">
 
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="dqpagetoggle"><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
+					
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
@@ -843,12 +890,7 @@
 
 					<div class="imgcolumn">
 
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="ssspagetoggle"><img class="example-image" src="Images/games/sss/sssScreen1.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
+					
 
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
@@ -868,8 +910,6 @@
 
 				</div>
 			</div>
-
-
 			<div>
 				<button id ="gamesclose">Look at the cool background</button>
 			</div>
@@ -877,71 +917,166 @@
 		<!-- Photo Grid -->
 		<div id="design" class = "design">
 			<div>
-				<h2>Design</h2>
+				<h2>Trickits : UX Design Process</h2>
 			</div>
 
 			<div>
-				<h3>UX/Graphic design</h3>
-			</div>
-			<div>
-				<h3>Tickits: UX Design Process</h3>
-			</div>
-			<div class="imgrowdesign">
-				<div class="imgcolumndesignpage">
-				</div>
-				<div class="imgcolumndesignpage">
+				<h2>Part 1: Workshop & Research</h2>
+				<p>Because this was being based on a physical experience there was lots of prior art to base my designs on. In our initial talks, we discussed using the app as more of a journal or workbook where the users would use the app to tell them what activity to do next and subsequently record their progress.</p>
+				<div class="imgrow">
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art0.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art0.png" alt="Trickits" title="Trickits"></a>
+							</section>
 
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="tricketspagetoggle" ><img class="example-image" src="Images/design/trickets/thumbnail.png" alt="My face" title="Stare into my soul"></a>
-						</section>
-				</div>
+						</div>
+					</div>
 
-				</div>
+					<div class="imgcolumn">
 
-				<div class="imgcolumndesignpage">
-				</div>
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art4.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art4.png" alt="Trickits" title="Trickits"></a>
+							</section>
+						</div>
 
-			</div>
-			<div>
-				<h3>Designs</h3>
-			</div>
-			<div class="imgrowdesign">
-				<div class="imgcolumndesignpage">
-				</div>
-				<div class="imgcolumndesignpage">
+					</div>
 
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="rustypagetoggle"  ><img class="example-image" src="Images/design/rusty/logo.jpg" alt="My face" title="Stare into my soul"></a>
-						</section>
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art1.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art1.png" alt="Trickits" title="Trickits"></a>
+							</section>
+						</div>
 					</div>
 
 				</div>
-
-				<div class="imgcolumndesignpage">
+				<div class="clearfix">
+					<div class="row">
+					  <div class="column" >
+					    <h3>Goal</h3>
+					    <p>-To make an interesting and fun to way to interact with a journal.</p>
+					    <p>-Use prior art to inform the look and feel of the app.</p>
+					  </div>
+					  <div class="column" >
+					    <h3>Deliverable</h3>
+					    <p>-Create rapid interactable prototypes to immediately begin testing the interface using POP by Marvel.</p>
+					  </div>
+					</div>
 				</div>
-			</div>
 
-			<div class="imgrowdesign">
-				<div class="imgcolumndesignpage">
-				</div>
-				<div class="imgcolumndesignpage">
+				<h2>Part 2: Prototyping</h2>
+				<p>As with any product, it is important to make prototypes fast and early. In the case of Trickits, we had the added challenge to design for young children ages 3-11. We also had to designso that parents could also use the app to either help or monitor the children's activities.</p>
+				<div class="imgrow">
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art5.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art5.png" alt="Trickits" title="Trickits"></a>
+							</section>
 
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="journeypagetoggle"  ><img class="example-image" src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
-						</section>
+						</div>
+					</div>
+					<div class="imgcolumn">
+
 					</div>
 
+					<div class="imgcolumn">
+
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art6.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art6.png" alt="Trickits" title="Trickits"></a>
+							</section>
+						</div>
+
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="row">
+					  <div class="column" >
+					    <h3>Goal</h3>
+					    <p>-Make rapid prototypes for quick user feedback to confirm that the app was easy to use and fun to interact with.</p>
+					    <p>-Make interaction engaging for the target audience and easy to navigate for parents.</p>
+					  </div>
+					  <div class="column" >
+					    <h3>Deliverable</h3>
+					    <p>-Iterate on both UX and make preliminary art decisions.</p>
+					  </div>
+					</div>
 				</div>
 
-				<div class="imgcolumndesignpage">
+				<h2>Part 3: Development & Iteration</h2>
+				<div class="imgrow">
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art7.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art7.png" alt="Trickits" title="Trickits"></a>
+							</section>
+
+						</div>
+					</div>
+
+					<div class="imgcolumn">
+
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art8.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art8.png" alt="Trickits" title="Trickits"></a>
+							</section>
+						</div>
+
+					</div>
+
+
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+									<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art9.jpg" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art9.jpg" alt="Trickits" title="Trickits"></a>
+							</section>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="row">
+					  <div class="column" >
+					    <h3>Goal</h3>
+					    <p>-Use knowledge from user testing to finalize the design and functionality.</p>
+					    <p>-Understand and develop the user story and features.</p>
+					  </div>
+					  <div class="column" >
+					    <h3>Deliverable</h3>
+					    <p>-Finalize the product for release.</p>
+					  </div>
+					</div>
+				</div>
+
+				<h2>Part 4: Results & Reflection</h2>
+
+				<div class="clearfix">
+					<div class="row">
+					  <div class="column" >
+					    <h3>Results</h3>
+					    <p>-App was released and used to replace the physical experience of Trickets.</p>
+					    <p>-Achieved initial goal of satisfying both children and parents with a fun experience.</p>
+					  </div>
+					  <div class="column" >
+					    <h3>Reflection</h3>
+					    <p>-The importance of researching the trends of the target audience is crucial. Without initial research we would not have achieved successful results for the user interface.</p>
+					    <p>-When evaluating user feedback it was crucial that we would cross reference with the Apple Design Guidelines. It was important to maintain consistency in app design for users to have familiarity with interactivity.</p>
+					  </div>
+					</div>
 				</div>
 			</div>
+			
+			
+			
 			<div>
 				<button id ="designclose">Look at the cool background</button>
 			</div>
@@ -958,7 +1093,7 @@
 				<div id="headerpicwrapper">
 						<!--gallery row 1 start -->
 						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/ColdEmailLogo.png" data-lightbox="coldpage" data-title="Cold Email logo" ><img class="example-image" src="Images/games/coldemail/ColdEmailLogo.png" alt="Cold Email logo" title="Cold Email logo"></a>
+							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/0.gif" data-lightbox="coldpage" data-title="Cold Email logo" ><img class="example-image" src="Images/games/coldemail/0.gif" alt="Cold Email logo" title="Cold Email logo"></a>
 						</section>
 				</div>
 			<div>
@@ -1178,7 +1313,7 @@
 				<div id="headerpicwrapper">
 						<!--gallery row 1 start -->
 						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqlogo.png" data-lightbox="dqpage" data-title="Dig Quest logo" ><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="Dig Quest logo" title="Dig Quest logo"></a>
+							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqscreen.png" data-lightbox="dqpage" data-title="Dig Quest logo" ><img class="example-image" src="Images/games/digquest/dqscreen.png" alt="Dig Quest logo" title="Dig Quest logo"></a>
 						</section>
 				</div>
 			<div>
@@ -1234,7 +1369,7 @@
 				<div id="headerpicwrapper">
 						<!--gallery row 1 start -->
 						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/sss/sssScreen1.png" data-lightbox="ssspage" data-title="Shaq logo" ><img class="example-image" src="Images/games/sss/sssScreen1.png" alt="Shaq logo" title="Shaq logo"></a>
+							<a class="example-image-link" id="lightbox-img" href="Images/games/sss/sss4 copy.png" data-lightbox="ssspage" data-title="Shaq logo" ><img class="example-image" src="Images/games/sss/sss4 copy.png" alt="Shaq logo" title="Shaq logo"></a>
 						</section>
 				</div>
 			<div>
@@ -1513,164 +1648,7 @@
 			</div>
 		</div>
 		<div id="tricketspage" class = "gamescontainer">
-			<div>
-				<h2>Trickits : UX Design Process</h2>
-			</div>
-
-			<div>
-				<h2>Part 1: Workshop & Research</h2>
-				<p>Because this was being based on a physical experience there was lots of prior art to base my designs on. In our initial talks, we discussed using the app as more of a journal or workbook where the users would use the app to tell them what activity to do next and subsequently record their progress.</p>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art0.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art0.png" alt="Trickits" title="Trickits"></a>
-							</section>
-
-						</div>
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art4.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art4.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-
-					</div>
-
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art1.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art1.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-					</div>
-
-				</div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Goal</h3>
-					    <p>-To make an interesting and fun to way to interact with a journal.</p>
-					    <p>-Use prior art to inform the look and feel of the app.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Deliverable</h3>
-					    <p>-Create rapid interactable prototypes to immediately begin testing the interface using POP by Marvel.</p>
-					  </div>
-					</div>
-				</div>
-
-				<h2>Part 2: Prototyping</h2>
-				<p>As with any product, it is important to make prototypes fast and early. In the case of Trickits, we had the added challenge to design for young children ages 3-11. We also had to designso that parents could also use the app to either help or monitor the children's activities.</p>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art5.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art5.png" alt="Trickits" title="Trickits"></a>
-							</section>
-
-						</div>
-					</div>
-					<div class="imgcolumn">
-
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art6.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art6.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-
-					</div>
-				</div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Goal</h3>
-					    <p>-Make rapid prototypes for quick user feedback to confirm that the app was easy to use and fun to interact with.</p>
-					    <p>-Make interaction engaging for the target audience and easy to navigate for parents.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Deliverable</h3>
-					    <p>-Iterate on both UX and make preliminary art decisions.</p>
-					  </div>
-					</div>
-				</div>
-
-				<h2>Part 3: Development & Iteration</h2>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art7.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art7.png" alt="Trickits" title="Trickits"></a>
-							</section>
-
-						</div>
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art8.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art8.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-
-					</div>
-
-
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-									<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art9.jpg" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art9.jpg" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Goal</h3>
-					    <p>-Use knowledge from user testing to finalize the design and functionality.</p>
-					    <p>-Understand and develop the user story and features.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Deliverable</h3>
-					    <p>-Finalize the product for release.</p>
-					  </div>
-					</div>
-				</div>
-
-				<h2>Part 4: Results & Reflection</h2>
-
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Results</h3>
-					    <p>-App was released and used to replace the physical experience of Trickets.</p>
-					    <p>-Achieved initial goal of satisfying both children and parents with a fun experience.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Reflection</h3>
-					    <p>-The importance of researching the trends of the target audience is crucial. Without initial research we would not have achieved successful results for the user interface.</p>
-					    <p>-When evaluating user feedback it was crucial that we would cross reference with the Apple Design Guidelines. It was important to maintain consistency in app design for users to have familiarity with interactivity.</p>
-					  </div>
-					</div>
-				</div>
-			</div>
+			
 
 			<div>
 				<button id ="tricketspageclose">Back</button>
