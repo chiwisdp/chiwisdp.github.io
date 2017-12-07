@@ -365,7 +365,7 @@ button {
 	}
 .gamescontainer{
 	position: fixed;
-	transform:translate(-50%, 5.25em);
+	transform:translate(-50%, 4em);
 	margin: 0 auto;
 	border-radius: 0.1875em 0.1875em 0.1875em 0;
     width: 70%;
@@ -1425,13 +1425,13 @@ p a{
 	  }
 	}
 }
-@media screen and (max-width: 326px) {
+@media screen and (max-width: 340px) {
 	.logo{
-		font-size:1.25em;
+		font-size:.85em;
 	}
 	button {
 		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-		font-size: .85em;
+		font-size: .5em;
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
@@ -1470,7 +1470,7 @@ p a{
 
 	button {
 		/*margin: 0.3125em 0.3125em 0.3125em 0.3125em; *//* 10 / 1980 */
-		font-size: 1em;
+		font-size: .5em;
 		/*box-shadow: -3px 4px 0px 0px rgba(100,100,100,1);*/
 	}
 	.showpanel{
@@ -1515,13 +1515,13 @@ p a{
 }
 @media screen and (max-width: 214px) {
     .logo{
-		font-size:1.25em;
+		font-size:.85em;
 	}
 	.logo h3{
 		font-size:.65em;
 	}
 	button {
-		font-size: .95em;
+		font-size: .5em;
 		padding: 3px 5px;
 		margin: 0.6125em 0.05em 0.05em 0.05em; /* 10 / 1980 */
 		box-shadow: -0.2em 0.2em 0px 0px rgba(100,100,100,1);
@@ -1698,6 +1698,41 @@ p a{
 	}
 	.showpaneldesign{
 	transform:translate(-50%, 3.5em);
+	}
+	
+}
+@media screen and (max-height: 250px) {
+   
+	.aboutme {
+		max-height: 30%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.press {
+		max-height: 30%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.games {
+		max-height: 30%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	.design {
+		max-height: 30%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+  		-webkit-overflow-scrolling: touch;
+	}
+	
+	.gamescontainer{
+		max-height: 30%;
+		transform:translate(-50%, 3em);
+	}
+	.showpanel{
+		transform:translate(-50%, 3em);
+	}
+	.showpaneldesign{
+	transform:translate(-50%, 3em);
 	}
 	
 }
