@@ -44,11 +44,15 @@
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
 			    	$("#typepage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
+						$("#touchpage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
 			    	isagamepageshowing = 0;
@@ -83,10 +87,14 @@
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -125,10 +133,14 @@
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -152,10 +164,14 @@
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -182,10 +198,14 @@
 			    	//functionality
 			    	$("#coldpage").toggleClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -218,11 +238,15 @@
 			    	
 			    	//functionality
 			    	$("#dqpage").toggleClass("showgamescontainer");
+																		$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -256,9 +280,13 @@
 			    	$("#monopage").toggleClass("showgamescontainer");
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -275,7 +303,43 @@
 			    	}
 
 			    }
+					$.fn.gbPageToggle = function () {
+					$("#aboutme").removeClass("showpanel");
+					$("#design").removeClass("showpaneldesign");
+					$("#press").removeClass("showpanel");
 
+					//design pages
+					$("#rustypage").removeClass("showgamescontainer");
+					$("#journeypage").removeClass("showgamescontainer");
+					$("#tricketspage").removeClass("showgamescontainer");
+					isadesignpageshowing = 0;
+					//games pages
+
+					//functionality
+					$("#gamebuilderpage").toggleClass("showgamescontainer");
+					$("#coldpage").removeClass("showgamescontainer");
+					$("#monopage").removeClass("showgamescontainer");
+					$("#dqpage").removeClass("showgamescontainer");
+					$("#dynapage").removeClass("showgamescontainer");
+					$("#ssspage").removeClass("showgamescontainer");
+					$("#typepage").removeClass("showgamescontainer");
+												$("#theypage").removeClass("showgamescontainer");
+
+					$("#touchpage").removeClass("showgamescontainer");
+					$("#kidpage").removeClass("showgamescontainer");
+					$("#spectrepage").removeClass("showgamescontainer");
+					$("#monopage").animate({
+						scrollTop: 0
+					}, 100);
+
+					if ($("#gamebuilderpage").attr('class') == 'gamescontainer showgamescontainer') {
+						isagamepageshowing = 1;
+					}
+					else {
+						isagamepageshowing = 0;
+					}
+
+				}
 			    $.fn.dynaPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
 			    	$("#design").removeClass("showpaneldesign");
@@ -290,11 +354,17 @@
 
 			    	//functionality
 			    	$("#dynapage").toggleClass("showgamescontainer");
+						$("#gamebuilderpage").toggleClass("showgamescontainer");
+						$("#coldpage").removeClass("showgamescontainer");
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -327,10 +397,14 @@
 			    	//functionality
 			    	$("#ssspage").toggleClass("showgamescontainer");
 			    	$("#coldpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dqpage").removeClass("showgamescontainer");
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -362,13 +436,17 @@
 			    	//functionality
 			    	$("#typepage").toggleClass("showgamescontainer");
 			    	$("#coldpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dqpage").removeClass("showgamescontainer");
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
+						$("#spectrepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#typepage").animate({
 					    scrollTop: 0
 					  }, 100);
@@ -398,9 +476,13 @@
 			    	$("#touchpage").toggleClass("showgamescontainer");
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
+						$("#ssspage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#typepage").removeClass("showgamescontainer");
 			    	$("#touchpage").animate({
 					    scrollTop: 0
@@ -432,9 +514,13 @@
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
 			    	$("#dynapage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#spectrepage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#kidpage").animate({
@@ -466,10 +552,14 @@
 			    	$("#spectrepage").toggleClass("showgamescontainer");
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").animate({
@@ -498,10 +588,14 @@
 
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -532,10 +626,14 @@
 			    	//games pages
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+													$("#theypage").removeClass("showgamescontainer");
+
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -554,7 +652,43 @@
 			    		isagamepageshowing = 0;
 			    	}
 
-			    }
+					}
+					$.fn.theyPageToggle = function () {
+					$("#aboutme").removeClass("showpanel");
+					$("#design").removeClass("showpaneldesign");
+					$("#press").removeClass("showpanel");
+					//design pages
+					$("#rustypage").removeClass("showgamescontainer");
+					$("#tricketspage").removeClass("showgamescontainer");
+					//games pages
+					$("#coldpage").removeClass("showgamescontainer");
+					$("#dqpage").removeClass("showgamescontainer");
+					$("#gamebuilderpage").removeClass("showgamescontainer");
+
+					$("#dynapage").removeClass("showgamescontainer");
+					$("#monopage").removeClass("showgamescontainer");
+					$("#ssspage").removeClass("showgamescontainer");
+					$("#typepage").removeClass("showgamescontainer");
+
+					$("#kidpage").removeClass("showgamescontainer");
+					$("#touchpage").removeClass("showgamescontainer");
+					$("#spectrepage").removeClass("showgamescontainer");
+					$("#journeypage").removeClass("showgamescontainer");
+					isadesignpageshowing = 0;
+					//functionality
+					$("#theypage").toggleClass("showgamescontainer");
+					$("#theypage").animate({
+						scrollTop: 0
+					}, 10);
+
+					if ($("#theypage").attr('class') == 'gamescontainer showgamescontainer') {
+						isagamepageshowing = 1;
+					}
+					else {
+						isagamepageshowing = 0;
+					}
+
+				}
 
 			    $.fn.tricketsPageToggle = function(){
 			    	$("#aboutme").removeClass("showpanel");
@@ -568,10 +702,13 @@
 
 			    	$("#coldpage").removeClass("showgamescontainer");
 			    	$("#dqpage").removeClass("showgamescontainer");
+												$("#gamebuilderpage").removeClass("showgamescontainer");
+
 			    	$("#dynapage").removeClass("showgamescontainer");
 			    	$("#monopage").removeClass("showgamescontainer");
 			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
+						$("#typepage").removeClass("showgamescontainer");
+							$("#theypage").removeClass("showgamescontainer");
 			    	$("#kidpage").removeClass("showgamescontainer");
 			    	$("#touchpage").removeClass("showgamescontainer");
 			    	$("#spectrepage").removeClass("showgamescontainer");
@@ -653,7 +790,13 @@
 			    });
 			    $("#typepageclose").click(function(){
 					$.fn.typePageToggle();
-			    });
+					});
+					$("#theypagetoggle").click(function () {
+					$.fn.theyPageToggle();
+					});
+					$("#theypageclose").click(function () {
+						$.fn.theyPageToggle();
+					});
 			    $("#touchpagetoggle").click(function(){
 					$.fn.touchPageToggle();
 			    });
@@ -680,6 +823,12 @@
 			    $("#journeypageclose").click(function(){
 					$.fn.journeyPageToggle();
 			    });
+					$("#gbpagetoggle").click(function () {
+						$.fn.gbPageToggle();
+					});
+					$("#gbpageclose").click(function () {
+						$.fn.gbPageToggle();
+					});
 			    $("#rustypagetoggle").click(function(){
 					$.fn.rustyPageToggle();
 			    });
@@ -704,7 +853,7 @@
 		</div>
 		<div id="topmenu" class="topmenu">
 			<div id="logo" class="logo"><h1>Daniel Ponce</h1></div>
-			<button id="b_design" onclick="showDesign()">Design Process</button>
+			<button id="b_design" onclick="showDesign()">Current Project</button>
 			<button id="b_games" onclick="showGames()">Works</button>
 			<button id="b_about" onclick="showAbout()">About me</button>
 			<button id="b_press" onclick="showPress()">Press</button>
@@ -795,60 +944,74 @@
 
 			<div class="clearfix">
 				<div class="imgrow">
-					<div class="imgcolumn">
+					<div class="imgcolumn-2pane">
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="coldpagetoggle"><img class="example-image" src="Images/games/coldemail/ColdEmailLogo.png" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="gbpagetoggle"><img class="example-image"
+										src="Images/games/gamebuilder/header.jpg" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
-
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="rustypagetoggle"  ><img class="example-image" src="Images/design/rusty/logo.jpg" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="ssspagetoggle"><img class="example-image" src="Images/games/sss/sssScreen1.png"
+										alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
-						
-						
-
 					</div>
-
-					<div class="imgcolumn">
+					<div class="imgcolumn-2pane">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="coldpagetoggle"><img class="example-image"
+										src="Images/games/coldemail/ColdEmailLogo.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
 								<a class="example-image-link" id="dqpagetoggle"><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
-						
-						
-					
-
 					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="ssspagetoggle"><img class="example-image" src="Images/games/sss/sssScreen1.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="journeypagetoggle"  ><img class="example-image" src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-				
-
-					</div>
-
 				</div>
 			</div>
 			<div>
-				<h3>Older Projects</h3>
+				<h3>Graphic Design</h3>
+					<div class="clearfix">
+						<div class="imgrow">
+								<div class="imgcolumn">
+									<div id="gallerywrapper">
+										<!--gallery row 1 start -->
+										<section class="workselect">
+											<a class="example-image-link" id="theypagetoggle"><img class="example-image" src="Images/design/theyshoot/IMG_5747HEADER.png"
+													alt="My face" title="Stare into my soul"></a>
+										</section>
+									</div>
+								</div>
+								<div class="imgcolumn">
+									<div id="gallerywrapper">
+										<!--gallery row 1 start -->
+										<section class="workselect">
+											<a class="example-image-link" id="rustypagetoggle"><img class="example-image" src="Images/design/rusty/logo.jpg"
+													alt="My face" title="Stare into my soul"></a>
+									</section>
+								</div>
+								</div>
+								<div class="imgcolumn">
+									<div id="gallerywrapper">
+										<section class="workselect">
+											<a class="example-image-link" id="journeypagetoggle"><img class="example-image"
+													src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
+										</section>
+									</div>
+								</div>
+						</div>
+					</div>
+			</div>
+			<div>
+				<h3>Older Works</h3>
 			</div>
 			<div class="clearfix">
 				<div class="imgrow">
@@ -858,31 +1021,13 @@
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="dynapagetoggle"><img class="example-image" src="Images/games/dynamice/Dynamice.png" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="dynapagetoggle"><img class="example-image" src="Images/games/dynamice/DynamiceHeader.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="monopagetoggle"><img class="example-image" src="Images/games/mono/mono.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-
-					</div>
-
-					<div class="imgcolumn">
-
-					
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="touchpagetoggle"><img class="example-image" src="Images/games/touch/stormynight-logo.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="spectrepagetoggle"><img class="example-image" src="Images/games/spectre/Spectre_Wallpaper_Text.jpg" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="monopagetoggle"><img class="example-image" src="Images/games/mono/monoHeader.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
@@ -891,18 +1036,36 @@
 					<div class="imgcolumn">
 
 					
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="touchpagetoggle"><img class="example-image" src="Images/games/touch/stormynight-logoHEADER.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="spectrepagetoggle"><img class="example-image" src="Images/games/spectre/Spectre_Wallpaper_TextHEADER.png" alt="My face" title="Stare into my soul"></a>
+							</section>
+						</div>
+
+					</div>
+
+					<div class="imgcolumn">
+
+					
 
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="typepagetoggle"><img class="example-image" src="Images/games/typeset/8.png" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="typepagetoggle"><img class="example-image" src="Images/games/typeset/TSheader.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="kidpagetoggle"><img class="example-image" src="Images/games/kid/hqdefault.jpg" alt="My face" title="Stare into my soul"></a>
+								<a class="example-image-link" id="kidpagetoggle"><img class="example-image" src="Images/games/kid/hqdefaultHeader.png" alt="My face" title="Stare into my soul"></a>
 							</section>
 						</div>
 
@@ -917,18 +1080,24 @@
 		<!-- Photo Grid -->
 		<div id="design" class = "design">
 			<div>
-				<h2>Trickits : UX Design Process</h2>
+				<h2>Current Ongoing Project:</h2>
+				<h2>R2 Unit: A Star Wars fan game.</h2>
 			</div>
 
 			<div>
-				<h2>Part 1: Workshop & Research</h2>
-				<p>Because this was being based on a physical experience there was lots of prior art to base my designs on. In our initial talks, we discussed using the app as more of a journal or workbook where the users would use the app to tell them what activity to do next and subsequently record their progress.</p>
+				<p>R2 Story : A Star Wars VR Fangame. This is a fan project and will not be distributed. This is just me playing around with Unity3D and an Oculus DK 2 kit. Lucasfilm and Disney Own the rights to the Star Wars brand. This is a work in progress.</p>
+				<div class="video-container">
+					<h3>Trailer</h3>
+					<div class="videoWrapper">
+						<iframe src="https://www.youtube.com/embed/ZQOZLxbX3f4" allowfullscreen></iframe>
+					</div>
+				</div>
 				<div class="imgrow">
 					<div class="imgcolumn">
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art0.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art0.png" alt="Trickits" title="Trickits"></a>
+								<a class="example-image-link" id="lightbox-img" href="Images/games/SWVR/TitleSWVR.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/games/SWVR/TitleSWVR.png" alt="Trickits" title="Trickits"></a>
 							</section>
 
 						</div>
@@ -939,7 +1108,7 @@
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art4.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art4.png" alt="Trickits" title="Trickits"></a>
+								<a class="example-image-link" id="lightbox-img" href="Images/games/SWVR/frontSWVR.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/games/SWVR/frontSWVR.png" alt="Trickits" title="Trickits"></a>
 							</section>
 						</div>
 
@@ -949,134 +1118,12 @@
 						<div id="gallerywrapper">
 							<!--gallery row 1 start -->
 							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art1.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art1.png" alt="Trickits" title="Trickits"></a>
+								<a class="example-image-link" id="lightbox-img" href="Images/games/SWVR/BackSWVR.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/games/SWVR/BackSWVR.png" alt="Trickits" title="Trickits"></a>
 							</section>
 						</div>
-					</div>
-
-				</div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Goal</h3>
-					    <p>-To make an interesting and fun to way to interact with a journal.</p>
-					    <p>-Use prior art to inform the look and feel of the app.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Deliverable</h3>
-					    <p>-Create rapid interactable prototypes to immediately begin testing the interface using POP by Marvel.</p>
-					  </div>
-					</div>
-				</div>
-
-				<h2>Part 2: Prototyping</h2>
-				<p>As with any product, it is important to make prototypes fast and early. In the case of Trickits, we had the added challenge to design for young children ages 3-11. We also had to designso that parents could also use the app to either help or monitor the children's activities.</p>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art5.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art5.png" alt="Trickits" title="Trickits"></a>
-							</section>
-
-						</div>
-					</div>
-					<div class="imgcolumn">
-
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art6.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art6.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-
-					</div>
-				</div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Goal</h3>
-					    <p>-Make rapid prototypes for quick user feedback to confirm that the app was easy to use and fun to interact with.</p>
-					    <p>-Make interaction engaging for the target audience and easy to navigate for parents.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Deliverable</h3>
-					    <p>-Iterate on both UX and make preliminary art decisions.</p>
-					  </div>
-					</div>
-				</div>
-
-				<h2>Part 3: Development & Iteration</h2>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art7.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art7.png" alt="Trickits" title="Trickits"></a>
-							</section>
-
-						</div>
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art8.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art8.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-
-					</div>
-
-
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-									<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/design/trickets/art9.jpg" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/design/trickets/art9.jpg" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Goal</h3>
-					    <p>-Use knowledge from user testing to finalize the design and functionality.</p>
-					    <p>-Understand and develop the user story and features.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Deliverable</h3>
-					    <p>-Finalize the product for release.</p>
-					  </div>
-					</div>
-				</div>
-
-				<h2>Part 4: Results & Reflection</h2>
-
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h3>Results</h3>
-					    <p>-App was released and used to replace the physical experience of Trickets.</p>
-					    <p>-Achieved initial goal of satisfying both children and parents with a fun experience.</p>
-					  </div>
-					  <div class="column" >
-					    <h3>Reflection</h3>
-					    <p>-The importance of researching the trends of the target audience is crucial. Without initial research we would not have achieved successful results for the user interface.</p>
-					    <p>-When evaluating user feedback it was crucial that we would cross reference with the Apple Design Guidelines. It was important to maintain consistency in app design for users to have familiarity with interactivity.</p>
-					  </div>
 					</div>
 				</div>
 			</div>
-			
-			
-			
 			<div>
 				<button id ="designclose">Look at the cool background</button>
 			</div>
@@ -1101,7 +1148,7 @@
 				<p>In Cold Email, you need to fire off emails as fast as you can before your computer explodes from malware. The send button has a nasty tendency to wander in the Game Jam title, though, so it may be difficult to get out all of those necessary emails before your PC bursts into flames. Do try, though, as your game, and your livelihood, depends on it.</p>
 				<a href="https://craterhouse.itch.io/cold-email" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Download Cold Email</a>
 			</div>
-			<div>
+			<div class="video-container">
 				<h3>Watch Pewdiepie play Cold Email!</h3>
 				<div class="videoWrapper">
 				    <iframe src="https://www.youtube.com/embed/X1Bi6Q-fp2E?start=285" allowfullscreen></iframe>
@@ -1113,7 +1160,9 @@
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
 						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/0.gif" data-lightbox="coldpage" data-title="Start of the game." ><img class="example-image" src="Images/games/coldemail/0.gif" alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
+							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/5.png" data-lightbox="coldpage"
+								data-title="Screenshot"><img class="example-image" src="Images/games/coldemail/5.png" alt="Cold Email Screenshot"
+									title="Cold Email Screenshot"></a>
 						</section>
 					</div>
 				</div>
@@ -1126,12 +1175,6 @@
 							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/2.png" data-lightbox="coldpage" data-title="Screenshot" ><img class="example-image" src="Images/games/coldemail/2.png" alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
 						</section>
 					</div>
-					<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/5.png" data-lightbox="coldpage" data-title="Screenshot" ><img class="example-image" src="Images/games/coldemail/5.png" alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
-							</section>
-						</div>
 				</div>
 
 				<div class="imgcolumn">
@@ -1170,15 +1213,12 @@
 				<p>IGF Student Showcase Finalist 2009</p>
 				<a href="https://www.dropbox.com/s/yqrswqnqo9vpwmy/KWS_Nightly.GDC.50.exe?dl=0" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Download for PC.</a>
 			</div>
-			<div>
+			<div class="video-container">
 				<h3>Trailer</h3>
 				<div class="videoWrapper">
-				    <iframe src="https://player.vimeo.com/video/3928691" allowfullscreen></iframe>
+					<iframe src="https://player.vimeo.com/video/3928691" allowfullscreen></iframe>
 				</div>
-
-
 			</div>
-
 			<div>
 				<button id ="kidpageclose">Back</button>
 			</div>
@@ -1203,15 +1243,14 @@
 				<p>For iPad only. Made with Unity 3D. MFA Thesis project.</p>
 				<a href="http://indiegames.com/2011/12/daniel_ponce_creates_a_type_se.html" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Press Feature: Indiegames.com</a>
 			</div>
-			<div>
-				<h3>Type Set Trailer</h3>
-				<div class="videoWrapper">
-				    <iframe src="https://www.youtube.com/embed/DFrrzchmqK4" allowfullscreen></iframe>
-				</div>
-			</div>
-
+<div class="video-container">
+	<h3>Trailer</h3>
+	<div class="videoWrapper">
+		<iframe src="https://www.youtube.com/embed/DFrrzchmqK4" allowfullscreen></iframe>
+	</div>
+</div>
 			<div class="imgrow">
-				<div class="imgcolumn" style="padding: .5em;">
+				<div class="imgcolumn" >
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
 						<section class="workselect">
@@ -1220,7 +1259,7 @@
 					</div>
 				</div>
 
-				<div class="imgcolumn" style="padding: .5em;">
+				<div class="imgcolumn" >
 
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
@@ -1230,7 +1269,7 @@
 					</div>
 				</div>
 
-				<div class="imgcolumn" style="padding: .5em;">
+				<div class="imgcolumn" >
 					<div id="gallerywrapper">
 						<!--gallery row 1 start -->
 						<section class="workselect">
@@ -1267,13 +1306,12 @@
 				<p>Indiecade 2010</p>
 				<a href="http://www.spectregame.com/play.php" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">For PC / Mac. Made using Flash.</a>
 			</div>
-			<div>
-				<h3>Spectre Trailer</h3>
-				<div class="videoWrapper">
-				    <iframe src="https://www.youtube.com/embed/_0SdfMBXPDQ" allowfullscreen></iframe>
-				</div>
-			</div>
-
+<div class="video-container">
+	<h3>Trailer</h3>
+	<div class="videoWrapper">
+		<iframe src="https://www.youtube.com/embed/_0SdfMBXPDQ" allowfullscreen></iframe>
+	</div>
+</div>
 			<div>
 				<button id ="spectrepageclose">Back</button>
 			</div>
@@ -1288,10 +1326,12 @@
 			<div>
 				<h3>Game Designer | Artist</h3>
 			</div>
+			<div class="video-container">
+				<h3>Trailer</h3>
 				<div class="videoWrapper">
-				    <iframe src="https://www.youtube.com/embed/yQzjGC5dtus" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/yQzjGC5dtus" allowfullscreen></iframe>
 				</div>
-
+			</div>
 			<div>
 				<p>A 2 - 4 player multiplayer game!</p>
 				<p>For PC. Using Torque 2D.</p>
@@ -1591,6 +1631,72 @@
 				<button id ="rustypageclose">Back</button>
 			</div>
 		</div>
+		<div id="theypage" class="gamescontainer">
+			<div>
+				<h2>They Shoot: Famicase</h2>
+			</div>
+		
+			<div>
+				<h3>Graphic Design</h3>
+			</div>
+			<div id="headerpicwrapper">
+				<!--gallery row 1 start -->
+				<section class="headerpicture">
+					<a class="example-image-link" id="lightbox-img" href="Images/design/theyshoot/theyshootFamicase.jpg" data-lightbox="theypage"
+						data-title="Famicase"><img class="example-image" src="Images/design/theyshoot/theyshootFamicase.jpg" alt="Famicase"
+							title="Famicase"></a>
+				</section>
+			</div>
+			<div>
+				<p>I designed a fake Famicom game for the Famicase Exhibition. It was displayed at the Meteor Gallery in Tokyo in
+					May 2018.</p>
+				<p>Visit Famicase<a href="http://famicase.com/" style=" text-decoration: none" rel="noopener noreferrer"
+						target="_blank"> Here.</a></p>
+			</div>
+		
+			<div class="imgrow">
+				<div class="imgcolumn">
+					<div id="gallerywrapper">
+						<!--gallery row 1 start -->
+						<section class="workselect">
+							<a class="example-image-link" id="lightbox-img" href="Images/design/theyshoot/theyshootFamicase.jpg"
+								data-lightbox="theypage" data-title="Famicase"><img class="example-image"
+									src="Images/design/theyshoot/theyshootFamicase.jpg" alt="Famicase" title="Famicase"></a>
+						</section>
+		
+					</div>
+				</div>
+		
+				<div class="imgcolumn">
+		
+					<div id="gallerywrapper">
+						<!--gallery row 1 start -->
+						<section class="workselect">
+							<a class="example-image-link" id="lightbox-img" href="Images/design/they/IMG_5747.jpg"
+								data-lightbox="theypage" data-title="Famicase"><img class="example-image"
+									src="Images/design/theyshoot/IMG_5747.jpg" alt="Famicase" title="Famicase"></a>
+						</section>
+					</div>
+		
+				</div>
+		
+				<div class="imgcolumn">
+					<div id="gallerywrapper">
+						<!--gallery row 1 start -->
+						<section class="workselect">
+							<a class="example-image-link" id="lightbox-img" href="Images/design/theyshoot/IMG_5751.png"
+								data-lightbox="theypage" data-title="Famicase"><img class="example-image"
+									src="Images/design/theyshoot/IMG_5751.png" alt="Famicase" title="Famicase"></a>
+						</section>
+					</div>
+				</div>
+		
+			</div>
+		
+			<div>
+				<button id="theypageclose">Back</button>
+			</div>
+		</div>
 		<div id="journeypage" class = "gamescontainer">
 			<div>
 				<h2>Journey To The End of The Night</h2>
@@ -1647,13 +1753,75 @@
 				<button id ="journeypageclose">Back</button>
 			</div>
 		</div>
-		<div id="tricketspage" class = "gamescontainer">
+			<div id="gamebuilderpage" class="gamescontainer">
+				<div>
+					<h2>Game Builder: The Game Building Sandbox</h2>
+				</div>
 			
-
-			<div>
-				<button id ="tricketspageclose">Back</button>
+				<div>
+					<h3>Design | UI | UX</h3>
+				</div>
+				<div id="headerpicwrapper">
+					<!--gallery row 1 start -->
+					<section class="headerpicture">
+						<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/header.jpg" data-lightbox="gamebuilder"
+							data-title="Cold Email logo"><img class="example-image" src="Images/games/gamebuilder/header.jpg" alt="Cold Email logo"
+								title="Cold Email logo"></a>
+					</section>
+				</div>
+				<div>
+					<p>Build and play games with your friends! Make a 3D platformer in 10 minutes, or spend hours jamming on the next indie
+					hit. Game Builder is designed for all skill levels, from players ready to build their first game to designers looking
+					for a faster way to realize their ideas.</p>
+					<p>I was responsible for general design and UI/UX for the game. It is available on Steam Early Access for free.</p>
+					<a href="https://store.steampowered.com/app/929860/Game_Builder/" style=" text-decoration: none" rel="noopener noreferrer"
+						target="_blank">Download Game Builder</a>
+				</div>
+			<div class="video-container">
+				<h3>Trailer</h3>
+				<div class="videoWrapper">
+					<iframe src="https://www.youtube.com/embed/R8aDZYucUQw" allowfullscreen></iframe>
+				</div>
 			</div>
-		</div>
+				<div class="imgrow">
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/1.jpg" data-lightbox="gamebuilder"
+									data-title="Screenshot"><img class="example-image" src="Images/games/gamebuilder/1.jpg"
+										alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
+							</section>
+						</div>
+					</div>
+			
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/2.jpg" data-lightbox="gamebuilder"
+									data-title="Screenshot"><img class="example-image" src="Images/games/gamebuilder/2.jpg"
+										alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
+							</section>
+						</div>
+					</div>
+					<div class="imgcolumn">
+						<div id="gallerywrapper">
+							<!--gallery row 1 start -->
+							<section class="workselect">
+								<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/3.jpg" data-lightbox="gamebuilder"
+									data-title="Screenshot"><img class="example-image" src="Images/games/gamebuilder/3.jpg"
+										alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
+							</section>
+						</div>
+					</div>
+			
+				</div>
+			
+				<div>
+					<button id="gbpageclose">Back</button>
+				</div>
+			</div>
 		<div id="loader-wrapper">
 			<div id="loader"></div>
 			<div class="loader-section section-left"></div>
