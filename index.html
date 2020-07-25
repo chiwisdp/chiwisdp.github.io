@@ -1,1872 +1,2844 @@
 <!DOCTYPE html>
 <html>
-	<head>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
- 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
- 		 <meta charset="UTF-8">
-		  <meta name="description" content="Daniel Ponce's Website">
-		  <meta name="keywords" content="Chiwis,Daniel Ponce,portfolio, designer">
-		  <meta name="author" content="Daniel Ponce">
-		<title>Daniel's web container</title>
-		<style>
-		@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Shrikhand');
-		</style>
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="JS/three.js"></script>
-		<script src="JS/Tween.js"></script>
-
-		<script src="JS/OBJLoader.js"></script>
-		<script src="JS/ExplodeModifier.js"></script>
-		<script src="JS/TessellateModifier.js"></script>
-		<script src="JS/Detector.js"></script>
-
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	    <link rel="stylesheet" href="css/lightbox.min.css">
-	    <link rel="stylesheet" type="text/css" href="main.css">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	    
-		<script>
-			$(document).ready(function(){
-				var isagamepageshowing = 0;
-				var isadesignpageshowing = 0;
-			    $.fn.designPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#games").removeClass("showpanel");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	
-			    	//games pages
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#typepage").removeClass("showgamescontainer");
-						$("#touchpage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isagamepageshowing = 0;
-			    	//functionality
-			    	if(isadesignpageshowing<1)
-			    	{
-			    		if($("#design").attr('class') =='design')
-			    		{
-			    		 setTimeout(function(){
-					            $("#design").toggleClass("showpaneldesign");
-					      },600);
-				    	}
-				    	else
-				    	{
-				    		$("#design").toggleClass("showpaneldesign");
-				    	}
-				    	$("#design").animate({
-						    scrollTop: 0
-						  }, 10);
-				    }
-			    }
-			    $.fn.gamePageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	
-			    	//games pages
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	
-			    	//functionality
-			    	if(isagamepageshowing<1)
-			    	{
-			    		console.log($("#games").attr('class'));
-				    	if($("#games").attr('class') =='games')
-			    		{
-			    		 setTimeout(function(){
-					            $("#games").toggleClass("showpanel");
-					      },600);
-				    	}
-				    	else
-				    	{
-				    		$("#games").toggleClass("showpanel");
-				    	}
-				    	$("#games").animate({
-						    scrollTop: 0
-						  }, 10);
-				    }
-			    }
-			    $.fn.aboutPageToggle = function(){
-			    	$("#aboutme").toggleClass("showpanel");
-			    	$("#games").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-
-			    	//games pages
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isagamepageshowing = 0;
-			    	//functionality
-			    	$("#aboutme").animate({
-					    scrollTop: 0
-					  }, 10);
-			    }
-			    $.fn.pressPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#games").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-
-			    	//games pages
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isagamepageshowing = 0;
-			    	//functionality
-			    	$("#press").toggleClass("showpanel");
-			    	$("#press").animate({
-					    scrollTop: 0
-					  }, 200);
-			    }
-			   	//individual games pages
-			    $.fn.coldPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-			    	
-			    	//functionality
-			    	$("#coldpage").toggleClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	$("#coldpage").animate({
-					    scrollTop: 0
-					  }, 100);
-
-			    	if($("#coldpage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-					
-			    }
-
-			    
-			    $.fn.dqPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-			    	
-			    	//functionality
-			    	$("#dqpage").toggleClass("showgamescontainer");
-																		$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	$("#dqpage").animate({
-					    scrollTop: 0
-					  }, 100);
-
-			    	if($("#dqpage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.monoPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#monopage").toggleClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	$("#monopage").animate({
-					    scrollTop: 0
-					  }, 100);
-
-			    	if($("#monopage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-					$.fn.gbPageToggle = function () {
-					$("#aboutme").removeClass("showpanel");
-					$("#design").removeClass("showpaneldesign");
-					$("#press").removeClass("showpanel");
-
-					//design pages
-					$("#rustypage").removeClass("showgamescontainer");
-					$("#journeypage").removeClass("showgamescontainer");
-					$("#tricketspage").removeClass("showgamescontainer");
-					isadesignpageshowing = 0;
-					//games pages
-
-					//functionality
-					$("#gamebuilderpage").toggleClass("showgamescontainer");
-					$("#coldpage").removeClass("showgamescontainer");
-					$("#monopage").removeClass("showgamescontainer");
-					$("#dqpage").removeClass("showgamescontainer");
-					$("#dynapage").removeClass("showgamescontainer");
-					$("#ssspage").removeClass("showgamescontainer");
-					$("#typepage").removeClass("showgamescontainer");
-												$("#theypage").removeClass("showgamescontainer");
-
-					$("#touchpage").removeClass("showgamescontainer");
-					$("#kidpage").removeClass("showgamescontainer");
-					$("#spectrepage").removeClass("showgamescontainer");
-					$("#monopage").animate({
-						scrollTop: 0
-					}, 100);
-
-					if ($("#gamebuilderpage").attr('class') == 'gamescontainer showgamescontainer') {
-						isagamepageshowing = 1;
-					}
-					else {
-						isagamepageshowing = 0;
-					}
-
-				}
-			    $.fn.dynaPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#dynapage").toggleClass("showgamescontainer");
-						$("#gamebuilderpage").toggleClass("showgamescontainer");
-						$("#coldpage").removeClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	$("#dynapage").animate({
-					    scrollTop: 0
-					  }, 100);
-
-			    	if($("#dynapage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.sssPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#ssspage").toggleClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dqpage").removeClass("showgamescontainer");
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	$("#ssspage").animate({
-					    scrollTop: 0
-					  }, 100);
-
-			    	if($("#ssspage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.typePageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#typepage").toggleClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dqpage").removeClass("showgamescontainer");
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-						$("#spectrepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#typepage").animate({
-					    scrollTop: 0
-					  }, 100);
-
-			    	if($("#typepage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.touchPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#touchpage").toggleClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-						$("#ssspage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#typepage").removeClass("showgamescontainer");
-			    	$("#touchpage").animate({
-					    scrollTop: 0
-					  }, );
-
-			    	if($("#touchpage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.kidPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#kidpage").toggleClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-			    	$("#dynapage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#kidpage").animate({
-					    scrollTop: 0
-					  }, 10);
-
-			    	if($("#kidpage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.spectrePageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//games pages
-
-			    	//functionality
-			    	$("#spectrepage").toggleClass("showgamescontainer");
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").animate({
-					    scrollTop: 0
-					  }, 10);
-
-			    	if($("#spectrepage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.rustyPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	//games pages
-
-
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//functionality
-			    	$("#rustypage").toggleClass("showgamescontainer");
-			    	$("#rustypage").animate({
-					    scrollTop: 0
-					  }, 10);
-
-			    	if($("#rustypage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-			    }
-
-			    $.fn.journeyPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#design").removeClass("showpaneldesign");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#tricketspage").removeClass("showgamescontainer");
-			    	//games pages
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-													$("#theypage").removeClass("showgamescontainer");
-
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isadesignpageshowing = 0;
-			    	//functionality
-			    	$("#journeypage").toggleClass("showgamescontainer");
-			    	$("#journeypage").animate({
-					    scrollTop: 0
-					  }, 10);
-
-			    	if($("#journeypage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isagamepageshowing = 1;
-			    	}
-			    	else{
-			    		isagamepageshowing = 0;
-			    	}
-
-					}
-					$.fn.theyPageToggle = function () {
-					$("#aboutme").removeClass("showpanel");
-					$("#design").removeClass("showpaneldesign");
-					$("#press").removeClass("showpanel");
-					//design pages
-					$("#rustypage").removeClass("showgamescontainer");
-					$("#tricketspage").removeClass("showgamescontainer");
-					//games pages
-					$("#coldpage").removeClass("showgamescontainer");
-					$("#dqpage").removeClass("showgamescontainer");
-					$("#gamebuilderpage").removeClass("showgamescontainer");
-
-					$("#dynapage").removeClass("showgamescontainer");
-					$("#monopage").removeClass("showgamescontainer");
-					$("#ssspage").removeClass("showgamescontainer");
-					$("#typepage").removeClass("showgamescontainer");
-
-					$("#kidpage").removeClass("showgamescontainer");
-					$("#touchpage").removeClass("showgamescontainer");
-					$("#spectrepage").removeClass("showgamescontainer");
-					$("#journeypage").removeClass("showgamescontainer");
-					isadesignpageshowing = 0;
-					//functionality
-					$("#theypage").toggleClass("showgamescontainer");
-					$("#theypage").animate({
-						scrollTop: 0
-					}, 10);
-
-					if ($("#theypage").attr('class') == 'gamescontainer showgamescontainer') {
-						isagamepageshowing = 1;
-					}
-					else {
-						isagamepageshowing = 0;
-					}
-
-				}
-
-			    $.fn.tricketsPageToggle = function(){
-			    	$("#aboutme").removeClass("showpanel");
-			    	$("#games").removeClass("showpanel");
-			    	$("#press").removeClass("showpanel");
-			    	//design pages
-			    	$("#rustypage").removeClass("showgamescontainer");
-			    	$("#journeypage").removeClass("showgamescontainer");
-			    	//games pages
-
-
-			    	$("#coldpage").removeClass("showgamescontainer");
-			    	$("#dqpage").removeClass("showgamescontainer");
-												$("#gamebuilderpage").removeClass("showgamescontainer");
-
-			    	$("#dynapage").removeClass("showgamescontainer");
-			    	$("#monopage").removeClass("showgamescontainer");
-			    	$("#ssspage").removeClass("showgamescontainer");
-						$("#typepage").removeClass("showgamescontainer");
-							$("#theypage").removeClass("showgamescontainer");
-			    	$("#kidpage").removeClass("showgamescontainer");
-			    	$("#touchpage").removeClass("showgamescontainer");
-			    	$("#spectrepage").removeClass("showgamescontainer");
-			    	isagamepageshowing = 0;
-			    	//functionality
-			    	$("#tricketspage").toggleClass("showgamescontainer");
-			    	$("#tricketspage").animate({
-					    scrollTop: 0
-					  }, 10);
-
-			    	if($("#tricketspage").attr('class') =='gamescontainer showgamescontainer')
-			    	{
-			    		isadesignpageshowing = 1;
-			    	}
-			    	else{
-			    		isadesignpageshowing = 0;
-			    	}
-
-			    }
-
-			    $("#b_design").click(function(){
-					$.fn.designPageToggle();
-			    });
-			    $("#b_games").click(function(){
-					$.fn.gamePageToggle();
-			    });
-			    $("#b_about").click(function(){
-					$.fn.aboutPageToggle();
-			    });
-			    $("#b_press").click(function(){
-					$.fn.pressPageToggle();
-			    });
-			    $("#aboutmeclose").click(function(){
-					$.fn.aboutPageToggle();
-			    });
-			    $("#pressclose").click(function(){
-					$.fn.pressPageToggle();
-			    });
-			    $("#gamesclose").click(function(){
-					$.fn.gamePageToggle();
-			    });
-			    $("#designclose").click(function(){
-					$.fn.designPageToggle();
-			    });
-
-			    //games pages
-			    $("#coldpagetoggle").click(function(){
-					$.fn.coldPageToggle();
-			    });
-			    $("#coldpageclose").click(function(){
-					$.fn.coldPageToggle();
-			    });
-			    $("#dqpagetoggle").click(function(){
-					$.fn.dqPageToggle();
-			    });
-			    $("#dqpageclose").click(function(){
-					$.fn.dqPageToggle();
-			    });
-			    $("#dynapagetoggle").click(function(){
-					$.fn.dynaPageToggle();
-			    });
-			    $("#dynapageclose").click(function(){
-					$.fn.dynaPageToggle();
-			    });
-			    $("#monopagetoggle").click(function(){
-					$.fn.monoPageToggle();
-			    });
-			    $("#monopageclose").click(function(){
-					$.fn.monoPageToggle();
-			    });
-			    $("#ssspagetoggle").click(function(){
-					$.fn.sssPageToggle();
-			    });
-			    $("#ssspageclose").click(function(){
-					$.fn.sssPageToggle();
-			    });
-			    $("#typepagetoggle").click(function(){
-					$.fn.typePageToggle();
-			    });
-			    $("#typepageclose").click(function(){
-					$.fn.typePageToggle();
-					});
-					$("#theypagetoggle").click(function () {
-					$.fn.theyPageToggle();
-					});
-					$("#theypageclose").click(function () {
-						$.fn.theyPageToggle();
-					});
-			    $("#touchpagetoggle").click(function(){
-					$.fn.touchPageToggle();
-			    });
-			    $("#touchpageclose").click(function(){
-					$.fn.touchPageToggle();
-			    });
-			    $("#kidpagetoggle").click(function(){
-					$.fn.kidPageToggle();
-			    });
-			    $("#kidpageclose").click(function(){
-					$.fn.kidPageToggle();
-			    });
-			    $("#spectrepagetoggle").click(function(){
-					$.fn.spectrePageToggle();
-			    });
-			    $("#spectrepageclose").click(function(){
-					$.fn.spectrePageToggle();
-			    });
-
-			    //Design pages
-			    $("#journeypagetoggle").click(function(){
-					$.fn.journeyPageToggle();
-			    });
-			    $("#journeypageclose").click(function(){
-					$.fn.journeyPageToggle();
-			    });
-					$("#gbpagetoggle").click(function () {
-						$.fn.gbPageToggle();
-					});
-					$("#gbpageclose").click(function () {
-						$.fn.gbPageToggle();
-					});
-			    $("#rustypagetoggle").click(function(){
-					$.fn.rustyPageToggle();
-			    });
-			    $("#rustypageclose").click(function(){
-					$.fn.rustyPageToggle();
-			    });
-			    $("#tricketspagetoggle").click(function(){
-					$.fn.tricketsPageToggle();
-			    });
-			    $("#tricketspageclose").click(function(){
-					$.fn.tricketsPageToggle();
-			    });
-
-			});
-		</script>
-
-	</head>
-
-	<body>
-		<div id="container">
-		  <div id="webglContainer"></div>
-		</div>
-		<div id="topmenu" class="topmenu">
-			<div id="logo" class="logo"><h1>Daniel Ponce</h1></div>
-			<button id="b_design" onclick="showDesign()">Current Project</button>
-			<button id="b_games" onclick="showGames()">Works</button>
-			<button id="b_about" onclick="showAbout()">About me</button>
-			<button id="b_press" onclick="showPress()">Press</button>
-
-		</div>
-		<div id="aboutme" class="aboutme">
-			<div>
-				<h2>About me</h2>
-			</div>
-			<div>
-				<h3>Designing one pixel at a time...</h3>
-			</div>
-
-			<div>
-				<div class="clearfix">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="profilepic">
-							<a class="example-image-link" id="lightbox-img" href="Images/profile.jpg" data-lightbox="example-set" data-title="You zoomed in on my face" ><img class="example-image" src="Images/profile.jpg" alt="My face" title="Stare into my soul"></a>
-						</section>
-					</div>
-					<p>From a young age, Daniel knew that he wanted to be part of the creative industry. He made that dream a reality after getting an MFA from <a href="https://cinema.usc.edu/interactive/" rel="noopener noreferrer" target="_blank">USC's Interactive Media Division.</a></p>
-
-					<p>Daniel Co-Founded <a href="https://craterhouse.com" rel="noopener noreferrer" target="_blank">Crater House</a> with <a href="http://www.funwithbill.net/" rel="noopener noreferrer" target="_blank">Bill Graner</a> and other alumni of USC's Interactive Media Division. There they created exciting, uniquely creative apps and intellectual properties for international brands-including Shaq Sky Slam for Shaquille O'Neal, and original design and development for The Israel Antiquities Authority, Tyson Chicken, Kraken Rum, and the California Indian Museum and Cultural Center.</p>
-
-					<p>Daniel does Interactive Design, UI/UX, and front-end development. He makes sure products look and feel amazing. He likes making weird and wacky games with an offbeat sense of humor in his spare time.</p>
-				</div>
-			</div>
-			<div>
-				<a href="https://www.dropbox.com/s/xk1h92csn4441iz/DanielPonce_ResumeDesign.pdf?dl=0" style="font-size: .75em; text-decoration: none" rel="noopener noreferrer" target="_blank">Resume</a>
-			</div>
-			<div>
-				<a href="https://www.dropbox.com/s/f6mh9mfha9wqp8r/DanielPonceDesignPortfolio.pdf?dl=0" style="font-size: .75em; text-decoration: none" rel="noopener noreferrer" target="_blank">Portfolio PDF</a>
-			</div>
-			<div>
-				<a href="https://twitter.com/Chiwis" class="fa fa-twitter" rel="noopener noreferrer" target="_blank"></a>
-				<a href="https://www.linkedin.com/in/daniel-ponce-51038413/" class="fa fa-linkedin" rel="noopener noreferrer" target="_blank"></a>
-			</div>
-			<div>
-				<button id ="aboutmeclose">Look at the cool background</button>
-			</div>
-		</div>
-
-		<div id="press" class="press">
-			<div>
-				<h2>Awards & Press</h2>
-			</div>
-			<div>
-				<h3>Some accolades!</h3>
-			</div>
-
-			<div>
-				<div class="clearfix">
-					<div class="row">
-					  <div class="column" >
-					    <h2>Awards</h2>
-					    <p>2017 My Famicase Exhibition : Rusty Blade</p>
-					    <p>2012 San Francisco Global Game Jam : Most Polish For Dynamice</p>
-						<p>2010 Independent Games Festival Student Showcase Winner For Spectre</p>
-						<p>2009 Indiecade Finalist For Spectre</p>
-						<p>2009 Independent Games Festival Student Showcase Winner For Kid the World Saver</p>
-						<p>2007 California Governor’s Safety Award For Disaster Zone</p>
-					  </div>
-					  <div class="column" >
-					    <h2>Press</h2>
-					    <p>PC Gamer Magazine Issue #280 July 2016 Top 10 Downloads : Cold Email</p>
-						<p>PCGamer.com March 2016 : Cold Email</p>
-						<p><a href="https://www.rockpapershotgun.com/2016/03/12/best-free-games-of-the-week-15/" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Rock Paper Shotgun</a>: Cold Email</p>
-						<p><a href="http://indiegames.com/2016/03/cold_email_-_a_game_about_cont.html" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Indiegames.com</a>: Cold Email</p>
-						<p><a href="https://www.youtube.com/watch?v=X1Bi6Q-fp2E&feature=youtu.be&t=4m47s" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Pewdiepie</a>: Cold Email</p>
-						<p><a href="http://indiegames.com/2011/12/daniel_ponce_creates_a_type_se.html" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Indiegames.com</a>: Type Set</p>
-					  </div>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<button id ="pressclose">Look at the cool background</button>
-			</div>
-		</div>
-		<div id="games" class="games">
-			<div>
-				<h2>Projects I've Worked on</h2>
-			</div>
-			<div>
-				<h3>Selected Works</h3>
-			</div>
-
-			<div class="clearfix">
-				<div class="imgrow">
-					<div class="imgcolumn-2pane">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="gbpagetoggle"><img class="example-image"
-										src="Images/games/gamebuilder/header.jpg" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="ssspagetoggle"><img class="example-image" src="Images/games/sss/sssScreen1.png"
-										alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-					</div>
-					<div class="imgcolumn-2pane">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="coldpagetoggle"><img class="example-image"
-										src="Images/games/coldemail/ColdEmailLogo.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="dqpagetoggle"><img class="example-image" src="Images/games/digquest/dqlogo.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div>
-				<h3>Graphic Design</h3>
-					<div class="clearfix">
-						<div class="imgrow">
-								<div class="imgcolumn">
-									<div id="gallerywrapper">
-										<!--gallery row 1 start -->
-										<section class="workselect">
-											<a class="example-image-link" id="theypagetoggle"><img class="example-image" src="Images/design/theyshoot/IMG_5747HEADER.png"
-													alt="My face" title="Stare into my soul"></a>
-										</section>
-									</div>
-								</div>
-								<div class="imgcolumn">
-									<div id="gallerywrapper">
-										<!--gallery row 1 start -->
-										<section class="workselect">
-											<a class="example-image-link" id="rustypagetoggle"><img class="example-image" src="Images/design/rusty/logo.jpg"
-													alt="My face" title="Stare into my soul"></a>
-									</section>
-								</div>
-								</div>
-								<div class="imgcolumn">
-									<div id="gallerywrapper">
-										<section class="workselect">
-											<a class="example-image-link" id="journeypagetoggle"><img class="example-image"
-													src="Images/design/journey/A1Horizontalv2.png" alt="My face" title="Stare into my soul"></a>
-										</section>
-									</div>
-								</div>
-						</div>
-					</div>
-			</div>
-			<div>
-				<h3>Older Works</h3>
-			</div>
-			<div class="clearfix">
-				<div class="imgrow">
-					<div class="imgcolumn">
-
-						
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="dynapagetoggle"><img class="example-image" src="Images/games/dynamice/DynamiceHeader.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="monopagetoggle"><img class="example-image" src="Images/games/mono/monoHeader.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-
-					</div>
-
-					<div class="imgcolumn">
-
-					
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="touchpagetoggle"><img class="example-image" src="Images/games/touch/stormynight-logoHEADER.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="spectrepagetoggle"><img class="example-image" src="Images/games/spectre/Spectre_Wallpaper_TextHEADER.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-
-					</div>
-
-					<div class="imgcolumn">
-
-					
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="typepagetoggle"><img class="example-image" src="Images/games/typeset/TSheader.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="kidpagetoggle"><img class="example-image" src="Images/games/kid/hqdefaultHeader.png" alt="My face" title="Stare into my soul"></a>
-							</section>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-			<div>
-				<button id ="gamesclose">Look at the cool background</button>
-			</div>
-		</div>
-		<!-- Photo Grid -->
-		<div id="design" class = "design">
-			<div>
-				<h2>Current Ongoing Project:</h2>
-				<h2>R2 Unit: A Star Wars fan game.</h2>
-			</div>
-
-			<div>
-				<p>R2 Story : A Star Wars VR Fangame. This is a fan project and will not be distributed. This is just me playing around with Unity3D and an Oculus DK 2 kit. Lucasfilm and Disney Own the rights to the Star Wars brand. This is a work in progress.</p>
-				<div class="video-container">
-					<h3>Trailer</h3>
-					<div class="videoWrapper">
-						<iframe src="https://www.youtube.com/embed/ZQOZLxbX3f4" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/SWVR/TitleSWVR.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/games/SWVR/TitleSWVR.png" alt="Trickits" title="Trickits"></a>
-							</section>
-
-						</div>
-					</div>
-
-					<div class="imgcolumn">
-
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/SWVR/frontSWVR.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/games/SWVR/frontSWVR.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-
-					</div>
-
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/SWVR/BackSWVR.png" data-lightbox="tricketspage" data-title="Trickits" ><img class="example-image" src="Images/games/SWVR/BackSWVR.png" alt="Trickits" title="Trickits"></a>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div>
-				<button id ="designclose">Look at the cool background</button>
-			</div>
-		</div>
-		<!--individual games start -->
-		<div id="coldpage" class = "gamescontainer">
-			<div>
-				<h2>Cold Email</h2>
-			</div>
-
-			<div>
-				<h3>Design | Art | Programming</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/0.gif" data-lightbox="coldpage" data-title="Cold Email logo" ><img class="example-image" src="Images/games/coldemail/0.gif" alt="Cold Email logo" title="Cold Email logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>If you've ever released a game, you've found yourself in a position where you have to send it off to the gaming press. Maybe you don't know anyone, maybe you have a couple of contacts - either way, you're nervous and trying to contact as many people as you can to get the word out about your game. Cold Email is about that. Except your computer is also kind of messed up and about to explode.</p>
-				<p>In Cold Email, you need to fire off emails as fast as you can before your computer explodes from malware. The send button has a nasty tendency to wander in the Game Jam title, though, so it may be difficult to get out all of those necessary emails before your PC bursts into flames. Do try, though, as your game, and your livelihood, depends on it.</p>
-				<a href="https://craterhouse.itch.io/cold-email" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Download Cold Email</a>
-			</div>
-			<div class="video-container">
-				<h3>Watch Pewdiepie play Cold Email!</h3>
-				<div class="videoWrapper">
-				    <iframe src="https://www.youtube.com/embed/X1Bi6Q-fp2E?start=285" allowfullscreen></iframe>
-				</div>
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/5.png" data-lightbox="coldpage"
-								data-title="Screenshot"><img class="example-image" src="Images/games/coldemail/5.png" alt="Cold Email Screenshot"
-									title="Cold Email Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/2.png" data-lightbox="coldpage" data-title="Screenshot" ><img class="example-image" src="Images/games/coldemail/2.png" alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/coldemail/3.png" data-lightbox="coldpage" data-title="Screenshot" ><img class="example-image" src="Images/games/coldemail/3.png" alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="coldpageclose">Back</button>
-			</div>
-		</div>
-
-		<div id="kidpage" class = "gamescontainer">
-			<div>
-				<h2>Kid the World Saver</h2>
-			</div>
-
-			<div>
-				<h3>Game Designer | Artist</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/kid/hqdefault.jpg" data-lightbox="kidpage" data-title="Kid the World Saver logo" ><img class="example-image" src="Images/games/kid/hqdefault.jpg" alt="Kid the World Saver logo" title="Kid the World Saver logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>Move blocks around to guide Kid to the end of the level!</p>
-				<h3>Awards</h3>
-				<p>IGF Student Showcase Finalist 2009</p>
-				<a href="https://www.dropbox.com/s/yqrswqnqo9vpwmy/KWS_Nightly.GDC.50.exe?dl=0" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Download for PC.</a>
-			</div>
-			<div class="video-container">
-				<h3>Trailer</h3>
-				<div class="videoWrapper">
-					<iframe src="https://player.vimeo.com/video/3928691" allowfullscreen></iframe>
-				</div>
-			</div>
-			<div>
-				<button id ="kidpageclose">Back</button>
-			</div>
-		</div>
-
-		<div id="typepage" class = "gamescontainer">
-			<div>
-				<h2>Type Set</h2>
-			</div>
-
-			<div>
-				<h3>Project Lead | Game Designer | Programmer | Artist</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/typeset/8.png" data-lightbox="typepage" data-title="Type Set logo" ><img class="example-image" src="Images/games/typeset/8.png" alt="Type Set logo" title="Type Set logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>Type Set is a game about moving a conversation along, literally. The player physically manipulates the words on screen through touch gestures. Just like a normal conversation depending on which words you emphasize it can change the tone and direction of the conversation. Emphasis is placed on certain words by making them bigger /smaller or rotating them. In this case, the protagonist is having a phone conversation with Sarah, his girlfriend's best friend, about why his relationship with his significant other is ending. So the conversation changes depending on the way players solve the puzzles ( i.e. emphasizing certain words to change the tone of the conversation in an angry or nice way).</p>
-				<p>For iPad only. Made with Unity 3D. MFA Thesis project.</p>
-				<a href="http://indiegames.com/2011/12/daniel_ponce_creates_a_type_se.html" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Press Feature: Indiegames.com</a>
-			</div>
-<div class="video-container">
-	<h3>Trailer</h3>
-	<div class="videoWrapper">
-		<iframe src="https://www.youtube.com/embed/DFrrzchmqK4" allowfullscreen></iframe>
-	</div>
-</div>
-			<div class="imgrow">
-				<div class="imgcolumn" >
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/typeset/10.png" data-lightbox="typepage" data-title="Screenshot" ><img class="example-image" src="Images/games/typeset/10.png" alt="Type Set Screenshot" title="Type Set Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-				<div class="imgcolumn" >
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/typeset/7.png" data-lightbox="typepage" data-title="Screenshot" ><img class="example-image" src="Images/games/typeset/7.png" alt="Type Set Screenshot" title="Type Set Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-				<div class="imgcolumn" >
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/typeset/6.png" data-lightbox="typepage" data-title="Screenshot" ><img class="example-image" src="Images/games/typeset/6.png" alt="Type Set Screenshot" title="Type Set Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="typepageclose">Back</button>
-			</div>
-		</div>
-
-		<div id="spectrepage" class = "gamescontainer">
-			<div>
-				<h2>Spectre</h2>
-			</div>
-
-			<div>
-				<h3>Artist | Game Designer</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/spectre/Spectre_Wallpaper_Text.jpg" data-lightbox="spectrepage" data-title="Spectre logo" ><img class="example-image" src="Images/games/spectre/Spectre_Wallpaper_Text.jpg" alt="Spectre logo" title="Spectre logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>Spectre is a recombinant narrative platformer, a game that tells the story of an individual's life. The landscape before you is not a physical world, but 73 years' worth of Joseph's memory: moments of joy and fear, light and darkness. As you navigate through his specific recollections, similarly themed events will glow brightly. If you succeed in these moments of play and follow a glowing path, you will find a theme uniting his experience, and uncover a little more of his fading memory. If not, your nightly story will end in confusion.</p>
-				<h3>Awards</h3>
-				<p>IGF Student Showcase Finalist 2010</p>
-				<p>Indiecade 2010</p>
-				<a href="http://www.spectregame.com/play.php" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">For PC / Mac. Made using Flash.</a>
-			</div>
-<div class="video-container">
-	<h3>Trailer</h3>
-	<div class="videoWrapper">
-		<iframe src="https://www.youtube.com/embed/_0SdfMBXPDQ" allowfullscreen></iframe>
-	</div>
-</div>
-			<div>
-				<button id ="spectrepageclose">Back</button>
-			</div>
-		</div>
-
-		<!--individual games start -->
-		<div id="monopage" class = "gamescontainer">
-			<div>
-				<h2>Monoverse: This is not physics</h2>
-			</div>
-
-			<div>
-				<h3>Game Designer | Artist</h3>
-			</div>
-			<div class="video-container">
-				<h3>Trailer</h3>
-				<div class="videoWrapper">
-					<iframe src="https://www.youtube.com/embed/yQzjGC5dtus" allowfullscreen></iframe>
-				</div>
-			</div>
-			<div>
-				<p>A 2 - 4 player multiplayer game!</p>
-				<p>For PC. Using Torque 2D.</p>
-			</div>
-
-			<div>
-				<button id ="monopageclose">Back</button>
-			</div>
-		</div>
-
-		<div id="dqpage" class = "gamescontainer">
-			<div>
-				<h2>Dig Quest: Israel</h2>
-			</div>
-
-			<div>
-				<h3>UX | UI | Designer | Front-End Programmer</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqscreen.png" data-lightbox="dqpage" data-title="Dig Quest logo" ><img class="example-image" src="Images/games/digquest/dqscreen.png" alt="Dig Quest logo" title="Dig Quest logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>Become an archeologist, and use your device to explore Israel’s past! Dig up the 2,000-year-old Lod Mosaic, and piece together the Dead Sea Scrolls. A collaboration between Crater House, Maya Cohan Productions, and the Israel Antiquities Authority!</p>
-				<p>Download<a href="https://itunes.apple.com/us/app/dig-quest-israel/id913694523?mt=8" style=" text-decoration: none" rel="noopener noreferrer" target="_blank"> iOS</a> / <a href="https://play.google.com/store/apps/details?id=il.org.antiquities.digquestisrael&hl=en" style=" text-decoration: none" rel="noopener noreferrer" target="_blank">Android</a> Made with Unity3D.</p>
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/dqScreen3.png" data-lightbox="dqpage" data-title="Start of the game." ><img class="example-image" src="Images/games/digquest/dqScreen3.png" alt="Dig Quest Screenshot" title="Cold Email Screenshot"></a>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/Screen1.png" data-lightbox="dqpage" data-title="Screenshot" ><img class="example-image" src="Images/games/digquest/Screen1.png" alt="Dig Quest Screenshot" title="Cold Email Screenshot"></a>
-						</section>
-					</div>
-
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/digquest/Screen Shot 2016-09-09 at 12.05.35 PM.png" data-lightbox="dqpage" data-title="Screenshot" ><img class="example-image" src="Images/games/digquest/Screen Shot 2016-09-09 at 12.05.35 PM.png" alt="Dig Quest Screenshot" title="Cold Email Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="dqpageclose">Back</button>
-			</div>
-		</div>
-		<div id="ssspage" class = "gamescontainer">
-			<div>
-				<h2>Shaq Sky Slam</h2>
-			</div>
-
-			<div>
-				<h3>Interaction Designer | UI/UX | Front - End Programmer</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/sss/sss4 copy.png" data-lightbox="ssspage" data-title="Shaq logo" ><img class="example-image" src="Images/games/sss/sss4 copy.png" alt="Shaq logo" title="Shaq logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>A new extreme sport for your mobile device brought to you by One Spear Entertainment, Crater House, and the man himself, Shaq!</p>
-				<p>Get ready for the most over the top extreme sport ever created. Skydive with a basketball in hand, plunge through the stratosphere at terminal velocity, grabbing coins and diving through hoops along the way. Divebomb toward the basketball court below, lock in on your target, and slam dunk that ball!</p>
-				<p>World renowned daredevil Robbie Maddison can’t resist a stunt like this. And he’s sky slamming Maddo style, jumping his bike from the plane!</p>
-				<p>Made for iOS / Android. Made with Unity 3D.</p>
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/sss/Screenshot_2016-09-09-13-18-17.png" data-lightbox="ssspage" data-title="Sky Slam" ><img class="example-image" src="Images/games/sss/Screenshot_2016-09-09-13-18-17.png" alt="Sky Slam Screenshot" title="Sky Slam Screenshot"></a>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/sss/sss5.png" data-lightbox="ssspage" data-title="Screenshot" ><img class="example-image" src="Images/games/sss/sss5.png" alt="Sky Slam Screenshot" title="Sky Slam Screenshot"></a>
-						</section>
-					</div>
-
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/sss/SSSscreen.png" data-lightbox="dqpage" data-title="Screenshot" ><img class="example-image" src="Images/games/sss/SSSscreen.png" alt="Sky Slam Screenshot" title="Sky Slam Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="ssspageclose">Back</button>
-			</div>
-		</div>
-
-		<div id="dynapage" class = "gamescontainer">
-			<div>
-				<h2>Dynamice</h2>
-			</div>
-
-			<div>
-				<h3>Game Designer | Front - End Programmer</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/dynamice/Dynamice.png" data-lightbox="dynapage" data-title="Dynamice logo" ><img class="example-image" src="Images/games/dynamice/Dynamice.png" alt="Dynamice logo" title="Dynamice logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>Play single or two player, but two player is more fun!</p>
-				<p>Players take turns running the maze and can see the footprints left by previous turns. The question to ask: is the other player running towards the cheese, or leading you into a trap?</p>
-				<p>Made at the global game jam in 48 hours and won the award for Most Polished Game at the 2012 San Francisco GGJ site.</p>
-				<p>Download here<a href="http://archive.globalgamejam.org/2012/dynamice" style=" text-decoration: none" rel="noopener noreferrer" target="_blank"> PC/Mac.</a> Made with Unity3D.</p>
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/dynamice/Dyna0.png" data-lightbox="dynapage" data-title="Start of the game." ><img class="example-image" src="Images/games/dynamice/Dyna0.png" alt="Dynamice Screenshot" title="Dynamice Screenshot"></a>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/dynamice/dyna2.png" data-lightbox="dynapage" data-title="Screenshot" ><img class="example-image" src="Images/games/dynamice/dyna2.png" alt="Dynamice Screenshot" title="Dynamice Screenshot"></a>
-						</section>
-					</div>
-
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/dynamice/dyna4.png" data-lightbox="dynapage" data-title="Screenshot" ><img class="example-image" src="Images/games/dynamice/dyna4.png" alt="Dynamice Screenshot" title="Dynamice Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="dynapageclose">Back</button>
-			</div>
-		</div>
-
-		<div id="touchpage" class = "gamescontainer">
-			<div>
-				<h2>Touch Lightning</h2>
-			</div>
-
-			<div>
-				<h3>Front-End Programmer | Game Designer | Graphic Designer</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/touch/stormynight-logo.png" data-lightbox="touchpage" data-title="Touch Lightning logo" ><img class="example-image" src="Images/games/touch/stormynight-logo.png" alt="Touch Lightning logo" title="Touch Lightning logo"></a>
-						</section>
-				</div>
-			<div>
-				<p>We wanted to express the beauty and power of nature with simple and intuitive mechanics, so we put bolts of electric fire at your fingertips. Of course, nature can also take the form of undead animals driven to shamble out of the forest by their terrifying hunger. </p>
-				<p>For iOS. Made with Unity3d.</p>
-
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/touch/TLShot2.png" data-lightbox="touchpage" data-title="Screenshot" ><img class="example-image" src="Images/games/touch/TLShot2.png" alt="Touch Lightning Screenshot" title="Touch Lightning Screenshot"></a>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/touch/TLShot4.png" data-lightbox="touchpage" data-title="Screenshot" ><img class="example-image" src="Images/games/touch/TLShot4.png" alt="Touch Lightning Screenshot" title="Touch Lightning Screenshot"></a>
-						</section>
-					</div>
-
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/games/touch/TLShot5.png" data-lightbox="touchpage" data-title="Screenshot" ><img class="example-image" src="Images/games/touch/TLShot5.png" alt="Touch Lightning Screenshot" title="DynamiTouch Lightningce Screenshot"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="touchpageclose">Back</button>
-			</div>
-		</div>
-		<!-- individual games end-->
-		<!-- individual design start-->
-		<div id="rustypage" class = "gamescontainer">
-			<div>
-				<h2>Rusty Blade: Famicase</h2>
-			</div>
-
-			<div>
-				<h3>Graphic Design</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/rusty/rusty1.jpg" data-lightbox="rustypage" data-title="Famicase" ><img class="example-image" src="Images/design/rusty/rusty1.jpg" alt="Famicase" title="Famicase"></a>
-						</section>
-				</div>
-			<div>
-				<p>I designed a fake Famicom game for the Famicase Exhibition. It was displayed at the Meteor Gallery in Tokyo in May 2017.</p>
-				<p>Visit Famicase<a href="http://famicase.com/" style=" text-decoration: none" rel="noopener noreferrer" target="_blank"> Here.</a></p>
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/rusty/Famicom case just sticker.png" data-lightbox="rustypage" data-title="Famicase" ><img class="example-image" src="Images/design/rusty/Famicom case just sticker.png" alt="Famicase" title="Famicase"></a>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/rusty/famicaseeeeee.jpg" data-lightbox="rustypage" data-title="Famicase" ><img class="example-image" src="Images/design/rusty/famicaseeeeee.jpg" alt="Famicase" title="Famicase"></a>
-						</section>
-					</div>
-
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/rusty/rusty2.jpg" data-lightbox="rustypage" data-title="Famicase" ><img class="example-image" src="Images/design/rusty/rusty2.jpg" alt="Famicase" title="Famicase"></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="rustypageclose">Back</button>
-			</div>
-		</div>
-		<div id="theypage" class="gamescontainer">
-			<div>
-				<h2>They Shoot: Famicase</h2>
-			</div>
-		
-			<div>
-				<h3>Graphic Design</h3>
-			</div>
-			<div id="headerpicwrapper">
-				<!--gallery row 1 start -->
-				<section class="headerpicture">
-					<a class="example-image-link" id="lightbox-img" href="Images/design/theyshoot/theyshootFamicase.jpg" data-lightbox="theypage"
-						data-title="Famicase"><img class="example-image" src="Images/design/theyshoot/theyshootFamicase.jpg" alt="Famicase"
-							title="Famicase"></a>
-				</section>
-			</div>
-			<div>
-				<p>I designed a fake Famicom game for the Famicase Exhibition. It was displayed at the Meteor Gallery in Tokyo in
-					May 2018.</p>
-				<p>Visit Famicase<a href="http://famicase.com/" style=" text-decoration: none" rel="noopener noreferrer"
-						target="_blank"> Here.</a></p>
-			</div>
-		
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/theyshoot/theyshootFamicase.jpg"
-								data-lightbox="theypage" data-title="Famicase"><img class="example-image"
-									src="Images/design/theyshoot/theyshootFamicase.jpg" alt="Famicase" title="Famicase"></a>
-						</section>
-		
-					</div>
-				</div>
-		
-				<div class="imgcolumn">
-		
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/they/IMG_5747.jpg"
-								data-lightbox="theypage" data-title="Famicase"><img class="example-image"
-									src="Images/design/theyshoot/IMG_5747.jpg" alt="Famicase" title="Famicase"></a>
-						</section>
-					</div>
-		
-				</div>
-		
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/theyshoot/IMG_5751.png"
-								data-lightbox="theypage" data-title="Famicase"><img class="example-image"
-									src="Images/design/theyshoot/IMG_5751.png" alt="Famicase" title="Famicase"></a>
-						</section>
-					</div>
-				</div>
-		
-			</div>
-		
-			<div>
-				<button id="theypageclose">Back</button>
-			</div>
-		</div>
-		<div id="journeypage" class = "gamescontainer">
-			<div>
-				<h2>Journey To The End of The Night</h2>
-			</div>
-
-			<div>
-				<h3>Graphic Design | Promotional materials</h3>
-			</div>
-				<div id="headerpicwrapper">
-						<!--gallery row 1 start -->
-						<section class="headerpicture">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/journey/A1Horizontalv2.png" data-lightbox="journeypage" data-title="Journey to the end of the night." ><img class="example-image" src="Images/design/journey/A1Horizontalv2.png" alt="Journey to the end of the night." title="Journey to the end of the night."></a>
-						</section>
-				</div>
-			<div>
-				<p>I was reponsible for graphic design for Journey to the End of the Night Holloween 2017 in Tokyo. I had to design for web and print. Including movie posters, and stickers.</p>
-				<p>Visit Journey to the end of the night<a href="http://ichaseyou.com/" style=" text-decoration: none" rel="noopener noreferrer" target="_blank"> Here.</a></p>
-			</div>
-
-			<div class="imgrow">
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/journey/DanielJTTEOTN_A1Vertical_v2.png" data-lightbox="journeypage" data-title="Journey to the end of the night." ><img class="example-image" src="Images/design/journey/DanielJTTEOTN_A1Vertical_v2.png" alt="Journey to the end of the night." title="Journey to the end of the night."></a>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="imgcolumn">
-
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/journey/IMG_4896.JPG" data-lightbox="journeypage" data-title="Journey to the end of the night." ><img class="example-image" src="Images/design/journey/IMG_4896.JPG" alt="Journey to the end of the night." title="Journey to the end of the night."></a>
-						</section>
-					</div>
-
-				</div>
-
-				<div class="imgcolumn">
-					<div id="gallerywrapper">
-						<!--gallery row 1 start -->
-						<section class="workselect">
-							<a class="example-image-link" id="lightbox-img" href="Images/design/journey/IMG_4897.JPG" data-lightbox="journeypage" data-title="Journey to the end of the night." ><img class="example-image" src="Images/design/journey/IMG_4897.JPG" alt="Journey to the end of the night." title="Journey to the end of the night."></a>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<div>
-				<button id ="journeypageclose">Back</button>
-			</div>
-		</div>
-			<div id="gamebuilderpage" class="gamescontainer">
-				<div>
-					<h2>Game Builder: The Game Building Sandbox</h2>
-				</div>
-			
-				<div>
-					<h3>Design | UI | UX</h3>
-				</div>
-				<div id="headerpicwrapper">
-					<!--gallery row 1 start -->
-					<section class="headerpicture">
-						<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/header.jpg" data-lightbox="gamebuilder"
-							data-title="Cold Email logo"><img class="example-image" src="Images/games/gamebuilder/header.jpg" alt="Cold Email logo"
-								title="Cold Email logo"></a>
-					</section>
-				</div>
-				<div>
-					<p>Build and play games with your friends! Make a 3D platformer in 10 minutes, or spend hours jamming on the next indie
-					hit. Game Builder is designed for all skill levels, from players ready to build their first game to designers looking
-					for a faster way to realize their ideas.</p>
-					<p>I was responsible for general design and UI/UX for the game. It is available on Steam Early Access for free.</p>
-					<a href="https://store.steampowered.com/app/929860/Game_Builder/" style=" text-decoration: none" rel="noopener noreferrer"
-						target="_blank">Download Game Builder</a>
-				</div>
-			<div class="video-container">
-				<h3>Trailer</h3>
-				<div class="videoWrapper">
-					<iframe src="https://www.youtube.com/embed/R8aDZYucUQw" allowfullscreen></iframe>
-				</div>
-			</div>
-				<div class="imgrow">
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/1.jpg" data-lightbox="gamebuilder"
-									data-title="Screenshot"><img class="example-image" src="Images/games/gamebuilder/1.jpg"
-										alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
-							</section>
-						</div>
-					</div>
-			
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/2.jpg" data-lightbox="gamebuilder"
-									data-title="Screenshot"><img class="example-image" src="Images/games/gamebuilder/2.jpg"
-										alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
-							</section>
-						</div>
-					</div>
-					<div class="imgcolumn">
-						<div id="gallerywrapper">
-							<!--gallery row 1 start -->
-							<section class="workselect">
-								<a class="example-image-link" id="lightbox-img" href="Images/games/gamebuilder/3.jpg" data-lightbox="gamebuilder"
-									data-title="Screenshot"><img class="example-image" src="Images/games/gamebuilder/3.jpg"
-										alt="Cold Email Screenshot" title="Cold Email Screenshot"></a>
-							</section>
-						</div>
-					</div>
-			
-				</div>
-			
-				<div>
-					<button id="gbpageclose">Back</button>
-				</div>
-			</div>
-		<div id="loader-wrapper">
-			<div id="loader"></div>
-			<div class="loader-section section-left"></div>
-
-		</div>
-		<script src="JS/loadingscreen.js"></script>
-		<!--Design pages end -->
-		<div id="divider" class="square"></div>
-		<div id="copyright" class="copyright">Website designed and created by Daniel Ponce</div>
-		<script type="x-shader/x-vertex" id="vertexshader">
-			uniform float amplitude;
-			attribute vec3 customColor;
-			attribute vec3 displacement;
-			varying vec3 vNormal;
-			varying vec3 vColor;
-			void main() {
-				vNormal = normal;
-				vColor = customColor;
-				vec3 newPosition = position + normal * amplitude * displacement;
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
-			}
-		</script>
-
-		<script type="x-shader/x-fragment" id="fragmentshader">
-			varying vec3 vNormal;
-			varying vec3 vColor ;
-			void main() {
-				const float ambient = .94;
-				vec3 light = vec3( 1.0 );
-				light = normalize( light );
-				float directional = max( dot( vNormal, light ), 0.0 );
-				gl_FragColor = vec4( ( directional + ambient ) * vColor, 1.0 );
-			}
-		</script>
-
-		<script src = "JS/background.js">
-			
-		</script>
-
-	<script src="JS/lightbox-plus-jquery.min.js"></script>
-		<script>
-	    lightbox.option ({
-	      'resizeDuration': 200,
-	      'wrapAround': true
-	    })
-	</script>
-	</body>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Daniel Ponce's Website" />
+    <meta name="keywords" content="Chiwis,Daniel Ponce,portfolio, designer" />
+    <meta name="author" content="Daniel Ponce" />
+    <title>Daniel's web container</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto|Shrikhand");
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="JS/three.js"></script>
+    <script src="JS/Tween.js"></script>
+
+    <script src="JS/OBJLoader.js"></script>
+    <script src="JS/ExplodeModifier.js"></script>
+    <script src="JS/TessellateModifier.js"></script>
+    <script src="JS/Detector.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var isagamepageshowing = 0;
+        var isadesignpageshowing = 0;
+        $.fn.designPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#games").removeClass("showpanel");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+
+          //games pages
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          isagamepageshowing = 0;
+          //functionality
+          if (isadesignpageshowing < 1) {
+            if ($("#design").attr("class") == "design") {
+              setTimeout(function () {
+                $("#design").toggleClass("showpaneldesign");
+              }, 600);
+            } else {
+              $("#design").toggleClass("showpaneldesign");
+            }
+            $("#design").animate(
+              {
+                scrollTop: 0,
+              },
+              10
+            );
+          }
+        };
+        $.fn.gamePageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+
+          //games pages
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+
+          //functionality
+          if (isagamepageshowing < 1) {
+            console.log($("#games").attr("class"));
+            if ($("#games").attr("class") == "games") {
+              setTimeout(function () {
+                $("#games").toggleClass("showpanel");
+              }, 600);
+            } else {
+              $("#games").toggleClass("showpanel");
+            }
+            $("#games").animate(
+              {
+                scrollTop: 0,
+              },
+              10
+            );
+          }
+        };
+        $.fn.aboutPageToggle = function () {
+          $("#aboutme").toggleClass("showpanel");
+          $("#games").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+
+          //games pages
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          isagamepageshowing = 0;
+          //functionality
+          $("#aboutme").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+        };
+        $.fn.pressPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#games").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+
+          //games pages
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          isagamepageshowing = 0;
+          //functionality
+          $("#press").toggleClass("showpanel");
+          $("#press").animate(
+            {
+              scrollTop: 0,
+            },
+            200
+          );
+        };
+        //individual games pages
+        $.fn.coldPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#coldpage").toggleClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#coldpage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#coldpage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.dqPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#dqpage").toggleClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#dqpage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#dqpage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.monoPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#monopage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#monopage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#monopage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+        $.fn.gbPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#gamebuilderpage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#monopage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#gamebuilderpage").attr("class") ==
+            "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+        $.fn.interviewPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+          $("#interviewpage").toggleClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#monopage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#interviewpage").attr("class") ==
+            "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+        $.fn.dynaPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#dynapage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#dynapage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#dynapage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.sssPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#ssspage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#ssspage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#ssspage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.typePageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#typepage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#typepage").animate(
+            {
+              scrollTop: 0,
+            },
+            100
+          );
+
+          if (
+            $("#typepage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.touchPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#touchpage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#typepage").removeClass("showgamescontainer");
+          $("#touchpage").animate({
+            scrollTop: 0,
+          });
+
+          if (
+            $("#touchpage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.kidPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#kidpage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#kidpage").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+
+          if (
+            $("#kidpage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.spectrePageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //games pages
+
+          //functionality
+          $("#spectrepage").toggleClass("showgamescontainer");
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#spectrepage").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+
+          if (
+            $("#spectrepage").attr("class") ==
+            "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.rustyPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#journeypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          //games pages
+
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //functionality
+          $("#rustypage").toggleClass("showgamescontainer");
+          $("#rustypage").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+
+          if (
+            $("#rustypage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.journeyPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          //games pages
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //functionality
+          $("#journeypage").toggleClass("showgamescontainer");
+          $("#journeypage").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+
+          if (
+            $("#journeypage").attr("class") ==
+            "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+        $.fn.theyPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#design").removeClass("showpaneldesign");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#tricketspage").removeClass("showgamescontainer");
+          //games pages
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          isadesignpageshowing = 0;
+          //functionality
+          $("#theypage").toggleClass("showgamescontainer");
+          $("#theypage").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+
+          if (
+            $("#theypage").attr("class") == "gamescontainer showgamescontainer"
+          ) {
+            isagamepageshowing = 1;
+          } else {
+            isagamepageshowing = 0;
+          }
+        };
+
+        $.fn.tricketsPageToggle = function () {
+          $("#aboutme").removeClass("showpanel");
+          $("#games").removeClass("showpanel");
+          $("#press").removeClass("showpanel");
+          //design pages
+          $("#rustypage").removeClass("showgamescontainer");
+          $("#journeypage").removeClass("showgamescontainer");
+          //games pages
+
+          $("#coldpage").removeClass("showgamescontainer");
+          $("#dqpage").removeClass("showgamescontainer");
+          $("#gamebuilderpage").removeClass("showgamescontainer");
+          $("#interviewpage").removeClass("showgamescontainer");
+          $("#dynapage").removeClass("showgamescontainer");
+          $("#monopage").removeClass("showgamescontainer");
+          $("#ssspage").removeClass("showgamescontainer");
+          $("#typepage").removeClass("showgamescontainer");
+          $("#theypage").removeClass("showgamescontainer");
+          $("#kidpage").removeClass("showgamescontainer");
+          $("#touchpage").removeClass("showgamescontainer");
+          $("#spectrepage").removeClass("showgamescontainer");
+          isagamepageshowing = 0;
+          //functionality
+          $("#tricketspage").toggleClass("showgamescontainer");
+          $("#tricketspage").animate(
+            {
+              scrollTop: 0,
+            },
+            10
+          );
+
+          if (
+            $("#tricketspage").attr("class") ==
+            "gamescontainer showgamescontainer"
+          ) {
+            isadesignpageshowing = 1;
+          } else {
+            isadesignpageshowing = 0;
+          }
+        };
+
+        $("#b_design").click(function () {
+          $.fn.designPageToggle();
+        });
+        $("#b_games").click(function () {
+          $.fn.gamePageToggle();
+        });
+        $("#b_about").click(function () {
+          $.fn.aboutPageToggle();
+        });
+        $("#b_press").click(function () {
+          $.fn.pressPageToggle();
+        });
+        $("#aboutmeclose").click(function () {
+          $.fn.aboutPageToggle();
+        });
+        $("#pressclose").click(function () {
+          $.fn.pressPageToggle();
+        });
+        $("#gamesclose").click(function () {
+          $.fn.gamePageToggle();
+        });
+        $("#designclose").click(function () {
+          $.fn.designPageToggle();
+        });
+
+        //games pages
+        $("#coldpagetoggle").click(function () {
+          $.fn.coldPageToggle();
+        });
+        $("#coldpageclose").click(function () {
+          $.fn.coldPageToggle();
+        });
+        $("#dqpagetoggle").click(function () {
+          $.fn.dqPageToggle();
+        });
+        $("#dqpageclose").click(function () {
+          $.fn.dqPageToggle();
+        });
+        $("#dynapagetoggle").click(function () {
+          $.fn.dynaPageToggle();
+        });
+        $("#dynapageclose").click(function () {
+          $.fn.dynaPageToggle();
+        });
+        $("#monopagetoggle").click(function () {
+          $.fn.monoPageToggle();
+        });
+        $("#monopageclose").click(function () {
+          $.fn.monoPageToggle();
+        });
+        $("#ssspagetoggle").click(function () {
+          $.fn.sssPageToggle();
+        });
+        $("#ssspageclose").click(function () {
+          $.fn.sssPageToggle();
+        });
+        $("#typepagetoggle").click(function () {
+          $.fn.typePageToggle();
+        });
+        $("#typepageclose").click(function () {
+          $.fn.typePageToggle();
+        });
+        $("#theypagetoggle").click(function () {
+          $.fn.theyPageToggle();
+        });
+        $("#theypageclose").click(function () {
+          $.fn.theyPageToggle();
+        });
+        $("#touchpagetoggle").click(function () {
+          $.fn.touchPageToggle();
+        });
+        $("#touchpageclose").click(function () {
+          $.fn.touchPageToggle();
+        });
+        $("#kidpagetoggle").click(function () {
+          $.fn.kidPageToggle();
+        });
+        $("#kidpageclose").click(function () {
+          $.fn.kidPageToggle();
+        });
+        $("#spectrepagetoggle").click(function () {
+          $.fn.spectrePageToggle();
+        });
+        $("#spectrepageclose").click(function () {
+          $.fn.spectrePageToggle();
+        });
+
+        //Design pages
+        $("#journeypagetoggle").click(function () {
+          $.fn.journeyPageToggle();
+        });
+        $("#journeypageclose").click(function () {
+          $.fn.journeyPageToggle();
+        });
+        $("#gbpagetoggle").click(function () {
+          $.fn.gbPageToggle();
+        });
+        $("#gbpageclose").click(function () {
+          $.fn.gbPageToggle();
+        });
+        $("#interviewpagetoggle").click(function () {
+          $.fn.interviewPageToggle();
+        });
+        $("#interviewpageclose").click(function () {
+          $.fn.interviewPageToggle();
+        });
+        $("#rustypagetoggle").click(function () {
+          $.fn.rustyPageToggle();
+        });
+        $("#rustypageclose").click(function () {
+          $.fn.rustyPageToggle();
+        });
+        $("#tricketspagetoggle").click(function () {
+          $.fn.tricketsPageToggle();
+        });
+        $("#tricketspageclose").click(function () {
+          $.fn.tricketsPageToggle();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="webglContainer"></div>
+    </div>
+    <div id="topmenu" class="topmenu">
+      <div id="logo" class="logo"><h1>Daniel Ponce</h1></div>
+      <button id="b_design" onclick="showDesign()">Current Project</button>
+      <button id="b_games" onclick="showGames()">Works</button>
+      <button id="b_about" onclick="showAbout()">About me</button>
+      <button id="b_press" onclick="showPress()">Press</button>
+    </div>
+    <div id="aboutme" class="aboutme">
+      <div>
+        <h2>About me</h2>
+      </div>
+      <div>
+        <h3>Designing one pixel at a time...</h3>
+      </div>
+
+      <div>
+        <div class="clearfix">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="profilepic">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/profile.jpg"
+                data-lightbox="example-set"
+                data-title="You zoomed in on my face"
+                ><img
+                  class="example-image"
+                  src="Images/profile.jpg"
+                  alt="My face"
+                  title="Stare into my soul"
+              /></a>
+            </section>
+          </div>
+          <p>
+            From a young age, Daniel knew that he wanted to be part of the
+            creative industry. He made that dream a reality after getting an MFA
+            from
+            <a
+              href="https://cinema.usc.edu/interactive/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >USC's Interactive Media Division.</a
+            >
+          </p>
+
+          <p>
+            Daniel Co-Founded
+            <a
+              href="https://craterhouse.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Crater House</a
+            >
+            with
+            <a
+              href="http://www.funwithbill.net/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Bill Graner</a
+            >
+            and other alumni of USC's Interactive Media Division. There they
+            created exciting, uniquely creative apps and intellectual properties
+            for international brands-including Shaq Sky Slam for Shaquille
+            O'Neal, and original design and development for The Israel
+            Antiquities Authority, Tyson Chicken, Kraken Rum, and the California
+            Indian Museum and Cultural Center.
+          </p>
+
+          <p>
+            Daniel does Interactive Design, UI/UX, and front-end development. He
+            makes sure products look and feel amazing. He likes making weird and
+            wacky games with an offbeat sense of humor in his spare time.
+          </p>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://www.dropbox.com/s/xk1h92csn4441iz/DanielPonce_ResumeDesign.pdf?dl=0"
+          style="font-size: 0.75em; text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Resume</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://www.dropbox.com/s/f6mh9mfha9wqp8r/DanielPonceDesignPortfolio.pdf?dl=0"
+          style="font-size: 0.75em; text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Portfolio PDF</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://twitter.com/Chiwis"
+          class="fa fa-twitter"
+          rel="noopener noreferrer"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/daniel-ponce-51038413/"
+          class="fa fa-linkedin"
+          rel="noopener noreferrer"
+          target="_blank"
+        ></a>
+      </div>
+      <div>
+        <button id="aboutmeclose">Look at the cool background</button>
+      </div>
+    </div>
+
+    <div id="press" class="press">
+      <div>
+        <h2>Awards & Press</h2>
+      </div>
+      <div>
+        <h3>Some accolades!</h3>
+      </div>
+
+      <div>
+        <div class="clearfix">
+          <div class="row">
+            <div class="column">
+              <h2>Awards</h2>
+              <p>2017 My Famicase Exhibition : Rusty Blade</p>
+              <p>
+                2012 San Francisco Global Game Jam : Most Polish For Dynamice
+              </p>
+              <p>
+                2010 Independent Games Festival Student Showcase Winner For
+                Spectre
+              </p>
+              <p>2009 Indiecade Finalist For Spectre</p>
+              <p>
+                2009 Independent Games Festival Student Showcase Winner For Kid
+                the World Saver
+              </p>
+              <p>2007 California Governor’s Safety Award For Disaster Zone</p>
+            </div>
+            <div class="column">
+              <h2>Press</h2>
+              <p>
+                PC Gamer Magazine Issue #280 July 2016 Top 10 Downloads : Cold
+                Email
+              </p>
+              <p>PCGamer.com March 2016 : Cold Email</p>
+              <p>
+                <a
+                  href="https://www.rockpapershotgun.com/2016/03/12/best-free-games-of-the-week-15/"
+                  style="text-decoration: none;"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Rock Paper Shotgun</a
+                >: Cold Email
+              </p>
+              <p>
+                <a
+                  href="http://indiegames.com/2016/03/cold_email_-_a_game_about_cont.html"
+                  style="text-decoration: none;"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Indiegames.com</a
+                >: Cold Email
+              </p>
+              <p>
+                <a
+                  href="https://www.youtube.com/watch?v=X1Bi6Q-fp2E&feature=youtu.be&t=4m47s"
+                  style="text-decoration: none;"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Pewdiepie</a
+                >: Cold Email
+              </p>
+              <p>
+                <a
+                  href="http://indiegames.com/2011/12/daniel_ponce_creates_a_type_se.html"
+                  style="text-decoration: none;"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Indiegames.com</a
+                >: Type Set
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="pressclose">Look at the cool background</button>
+      </div>
+    </div>
+    <div id="games" class="games">
+      <div>
+        <h2>Projects I've Worked on</h2>
+      </div>
+      <div>
+        <h3>Selected Works</h3>
+      </div>
+      <div class="clearfix">
+        <div class="imgrow">
+          <div class="imgcolumn-2pane">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="interviewpagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/interviewvr/interview1.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix">
+        <div class="imgrow">
+          <div class="imgcolumn-2pane">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="gbpagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/gamebuilder/header.jpg"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="ssspagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/sss/sssScreen1.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+          </div>
+          <div class="imgcolumn-2pane">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="coldpagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/coldemail/ColdEmailLogo.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="dqpagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/digquest/dqlogo.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Graphic Design</h3>
+        <div class="clearfix">
+          <div class="imgrow">
+            <div class="imgcolumn">
+              <div id="gallerywrapper">
+                <!--gallery row 1 start -->
+                <section class="workselect">
+                  <a class="example-image-link" id="theypagetoggle"
+                    ><img
+                      class="example-image"
+                      src="Images/design/theyshoot/IMG_5747HEADER.png"
+                      alt="My face"
+                      title="Stare into my soul"
+                  /></a>
+                </section>
+              </div>
+            </div>
+            <div class="imgcolumn">
+              <div id="gallerywrapper">
+                <!--gallery row 1 start -->
+                <section class="workselect">
+                  <a class="example-image-link" id="rustypagetoggle"
+                    ><img
+                      class="example-image"
+                      src="Images/design/rusty/logo.jpg"
+                      alt="My face"
+                      title="Stare into my soul"
+                  /></a>
+                </section>
+              </div>
+            </div>
+            <div class="imgcolumn">
+              <div id="gallerywrapper">
+                <section class="workselect">
+                  <a class="example-image-link" id="journeypagetoggle"
+                    ><img
+                      class="example-image"
+                      src="Images/design/journey/A1Horizontalv2.png"
+                      alt="My face"
+                      title="Stare into my soul"
+                  /></a>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Older Works</h3>
+      </div>
+      <div class="clearfix">
+        <div class="imgrow">
+          <div class="imgcolumn">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="dynapagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/dynamice/DynamiceHeader.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="monopagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/mono/monoHeader.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+          </div>
+
+          <div class="imgcolumn">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="touchpagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/touch/stormynight-logoHEADER.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="spectrepagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/spectre/Spectre_Wallpaper_TextHEADER.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+          </div>
+
+          <div class="imgcolumn">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="typepagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/typeset/TSheader.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a class="example-image-link" id="kidpagetoggle"
+                  ><img
+                    class="example-image"
+                    src="Images/games/kid/hqdefaultHeader.png"
+                    alt="My face"
+                    title="Stare into my soul"
+                /></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button id="gamesclose">Look at the cool background</button>
+      </div>
+    </div>
+    <!-- Photo Grid -->
+    <div id="design" class="design">
+      <div>
+        <h2>Current Ongoing Project:</h2>
+        <h2>R2 Unit: A Star Wars fan game.</h2>
+      </div>
+
+      <div>
+        <p>
+          R2 Story : A Star Wars VR Fangame. This is a fan project and will not
+          be distributed. This is just me playing around with Unity3D and an
+          Oculus DK 2 kit. Lucasfilm and Disney Own the rights to the Star Wars
+          brand. This is a work in progress.
+        </p>
+        <div class="video-container">
+          <h3>Trailer</h3>
+          <div class="videoWrapper">
+            <iframe
+              src="https://www.youtube.com/embed/ZQOZLxbX3f4"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="imgrow">
+          <div class="imgcolumn">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a
+                  class="example-image-link"
+                  id="lightbox-img"
+                  href="Images/games/SWVR/TitleSWVR.png"
+                  data-lightbox="tricketspage"
+                  data-title="Trickits"
+                  ><img
+                    class="example-image"
+                    src="Images/games/SWVR/TitleSWVR.png"
+                    alt="Trickits"
+                    title="Trickits"
+                /></a>
+              </section>
+            </div>
+          </div>
+
+          <div class="imgcolumn">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a
+                  class="example-image-link"
+                  id="lightbox-img"
+                  href="Images/games/SWVR/frontSWVR.png"
+                  data-lightbox="tricketspage"
+                  data-title="Trickits"
+                  ><img
+                    class="example-image"
+                    src="Images/games/SWVR/frontSWVR.png"
+                    alt="Trickits"
+                    title="Trickits"
+                /></a>
+              </section>
+            </div>
+          </div>
+
+          <div class="imgcolumn">
+            <div id="gallerywrapper">
+              <!--gallery row 1 start -->
+              <section class="workselect">
+                <a
+                  class="example-image-link"
+                  id="lightbox-img"
+                  href="Images/games/SWVR/BackSWVR.png"
+                  data-lightbox="tricketspage"
+                  data-title="Trickits"
+                  ><img
+                    class="example-image"
+                    src="Images/games/SWVR/BackSWVR.png"
+                    alt="Trickits"
+                    title="Trickits"
+                /></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button id="designclose">Look at the cool background</button>
+      </div>
+    </div>
+    <!--individual games start -->
+    <div id="coldpage" class="gamescontainer">
+      <div>
+        <h2>Cold Email</h2>
+      </div>
+
+      <div>
+        <h3>Design | Art | Programming</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/coldemail/0.gif"
+            data-lightbox="coldpage"
+            data-title="Cold Email logo"
+            ><img
+              class="example-image"
+              src="Images/games/coldemail/0.gif"
+              alt="Cold Email logo"
+              title="Cold Email logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          If you've ever released a game, you've found yourself in a position
+          where you have to send it off to the gaming press. Maybe you don't
+          know anyone, maybe you have a couple of contacts - either way, you're
+          nervous and trying to contact as many people as you can to get the
+          word out about your game. Cold Email is about that. Except your
+          computer is also kind of messed up and about to explode.
+        </p>
+        <p>
+          In Cold Email, you need to fire off emails as fast as you can before
+          your computer explodes from malware. The send button has a nasty
+          tendency to wander in the Game Jam title, though, so it may be
+          difficult to get out all of those necessary emails before your PC
+          bursts into flames. Do try, though, as your game, and your livelihood,
+          depends on it.
+        </p>
+        <a
+          href="https://craterhouse.itch.io/cold-email"
+          style="text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Download Cold Email</a
+        >
+      </div>
+      <div class="video-container">
+        <h3>Watch Pewdiepie play Cold Email!</h3>
+        <div class="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/X1Bi6Q-fp2E?start=285"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/coldemail/5.png"
+                data-lightbox="coldpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/coldemail/5.png"
+                  alt="Cold Email Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/coldemail/2.png"
+                data-lightbox="coldpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/coldemail/2.png"
+                  alt="Cold Email Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/coldemail/3.png"
+                data-lightbox="coldpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/coldemail/3.png"
+                  alt="Cold Email Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="coldpageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="kidpage" class="gamescontainer">
+      <div>
+        <h2>Kid the World Saver</h2>
+      </div>
+
+      <div>
+        <h3>Game Designer | Artist</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/kid/hqdefault.jpg"
+            data-lightbox="kidpage"
+            data-title="Kid the World Saver logo"
+            ><img
+              class="example-image"
+              src="Images/games/kid/hqdefault.jpg"
+              alt="Kid the World Saver logo"
+              title="Kid the World Saver logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>Move blocks around to guide Kid to the end of the level!</p>
+        <h3>Awards</h3>
+        <p>IGF Student Showcase Finalist 2009</p>
+        <a
+          href="https://www.dropbox.com/s/yqrswqnqo9vpwmy/KWS_Nightly.GDC.50.exe?dl=0"
+          style="text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Download for PC.</a
+        >
+      </div>
+      <div class="video-container">
+        <h3>Trailer</h3>
+        <div class="videoWrapper">
+          <iframe
+            src="https://player.vimeo.com/video/3928691"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div>
+        <button id="kidpageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="typepage" class="gamescontainer">
+      <div>
+        <h2>Type Set</h2>
+      </div>
+
+      <div>
+        <h3>Project Lead | Game Designer | Programmer | Artist</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/typeset/8.png"
+            data-lightbox="typepage"
+            data-title="Type Set logo"
+            ><img
+              class="example-image"
+              src="Images/games/typeset/8.png"
+              alt="Type Set logo"
+              title="Type Set logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          Type Set is a game about moving a conversation along, literally. The
+          player physically manipulates the words on screen through touch
+          gestures. Just like a normal conversation depending on which words you
+          emphasize it can change the tone and direction of the conversation.
+          Emphasis is placed on certain words by making them bigger /smaller or
+          rotating them. In this case, the protagonist is having a phone
+          conversation with Sarah, his girlfriend's best friend, about why his
+          relationship with his significant other is ending. So the conversation
+          changes depending on the way players solve the puzzles ( i.e.
+          emphasizing certain words to change the tone of the conversation in an
+          angry or nice way).
+        </p>
+        <p>For iPad only. Made with Unity 3D. MFA Thesis project.</p>
+        <a
+          href="http://indiegames.com/2011/12/daniel_ponce_creates_a_type_se.html"
+          style="text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Press Feature: Indiegames.com</a
+        >
+      </div>
+      <div class="video-container">
+        <h3>Trailer</h3>
+        <div class="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/DFrrzchmqK4"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/typeset/10.png"
+                data-lightbox="typepage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/typeset/10.png"
+                  alt="Type Set Screenshot"
+                  title="Type Set Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/typeset/7.png"
+                data-lightbox="typepage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/typeset/7.png"
+                  alt="Type Set Screenshot"
+                  title="Type Set Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/typeset/6.png"
+                data-lightbox="typepage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/typeset/6.png"
+                  alt="Type Set Screenshot"
+                  title="Type Set Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="typepageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="spectrepage" class="gamescontainer">
+      <div>
+        <h2>Spectre</h2>
+      </div>
+
+      <div>
+        <h3>Artist | Game Designer</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/spectre/Spectre_Wallpaper_Text.jpg"
+            data-lightbox="spectrepage"
+            data-title="Spectre logo"
+            ><img
+              class="example-image"
+              src="Images/games/spectre/Spectre_Wallpaper_Text.jpg"
+              alt="Spectre logo"
+              title="Spectre logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          Spectre is a recombinant narrative platformer, a game that tells the
+          story of an individual's life. The landscape before you is not a
+          physical world, but 73 years' worth of Joseph's memory: moments of joy
+          and fear, light and darkness. As you navigate through his specific
+          recollections, similarly themed events will glow brightly. If you
+          succeed in these moments of play and follow a glowing path, you will
+          find a theme uniting his experience, and uncover a little more of his
+          fading memory. If not, your nightly story will end in confusion.
+        </p>
+        <h3>Awards</h3>
+        <p>IGF Student Showcase Finalist 2010</p>
+        <p>Indiecade 2010</p>
+        <a
+          href="http://www.spectregame.com/play.php"
+          style="text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >For PC / Mac. Made using Flash.</a
+        >
+      </div>
+      <div class="video-container">
+        <h3>Trailer</h3>
+        <div class="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/_0SdfMBXPDQ"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div>
+        <button id="spectrepageclose">Back</button>
+      </div>
+    </div>
+
+    <!--individual games start -->
+    <div id="monopage" class="gamescontainer">
+      <div>
+        <h2>Monoverse: This is not physics</h2>
+      </div>
+
+      <div>
+        <h3>Game Designer | Artist</h3>
+      </div>
+      <div class="video-container">
+        <h3>Trailer</h3>
+        <div class="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/yQzjGC5dtus"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div>
+        <p>A 2 - 4 player multiplayer game!</p>
+        <p>For PC. Using Torque 2D.</p>
+      </div>
+
+      <div>
+        <button id="monopageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="dqpage" class="gamescontainer">
+      <div>
+        <h2>Dig Quest: Israel</h2>
+      </div>
+
+      <div>
+        <h3>UX | UI | Designer | Front-End Programmer</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/digquest/dqscreen.png"
+            data-lightbox="dqpage"
+            data-title="Dig Quest logo"
+            ><img
+              class="example-image"
+              src="Images/games/digquest/dqscreen.png"
+              alt="Dig Quest logo"
+              title="Dig Quest logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          Become an archeologist, and use your device to explore Israel’s past!
+          Dig up the 2,000-year-old Lod Mosaic, and piece together the Dead Sea
+          Scrolls. A collaboration between Crater House, Maya Cohan Productions,
+          and the Israel Antiquities Authority!
+        </p>
+        <p>
+          Download<a
+            href="https://itunes.apple.com/us/app/dig-quest-israel/id913694523?mt=8"
+            style="text-decoration: none;"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            iOS</a
+          >
+          /
+          <a
+            href="https://play.google.com/store/apps/details?id=il.org.antiquities.digquestisrael&hl=en"
+            style="text-decoration: none;"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Android</a
+          >
+          Made with Unity3D.
+        </p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/digquest/dqScreen3.png"
+                data-lightbox="dqpage"
+                data-title="Start of the game."
+                ><img
+                  class="example-image"
+                  src="Images/games/digquest/dqScreen3.png"
+                  alt="Dig Quest Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/digquest/Screen1.png"
+                data-lightbox="dqpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/digquest/Screen1.png"
+                  alt="Dig Quest Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/digquest/Screen Shot 2016-09-09 at 12.05.35 PM.png"
+                data-lightbox="dqpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/digquest/Screen Shot 2016-09-09 at 12.05.35 PM.png"
+                  alt="Dig Quest Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="dqpageclose">Back</button>
+      </div>
+    </div>
+    <div id="ssspage" class="gamescontainer">
+      <div>
+        <h2>Shaq Sky Slam</h2>
+      </div>
+
+      <div>
+        <h3>Interaction Designer | UI/UX | Front - End Programmer</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/sss/sss4 copy.png"
+            data-lightbox="ssspage"
+            data-title="Shaq logo"
+            ><img
+              class="example-image"
+              src="Images/games/sss/sss4 copy.png"
+              alt="Shaq logo"
+              title="Shaq logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          A new extreme sport for your mobile device brought to you by One Spear
+          Entertainment, Crater House, and the man himself, Shaq!
+        </p>
+        <p>
+          Get ready for the most over the top extreme sport ever created.
+          Skydive with a basketball in hand, plunge through the stratosphere at
+          terminal velocity, grabbing coins and diving through hoops along the
+          way. Divebomb toward the basketball court below, lock in on your
+          target, and slam dunk that ball!
+        </p>
+        <p>
+          World renowned daredevil Robbie Maddison can’t resist a stunt like
+          this. And he’s sky slamming Maddo style, jumping his bike from the
+          plane!
+        </p>
+        <p>Made for iOS / Android. Made with Unity 3D.</p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/sss/Screenshot_2016-09-09-13-18-17.png"
+                data-lightbox="ssspage"
+                data-title="Sky Slam"
+                ><img
+                  class="example-image"
+                  src="Images/games/sss/Screenshot_2016-09-09-13-18-17.png"
+                  alt="Sky Slam Screenshot"
+                  title="Sky Slam Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/sss/sss5.png"
+                data-lightbox="ssspage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/sss/sss5.png"
+                  alt="Sky Slam Screenshot"
+                  title="Sky Slam Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/sss/SSSscreen.png"
+                data-lightbox="dqpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/sss/SSSscreen.png"
+                  alt="Sky Slam Screenshot"
+                  title="Sky Slam Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="ssspageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="dynapage" class="gamescontainer">
+      <div>
+        <h2>Dynamice</h2>
+      </div>
+
+      <div>
+        <h3>Game Designer | Front - End Programmer</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/dynamice/Dynamice.png"
+            data-lightbox="dynapage"
+            data-title="Dynamice logo"
+            ><img
+              class="example-image"
+              src="Images/games/dynamice/Dynamice.png"
+              alt="Dynamice logo"
+              title="Dynamice logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>Play single or two player, but two player is more fun!</p>
+        <p>
+          Players take turns running the maze and can see the footprints left by
+          previous turns. The question to ask: is the other player running
+          towards the cheese, or leading you into a trap?
+        </p>
+        <p>
+          Made at the global game jam in 48 hours and won the award for Most
+          Polished Game at the 2012 San Francisco GGJ site.
+        </p>
+        <p>
+          Download here<a
+            href="http://archive.globalgamejam.org/2012/dynamice"
+            style="text-decoration: none;"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            PC/Mac.</a
+          >
+          Made with Unity3D.
+        </p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/dynamice/Dyna0.png"
+                data-lightbox="dynapage"
+                data-title="Start of the game."
+                ><img
+                  class="example-image"
+                  src="Images/games/dynamice/Dyna0.png"
+                  alt="Dynamice Screenshot"
+                  title="Dynamice Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/dynamice/dyna2.png"
+                data-lightbox="dynapage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/dynamice/dyna2.png"
+                  alt="Dynamice Screenshot"
+                  title="Dynamice Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/dynamice/dyna4.png"
+                data-lightbox="dynapage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/dynamice/dyna4.png"
+                  alt="Dynamice Screenshot"
+                  title="Dynamice Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="dynapageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="touchpage" class="gamescontainer">
+      <div>
+        <h2>Touch Lightning</h2>
+      </div>
+
+      <div>
+        <h3>Front-End Programmer | Game Designer | Graphic Designer</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/touch/stormynight-logo.png"
+            data-lightbox="touchpage"
+            data-title="Touch Lightning logo"
+            ><img
+              class="example-image"
+              src="Images/games/touch/stormynight-logo.png"
+              alt="Touch Lightning logo"
+              title="Touch Lightning logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          We wanted to express the beauty and power of nature with simple and
+          intuitive mechanics, so we put bolts of electric fire at your
+          fingertips. Of course, nature can also take the form of undead animals
+          driven to shamble out of the forest by their terrifying hunger.
+        </p>
+        <p>For iOS. Made with Unity3d.</p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/touch/TLShot2.png"
+                data-lightbox="touchpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/touch/TLShot2.png"
+                  alt="Touch Lightning Screenshot"
+                  title="Touch Lightning Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/touch/TLShot4.png"
+                data-lightbox="touchpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/touch/TLShot4.png"
+                  alt="Touch Lightning Screenshot"
+                  title="Touch Lightning Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/touch/TLShot5.png"
+                data-lightbox="touchpage"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/touch/TLShot5.png"
+                  alt="Touch Lightning Screenshot"
+                  title="DynamiTouch Lightningce Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="touchpageclose">Back</button>
+      </div>
+    </div>
+    <!-- individual games end-->
+    <!-- individual design start-->
+    <div id="rustypage" class="gamescontainer">
+      <div>
+        <h2>Rusty Blade: Famicase</h2>
+      </div>
+
+      <div>
+        <h3>Graphic Design</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/design/rusty/rusty1.jpg"
+            data-lightbox="rustypage"
+            data-title="Famicase"
+            ><img
+              class="example-image"
+              src="Images/design/rusty/rusty1.jpg"
+              alt="Famicase"
+              title="Famicase"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          I designed a fake Famicom game for the Famicase Exhibition. It was
+          displayed at the Meteor Gallery in Tokyo in May 2017.
+        </p>
+        <p>
+          Visit Famicase<a
+            href="http://famicase.com/"
+            style="text-decoration: none;"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Here.</a
+          >
+        </p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/rusty/Famicom case just sticker.png"
+                data-lightbox="rustypage"
+                data-title="Famicase"
+                ><img
+                  class="example-image"
+                  src="Images/design/rusty/Famicom case just sticker.png"
+                  alt="Famicase"
+                  title="Famicase"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/rusty/famicaseeeeee.jpg"
+                data-lightbox="rustypage"
+                data-title="Famicase"
+                ><img
+                  class="example-image"
+                  src="Images/design/rusty/famicaseeeeee.jpg"
+                  alt="Famicase"
+                  title="Famicase"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/rusty/rusty2.jpg"
+                data-lightbox="rustypage"
+                data-title="Famicase"
+                ><img
+                  class="example-image"
+                  src="Images/design/rusty/rusty2.jpg"
+                  alt="Famicase"
+                  title="Famicase"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="rustypageclose">Back</button>
+      </div>
+    </div>
+    <div id="theypage" class="gamescontainer">
+      <div>
+        <h2>They Shoot: Famicase</h2>
+      </div>
+
+      <div>
+        <h3>Graphic Design</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/design/theyshoot/theyshootFamicase.jpg"
+            data-lightbox="theypage"
+            data-title="Famicase"
+            ><img
+              class="example-image"
+              src="Images/design/theyshoot/theyshootFamicase.jpg"
+              alt="Famicase"
+              title="Famicase"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          I designed a fake Famicom game for the Famicase Exhibition. It was
+          displayed at the Meteor Gallery in Tokyo in May 2018.
+        </p>
+        <p>
+          Visit Famicase<a
+            href="http://famicase.com/"
+            style="text-decoration: none;"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Here.</a
+          >
+        </p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/theyshoot/theyshootFamicase.jpg"
+                data-lightbox="theypage"
+                data-title="Famicase"
+                ><img
+                  class="example-image"
+                  src="Images/design/theyshoot/theyshootFamicase.jpg"
+                  alt="Famicase"
+                  title="Famicase"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/they/IMG_5747.jpg"
+                data-lightbox="theypage"
+                data-title="Famicase"
+                ><img
+                  class="example-image"
+                  src="Images/design/theyshoot/IMG_5747.jpg"
+                  alt="Famicase"
+                  title="Famicase"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/theyshoot/IMG_5751.png"
+                data-lightbox="theypage"
+                data-title="Famicase"
+                ><img
+                  class="example-image"
+                  src="Images/design/theyshoot/IMG_5751.png"
+                  alt="Famicase"
+                  title="Famicase"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="theypageclose">Back</button>
+      </div>
+    </div>
+    <div id="journeypage" class="gamescontainer">
+      <div>
+        <h2>Journey To The End of The Night</h2>
+      </div>
+
+      <div>
+        <h3>Graphic Design | Promotional materials</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/design/journey/A1Horizontalv2.png"
+            data-lightbox="journeypage"
+            data-title="Journey to the end of the night."
+            ><img
+              class="example-image"
+              src="Images/design/journey/A1Horizontalv2.png"
+              alt="Journey to the end of the night."
+              title="Journey to the end of the night."
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          I was reponsible for graphic design for Journey to the End of the
+          Night Holloween 2017 in Tokyo. I had to design for web and print.
+          Including movie posters, and stickers.
+        </p>
+        <p>
+          Visit Journey to the end of the night<a
+            href="http://ichaseyou.com/"
+            style="text-decoration: none;"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Here.</a
+          >
+        </p>
+      </div>
+
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/journey/DanielJTTEOTN_A1Vertical_v2.png"
+                data-lightbox="journeypage"
+                data-title="Journey to the end of the night."
+                ><img
+                  class="example-image"
+                  src="Images/design/journey/DanielJTTEOTN_A1Vertical_v2.png"
+                  alt="Journey to the end of the night."
+                  title="Journey to the end of the night."
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/journey/IMG_4896.JPG"
+                data-lightbox="journeypage"
+                data-title="Journey to the end of the night."
+                ><img
+                  class="example-image"
+                  src="Images/design/journey/IMG_4896.JPG"
+                  alt="Journey to the end of the night."
+                  title="Journey to the end of the night."
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/design/journey/IMG_4897.JPG"
+                data-lightbox="journeypage"
+                data-title="Journey to the end of the night."
+                ><img
+                  class="example-image"
+                  src="Images/design/journey/IMG_4897.JPG"
+                  alt="Journey to the end of the night."
+                  title="Journey to the end of the night."
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="journeypageclose">Back</button>
+      </div>
+    </div>
+    <div id="gamebuilderpage" class="gamescontainer">
+      <div>
+        <h2>Game Builder: The Game Building Sandbox</h2>
+      </div>
+
+      <div>
+        <h3>Design | UI | UX</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/gamebuilder/header.jpg"
+            data-lightbox="gamebuilder"
+            data-title="Cold Email logo"
+            ><img
+              class="example-image"
+              src="Images/games/gamebuilder/header.jpg"
+              alt="Cold Email logo"
+              title="Cold Email logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          Build and play games with your friends! Make a 3D platformer in 10
+          minutes, or spend hours jamming on the next indie hit. Game Builder is
+          designed for all skill levels, from players ready to build their first
+          game to designers looking for a faster way to realize their ideas.
+        </p>
+        <p>
+          I was responsible for general design and UI/UX for the game. It is
+          available on Steam Early Access for free.
+        </p>
+        <a
+          href="https://store.steampowered.com/app/929860/Game_Builder/"
+          style="text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Download Game Builder</a
+        >
+      </div>
+      <div class="video-container">
+        <h3>Trailer</h3>
+        <div class="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/R8aDZYucUQw"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="imgrow">
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/gamebuilder/1.jpg"
+                data-lightbox="gamebuilder"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/gamebuilder/1.jpg"
+                  alt="Cold Email Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/gamebuilder/2.jpg"
+                data-lightbox="gamebuilder"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/gamebuilder/2.jpg"
+                  alt="Cold Email Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+        <div class="imgcolumn">
+          <div id="gallerywrapper">
+            <!--gallery row 1 start -->
+            <section class="workselect">
+              <a
+                class="example-image-link"
+                id="lightbox-img"
+                href="Images/games/gamebuilder/3.jpg"
+                data-lightbox="gamebuilder"
+                data-title="Screenshot"
+                ><img
+                  class="example-image"
+                  src="Images/games/gamebuilder/3.jpg"
+                  alt="Cold Email Screenshot"
+                  title="Cold Email Screenshot"
+              /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="gbpageclose">Back</button>
+      </div>
+    </div>
+    <div id="interviewpage" class="gamescontainer">
+      <div>
+        <h2>InterView: VR Job Interview Simulator</h2>
+      </div>
+
+      <div>
+        <h3>Design | Code | UX</h3>
+      </div>
+      <div id="headerpicwrapper">
+        <!--gallery row 1 start -->
+        <section class="headerpicture">
+          <a
+            class="example-image-link"
+            id="lightbox-img"
+            href="Images/games/interviewvr/interview1.png"
+            data-lightbox="InterView"
+            data-title="InterView logo"
+            ><img
+              class="example-image"
+              src="Images/games/interviewvr/interview1.png"
+              alt="InterView logo"
+              title="InterView logo"
+          /></a>
+        </section>
+      </div>
+      <div>
+        <p>
+          A job interview VR simulator. Select from multiple job types and
+          simulate a mock interview in VR. After a quick job skills assement,
+          users will be interviewed for a job by a vitual job interviewer. The
+          user speaks to the virtual interviwer and all of their answers are
+          recorded. There will be an assesment at the end of the interview based
+          on data that Indeed has collected based on job interviews for that
+          specific type of job. The user can download the recordings to listsen
+          to them while not in the VR space. This project was created for a 48
+          hour internal hackathon at Indeed in 2019.
+        </p>
+        <p>
+          I was responsible for all design and code for the game. A video of a
+          playthrough is available.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1xF_76ysm397HsZtYg027nrXZmNv_ys9t/view?usp=sharing"
+          style="text-decoration: none;"
+          rel="noopener noreferrer"
+          target="_blank"
+          >View playthrough</a
+        >
+      </div>
+      <div>
+        <button id="interviewpageclose">Back</button>
+      </div>
+    </div>
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+    </div>
+    <script src="JS/loadingscreen.js"></script>
+    <!--Design pages end -->
+    <div id="divider" class="square"></div>
+    <div id="copyright" class="copyright">
+      Website designed and created by Daniel Ponce
+    </div>
+    <script type="x-shader/x-vertex" id="vertexshader">
+      uniform float amplitude;
+      attribute vec3 customColor;
+      attribute vec3 displacement;
+      varying vec3 vNormal;
+      varying vec3 vColor;
+      void main() {
+      	vNormal = normal;
+      	vColor = customColor;
+      	vec3 newPosition = position + normal * amplitude * displacement;
+      	gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+      }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      varying vec3 vNormal;
+      varying vec3 vColor ;
+      void main() {
+      	const float ambient = .94;
+      	vec3 light = vec3( 1.0 );
+      	light = normalize( light );
+      	float directional = max( dot( vNormal, light ), 0.0 );
+      	gl_FragColor = vec4( ( directional + ambient ) * vColor, 1.0 );
+      }
+    </script>
+
+    <script src="JS/background.js"></script>
+
+    <script src="JS/lightbox-plus-jquery.min.js"></script>
+    <script>
+      lightbox.option({
+        resizeDuration: 200,
+        wrapAround: true,
+      });
+    </script>
+  </body>
 </html>
