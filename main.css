@@ -183,7 +183,7 @@ button:active {
 
 .aboutme {
   position: fixed;
-  transform: translate(-50%, 30em);
+  transform: translate(-50%, 60em);
   margin: 0 auto;
   border-radius: 0.1875em 0.1875em 0.1875em 0;
   width: 70%;
@@ -237,7 +237,7 @@ button:active {
 
 .press {
   position: fixed;
-  transform: translate(-50%, 30em);
+  transform: translate(-50%, 60em);
   margin: 0 auto;
   border-radius: 0.1875em 0.1875em 0.1875em 0;
   width: 70%;
@@ -292,7 +292,7 @@ button:active {
 
 .games {
   position: fixed;
-  transform: translate(-50%, 30em);
+  transform: translate(-50%, 60em);
   margin: 0 auto;
   border-radius: 0.1875em 0.1875em 0.1875em 0;
   width: 70%;
@@ -349,7 +349,7 @@ button:active {
   -webkit-box-shadow: inset 0 0 10px #fff;
   box-shadow: inset 0 0 10px #fff;
   position: fixed;
-  transform: translate(-50%, 30em);
+  transform: translate(-50%, 60em);
   margin: 0 auto;
   border-radius: 0.1875em 0.1875em 0.1875em 0;
   width: 70%;
@@ -1074,7 +1074,7 @@ p a {
 
 @keyframes slideintextbg {
   from {
-    transform: translate(12%, 30em);
+    transform: translate(12%, 60em);
   }
   to {
     transform: translate(12%, 4.25em);
@@ -1086,7 +1086,7 @@ p a {
     transform: translate(12%, 5.25em);
   }
   to {
-    transform: translate(12%, 30em);
+    transform: translate(12%, 60em);
   }
 }
 
@@ -1115,19 +1115,19 @@ p a {
     font-size: 0.5em;
   }
   .design {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 65%;
   }
   .aboutme {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 65%;
   }
   .press {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 65%;
   }
   .games {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 65%;
   }
   .profilepic {
@@ -1191,19 +1191,19 @@ p a {
     margin-right: 3%;
   }
   .design {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 70%;
   }
   .aboutme {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 70%;
   }
   .press {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 70%;
   }
   .games {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
     width: 70%;
   }
   .profilepic {
@@ -1251,7 +1251,7 @@ p a {
     transform: translate(-50%, 3em);
   }
   .design {
-    transform: translate(-50%, 30em);
+    transform: translate(-50%, 60em);
   }
   .showpaneldesign {
     transform: translate(-50%, 3em);
