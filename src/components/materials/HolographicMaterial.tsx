@@ -203,8 +203,9 @@ export default function HolographicMaterial({
 
   // Add the custom material to JSX.IntrinsicElements
 
-  useFrame((delta) => {
+  useFrame((state, delta) => {
     ref.current.time += delta;
+    console.log(state);
   });
 
   const ref = useRef<any>(null);
