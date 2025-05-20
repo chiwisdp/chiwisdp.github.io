@@ -4,7 +4,6 @@ import { Image, RoundedBox } from "@react-three/drei";
 import HolographicMaterial from "../materials/HolographicMaterial";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
-import { SkillStats } from "./SkillStats";
 
 interface SkillDisplayProps {
   canShow: boolean;
@@ -12,7 +11,6 @@ interface SkillDisplayProps {
 }
 
 export const SkillDisplay: React.FC<SkillDisplayProps> = ({
-  canShow,
   sectionNumber,
 }) => {
   const skillToDisplay = useSelector((state: RootState) => state.skill.skill);

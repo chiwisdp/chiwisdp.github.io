@@ -3,7 +3,7 @@
  * Dec 7th - Added useMemo for better performance
  */
 
-import React, { useRef, useMemo } from "react";
+import { useRef, useMemo } from "react";
 
 import { shaderMaterial } from "@react-three/drei";
 import { extend, useFrame } from "@react-three/fiber";
@@ -203,7 +203,7 @@ export default function HolographicMaterial({
 
   // Add the custom material to JSX.IntrinsicElements
 
-  useFrame((state, delta) => {
+  useFrame((delta) => {
     ref.current.time += delta;
   });
 

@@ -5,7 +5,6 @@ import { CameraControls, Environment } from "@react-three/drei";
 import {
   EffectComposer,
   Glitch,
-  Scanline,
   ToneMapping,
   Vignette,
 } from "@react-three/postprocessing";

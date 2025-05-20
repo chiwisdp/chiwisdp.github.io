@@ -36,7 +36,6 @@ export const MeModel: React.FC<MeModelProps> = ({
   const [currentClickAnimationName, setCurrentClickAnimationName] =
     useState<string>("groinHit");
   const [clickTiming, setClickTiming] = useState<number>(1000);
-  let hitTimeOut: ReturnType<typeof setTimeout> | undefined = undefined;
   let isGroinHit = false;
   const [hasPlayedMelt, setHasPlayedMelt] = useState(false);
   let meltAnim: AnimationPlaybackControls | null = null;
@@ -441,7 +440,7 @@ export const MeModel: React.FC<MeModelProps> = ({
         .fadeIn(fadeInTime)
         .play();
 
-      hitTimeOut = setTimeout(() => {
+      setTimeout(() => {
         resetClickAnimation();
       }, clickTiming);
     }

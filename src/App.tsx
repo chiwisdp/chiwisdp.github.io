@@ -6,7 +6,6 @@ import { Experience } from "./components/experience/Experience";
 import { Suspense, useEffect, useState } from "react";
 import { HTMLLandingRenderPage } from "./pages/HTMLLandingRenderPage";
 import { LoadingPage } from "./components/LoadingPage";
-import ClientWrapper from "./components/ClientWrapper.tsx";
 
 export default function App() {
   const [showLandingPage, setShowLandingPage] = useState(false);

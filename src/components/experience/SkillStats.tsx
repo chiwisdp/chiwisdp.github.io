@@ -2,8 +2,6 @@ import { motion } from "framer-motion-3d";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
 import { Image, RoundedBox, Text3D, Text } from "@react-three/drei";
-import HolographicMaterial from "../materials/HolographicMaterial";
-import { useEffect } from "react";
 
 export const SkillStats: React.FC = () => {
   const skillToDisplay = useSelector((state: RootState) => state.skill.skill);
