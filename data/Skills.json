@@ -8,56 +8,64 @@
         "level": "Advanced",
         "description": "Proficient in frontend development using JavaScript, including ES6+ features.",
         "logo": "/devLogos/java.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 0
       },
       {
         "name": "React",
         "level": "Advanced",
         "description": "Experienced in building frontend applications using React and its ecosystem.",
         "logo": "/devLogos/react.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 1
       },
       {
         "name": "TypeScript",
         "level": "Intermediate",
         "description": "Strong understanding of TypeScript for building scalable applications.",
         "logo": "/devLogos/typeScript.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 2
       },
       {
         "name": "Tailwind CSS",
         "level": "Intermediate",
         "description": "Proficient in using Tailwind CSS for utility-first styling.",
         "logo": "/devLogos/tailwind.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 3
       },
       {
         "name": "Three.js",
         "level": "Intermediate",
         "description": "Experience with Three.js for 3D graphics and animations in web applications.",
         "logo": "/devLogos/three.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 4
       },
       {
         "name": "HTML & CSS",
         "level": "Advanced",
         "description": "Strong understanding of HTML5 and CSS3, including responsive design.",
         "logo": "/devLogos/html.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 5
       },
       {
         "name": "C#",
         "level": "Intermediate",
         "description": "Years of experience in C# for game development.",
         "logo": "/devLogos/cSharp.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 6
       },
       {
         "name": "C++",
         "level": "Beginner",
         "description": "Basic understanding of C++ for game development.",
         "logo": "/devLogos/cPlus.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 7
       }
     ],
     "uxSkills": [
@@ -66,28 +74,32 @@
         "level": "Intermediate",
         "description": "Experience with Figma\nfor UI UX design and\nprototyping.",
         "logo": "/devLogos/figma.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 8
       },
       {
         "name": "Photoshop",
         "level": "Intermediate",
         "description": "Advanced understanding of Photoshop for image editing and design.",
         "logo": "/devLogos/photoS.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 9
       },
       {
         "name": "Illustrator",
         "level": "Intermediate",
         "description": "Advanced understanding of Photoshop for image editing and design.",
         "logo": "/devLogos/illustrator.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 10
       },
       {
         "name": "Blender",
         "level": "Beginner",
         "description": "Basic understanding of Blender for 3D modeling and animation.",
         "logo": "/devLogos/blender.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 11
       }
     ],
     "gameSkills": [
@@ -96,14 +108,16 @@
         "level": "Advanced",
         "description": "Proficient in using Unity3D for game development, including 2D and 3D projects.",
         "logo": "/devLogos/unity.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 12
       },
       {
         "name": "Unreal Engine",
         "level": "Intermediate",
         "description": "Experience with Unreal Engine for game development, including Blueprints.",
         "logo": "/devLogos/unreal.png",
-        "color": "#FFF"
+        "color": "#FFF",
+        "index": 13
       }
     ]
   }
