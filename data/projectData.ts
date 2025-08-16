@@ -16,7 +16,7 @@ export const projects = [
     id: 2,
     title: "Indeed VR Interview",
     description:
-      "This was done at a internal Indeed hackathon. This was a virtual reality interview experience where the user can practice their interview skills in a VR environment. This was done over a 3 day period in Unity3D.",
+      "This was done at a internal Indeed hackathon. This was a virtual reality interview experience where the user can practice their interview skills in a VR environment. This was done over a 3 day period in Unity3D I worked with UX Researchers to gain some data. Solo development",
     images: [
       "/projectImages/indeedVR/interview1.png",
       "/projectImages/indeedVR/interview2.png",
@@ -28,7 +28,7 @@ export const projects = [
     id: 3,
     title: "Game Builder",
     description:
-      "I was responsible for the UX and UI of this project. Build and play games with your friends! Make a 3D platformer in 10 minutes, or spend hours jamming on the next indie hit. Game Builder is designed for all skill levels, from players ready to build their first game to designers looking for a faster way to realize their ideas.",
+      "Build and play games with your friends! Make a 3D platformer in 10 minutes, or spend hours jamming on the next indie hit. Game Builder is designed for all skill levels, from players ready to build their first game to designers looking for a faster way to realize their ideas. I was responsible for the UX and UI of this project. I built a design system that was ten used by the developers. Was done in Unity3d",
     images: [
       "/projectImages/gameBuilder/header.jpg",
       "/projectImages/gameBuilder/2.jpg",
@@ -40,7 +40,7 @@ export const projects = [
     id: 4,
     title: "Cold Email",
     description:
-      "In Cold Email, you need to fire off emails as fast as you can before your computer explodes from malware. The send button has a nasty tendency to wander in the Game Jam title, though, so it may be difficult to get out all of those necessary emails before your PC bursts into flames. Do try, though, as your game, and your livelihood, depends on it.",
+      "In Cold Email, you need to fire off emails as fast as you can before your computer explodes from malware. The send button has a nasty tendency to wander in the Game Jam title, though, so it may be difficult to get out all of those necessary emails before your PC bursts into flames. Do try, though, as your game, and your livelihood, depends on it. I was the sole developer on this project. I did the design, art, and programming. This was done in Unity3D.",
     images: [
       "/projectImages/coldEmail/0.gif",
       "/projectImages/coldEmail/1.png",
@@ -51,7 +51,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Star Wars VR",
+    title: "R2 Story: VR",
     description:
       "R2 Story : A Star Wars VR Fan game. This is a fan project and will not be distributed. This is just me playing around with Unity3D and an Oculus DK 2 kit. Lucasfilm and Disney Own the rights to the Star Wars brand.",
     images: [
@@ -65,7 +65,7 @@ export const projects = [
     id: 6,
     title: "Shaq Sky Slam",
     description:
-      "Get ready for the most over the top extreme sport ever created. Skydive with a basketball in hand, plunge through the stratosphere at terminal velocity, grabbing coins and diving through hoops along the way. Dive bomb toward the basketball court below, lock in on your target, and slam dunk that ball!",
+      "Get ready for the most over the top extreme sport ever created. Skydive with a basketball in hand, plunge through the stratosphere at terminal velocity, grabbing coins and diving through hoops along the way. Dive bomb toward the basketball court below, lock in on your target, and slam dunk that ball! This was a mobile game I worked on at Crater House. I was responsible for the UX, UI, game design and gameplay engineering of this project. Was done in Unity3d.",
     images: [
       "/projectImages/shaq/sss3.png",
       "/projectImages/shaq/sss0.png",
@@ -79,7 +79,7 @@ export const projects = [
     id: 7,
     title: "Dig Quest Israel",
     description:
-      "Become an archeologist, and use your device to explore Israel’s past! Dig up the 2,000-year-old Lod Mosaic, and piece together the Dead Sea Scrolls. A collaboration between Crater House, Maya Cohan Productions, and the Israel Antiquities Authority!",
+      "Become an archeologist, and use your device to explore Israel’s past! Dig up the 2,000-year-old Lod Mosaic, and piece together the Dead Sea Scrolls. A collaboration between Crater House, Maya Cohan Productions, and the Israel Antiquities Authority! A mobile game I worked on at Crater House. I was responsible for the UX, UI, and contributed to game design and gameplay engineering of this project. Was done in Unity3d.",
     images: [
       "/projectImages/digQuest/dqScreen3.png",
       "/projectImages/digQuest/dqscreen.png",
@@ -91,7 +91,7 @@ export const projects = [
     id: 8,
     title: "Dynamice",
     description:
-      "Players take turns running the maze and can see the footprints left by previous turns. The question to ask: is the other player running towards the cheese, or leading you into a trap?",
+      "Players take turns running the maze and can see the footprints left by previous turns. The question to ask: is the other player running towards the cheese, or leading you into a trap? I worked on the game design and gameplay engineering. This was done in Unity3d.",
     images: [
       "/projectImages/dynamice/DynamiceHeader.png",
       "/projectImages/dynamice/Dyna0.png",
@@ -103,7 +103,7 @@ export const projects = [
     id: 9,
     title: "TypeSet",
     description:
-      "Type Set is a game about moving a conversation along, literally. The player physically manipulates the words on screen through touch gestures. Just like a normal conversation depending on which words you emphasize it can change the tone and direction of the conversation. Emphasis is placed on certain words by making them bigger /smaller or rotating them. The conversation changes depending on the way players solve the puzzles ( i.e. emphasizing certain words to change the tone of the conversation in an angry or nice way).",
+      "Type Set is a game about moving a conversation along, literally. The player physically manipulates the words on screen through touch gestures. Just like a normal conversation depending on which words you emphasize it can change the tone and direction of the conversation. Emphasis is placed on certain words by making them bigger /smaller or rotating them. The conversation changes depending on the way players solve the puzzles ( i.e. emphasizing certain words to change the tone of the conversation in an angry or nice way). I was the sole developer on this project. I did the design, art, and programming. This was done in Unity3D.",
     images: [
       "/projectImages/typeSet/tsHeader.jpg",
       "/projectImages/typeSet/5.png",
@@ -116,7 +116,7 @@ export const projects = [
     id: 10,
     title: "Spectre",
     description:
-      "Spectre is a recombinant narrative platformer, a game that tells the story of an individual's life. As you navigate through his specific recollections, similarly themed events will glow brightly. If you succeed in these moments of play and follow a glowing path, you will find a theme uniting his experience, and uncover a little more of his fading memory. If not, your nightly story will end in confusion.",
+      "Spectre is a recombinant narrative platformer, a game that tells the story of an individual's life. As you navigate through his specific recollections, similarly themed events will glow brightly. If you succeed in these moments of play and follow a glowing path, you will find a theme uniting his experience, and uncover a little more of his fading memory. If not, your nightly story will end in confusion. I worked on the environmental art.",
     images: ["/projectImages/spectre/spectre.png"],
     youtubeVideoId: "_0SdfMBXPDQ",
   },
@@ -124,7 +124,7 @@ export const projects = [
     id: 11,
     title: "Kid The World Saver",
     description:
-      "Move blocks around to guide Kid to the end of the level! IGF Student Showcase Finalist 2009.",
+      "Move blocks around to guide Kid to the end of the level! IGF Student Showcase Finalist 2009. I worked on the game design, level design, and art.",
     images: ["/projectImages/kid/kid1.jpg", "/projectImages/kid/kid2.jpg"],
     youtubeVideoId: "hBoAGmgIKOg",
   },
